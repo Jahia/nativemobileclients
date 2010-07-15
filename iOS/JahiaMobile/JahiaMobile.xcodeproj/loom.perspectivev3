@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -271,12 +269,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>080E96DDFE201D6D7F000001</string>
-								<string>F42ECED3115CF32E00838F1A</string>
-								<string>F42ECED4115CF33600838F1A</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>F48DC78F115B9B63000F8DBA</string>
-								<string>F48DC78E115B9B58000F8DBA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>F455F0BC11246DFF0023CB67</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -284,8 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>57</integer>
-									<integer>56</integer>
+									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -337,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>F456304E11EEEF94001F61FA</string>
+										<string>F45FCBBB11EEF46F003C079A</string>
 										<key>history</key>
 										<array>
 											<string>F422B572115C091C00DA0BA1</string>
@@ -345,7 +336,6 @@
 											<string>F42ECF86115D2AE000838F1A</string>
 											<string>F4F48F97115E6B0300A8F49B</string>
 											<string>F4F48F99115E6B0300A8F49B</string>
-											<string>F47864D211648B950044E498</string>
 											<string>F4786544116497470044E498</string>
 											<string>F47865791164A2C50044E498</string>
 											<string>F478663D1164BC5E0044E498</string>
@@ -362,7 +352,6 @@
 											<string>F462E94B11B90ABD0063CA17</string>
 											<string>F462E98111B913650063CA17</string>
 											<string>F462E98211B913650063CA17</string>
-											<string>F462E98311B913650063CA17</string>
 											<string>F462E98711B913650063CA17</string>
 											<string>F462E98811B913650063CA17</string>
 											<string>F462E99011B914BA0063CA17</string>
@@ -372,7 +361,7 @@
 											<string>F462EA4511B922330063CA17</string>
 											<string>F464F09E11EEE08F0073BBB6</string>
 											<string>F4758CAC11EEE44A00245CB8</string>
-											<string>F443986111EEEBDC000B67BD</string>
+											<string>F4BF44F411EEF2BB0039FEE0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -386,21 +375,23 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1019, 217}}</string>
+								<string>{{0, 0}, {1019, 190}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 127 1280 651 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>217pt</string>
+							<string>190pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>388pt</string>
+							<string>415pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
@@ -411,7 +402,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1019, 361}}</string>
+										<string>{{10, 27}, {1019, 388}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 127 1280 651 0 0 1280 778 </string>
 									</dict>
@@ -443,12 +434,12 @@
 										<dict>
 											<key>PBXCVSModuleTreeModuleColumnWidthsKey</key>
 											<array>
-												<real>200</real>
-												<real>56.66162109375</real>
+												<real>603</real>
+												<real>56</real>
 												<real>63</real>
 												<real>60</real>
 												<real>63</real>
-												<real>139.556640625</real>
+												<real>139</real>
 											</array>
 											<key>PBXCVSModuleTreeModuleColumnsKey</key>
 											<array>
@@ -468,7 +459,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1019, 195}}</string>
+										<string>{{10, 27}, {1019, 388}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXCVSModule</string>
@@ -516,11 +507,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>F456302C11EEECCA001F61FA</string>
+				<string>F45FCB8D11EEF2D4003C079A</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>F456302D11EEECCA001F61FA</string>
+				<string>F45FCB8E11EEF2D4003C079A</string>
 				<string>F48DC88B115BE05F000F8DBA</string>
-				<string>F456302E11EEECCA001F61FA</string>
+				<string>F45FCB8F11EEF2D4003C079A</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -669,14 +660,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>F456302F11EEECCA001F61FA</string>
+				<string>F45FCBBC11EEF46F003C079A</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>F456303011EEECCA001F61FA</string>
-				<string>F456303111EEECCA001F61FA</string>
-				<string>F456303211EEECCA001F61FA</string>
-				<string>F456303311EEECCA001F61FA</string>
-				<string>F456303411EEECCA001F61FA</string>
+				<string>F45FCBBD11EEF46F003C079A</string>
+				<string>F45FCBBE11EEF46F003C079A</string>
+				<string>F45FCBBF11EEF46F003C079A</string>
+				<string>F45FCBC011EEF46F003C079A</string>
+				<string>F45FCBC111EEF46F003C079A</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -710,9 +701,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>F456303511EEECCA001F61FA</string>
-		<string>F456303611EEECCA001F61FA</string>
-		<string>/Users/loom/Documents/work/iphone/Projects/JahiaMobile/JahiaMobile.xcodeproj</string>
+		<string>/Users/loom/Documents/work/iphone/Projects/Jahia's Mobile iOS JahiaMobile Project/JahiaMobile.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 127 1280 651 0 0 1280 778 </string>

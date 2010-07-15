@@ -302,17 +302,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 300870674;
-			PBXWorkspaceStateSaveDate = 300870674;
+			PBXPerProjectTemplateStateSaveDate = 300872391;
+			PBXWorkspaceStateSaveDate = 300872391;
 		};
 		perUserProjectItems = {
 			F422B572115C091C00DA0BA1 = F422B572115C091C00DA0BA1 /* PBXBookmark */;
 			F422B574115C091C00DA0BA1 = F422B574115C091C00DA0BA1 /* PBXTextBookmark */;
 			F42ECF86115D2AE000838F1A = F42ECF86115D2AE000838F1A /* PBXTextBookmark */;
-			F443986111EEEBDC000B67BD = F443986111EEEBDC000B67BD /* PlistBookmark */;
-			F456302B11EEECCA001F61FA /* PlistBookmark */ = F456302B11EEECCA001F61FA /* PlistBookmark */;
-			F456304711EEEF82001F61FA /* PlistBookmark */ = F456304711EEEF82001F61FA /* PlistBookmark */;
-			F456304E11EEEF94001F61FA /* PlistBookmark */ = F456304E11EEEF94001F61FA /* PlistBookmark */;
+			F456304E11EEEF94001F61FA = F456304E11EEEF94001F61FA /* PlistBookmark */;
+			F45FCB8C11EEF2D4003C079A /* PlistBookmark */ = F45FCB8C11EEF2D4003C079A /* PlistBookmark */;
+			F45FCBBB11EEF46F003C079A /* PlistBookmark */ = F45FCBBB11EEF46F003C079A /* PlistBookmark */;
 			F462E94B11B90ABD0063CA17 = F462E94B11B90ABD0063CA17 /* PBXTextBookmark */;
 			F462E98111B913650063CA17 = F462E98111B913650063CA17 /* PBXTextBookmark */;
 			F462E98211B913650063CA17 = F462E98211B913650063CA17 /* PBXTextBookmark */;
@@ -332,6 +331,7 @@
 			F478663D1164BC5E0044E498 = F478663D1164BC5E0044E498 /* PBXTextBookmark */;
 			F48A07B5119EE555002D8620 = F48A07B5119EE555002D8620 /* PBXTextBookmark */;
 			F48A07B6119EE555002D8620 = F48A07B6119EE555002D8620 /* PBXTextBookmark */;
+			F4BF44F411EEF2BB0039FEE0 = F4BF44F411EEF2BB0039FEE0 /* PlistBookmark */;
 			F4CD4AE211B6824700FD666E = F4CD4AE211B6824700FD666E /* PBXTextBookmark */;
 			F4CD4AE411B6824700FD666E = F4CD4AE411B6824700FD666E /* PBXTextBookmark */;
 			F4EC4FDB11676BFA0012142B = F4EC4FDB11676BFA0012142B /* PBXTextBookmark */;
@@ -340,7 +340,6 @@
 			F4EC5014116770AA0012142B = F4EC5014116770AA0012142B /* PBXTextBookmark */;
 			F4EC50761168B5AE0012142B = F4EC50761168B5AE0012142B /* PBXTextBookmark */;
 			F4EC50791168B5AE0012142B = F4EC50791168B5AE0012142B /* PBXTextBookmark */;
-			F4EF593F11EEE8CD0020F0A2 = F4EF593F11EEE8CD0020F0A2 /* PlistBookmark */;
 			F4F48F97115E6B0300A8F49B = F4F48F97115E6B0300A8F49B /* PBXTextBookmark */;
 			F4F48F99115E6B0300A8F49B = F4F48F99115E6B0300A8F49B /* PBXTextBookmark */;
 		};
@@ -533,7 +532,7 @@
 		vrLen = 1481;
 		vrLoc = 332;
 	};
-	F443986111EEEBDC000B67BD /* PlistBookmark */ = {
+	F456304E11EEEF94001F61FA /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
 		fallbackIsa = PBXBookmark;
@@ -544,36 +543,25 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
-	F456302B11EEECCA001F61FA /* PlistBookmark */ = {
+	F45FCB8C11EEF2D4003C079A /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
 		fallbackIsa = PBXBookmark;
 		isK = 0;
 		kPath = (
 		);
-		name = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Entitlements.plist;
+		name = "/Users/loom/Documents/work/iphone/Projects/Jahia's Mobile iOS JahiaMobile Project/Entitlements.plist";
 		rLen = 0;
 		rLoc = 9223372036854775807;
 	};
-	F456304711EEEF82001F61FA /* PlistBookmark */ = {
+	F45FCBBB11EEF46F003C079A /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
 		fallbackIsa = PBXBookmark;
 		isK = 0;
 		kPath = (
 		);
-		name = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Entitlements.plist;
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	F456304E11EEEF94001F61FA /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Entitlements.plist;
+		name = "/Users/loom/Documents/work/iphone/Projects/Jahia's Mobile iOS JahiaMobile Project/Entitlements.plist";
 		rLen = 0;
 		rLoc = 9223372036854775807;
 	};
@@ -935,9 +923,20 @@
 		ignoreCount = 0;
 		lineNumber = 105;
 		location = JahiaPad;
-		modificationTime = 300870741.005795;
+		modificationTime = 300870741.0057951;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
+	};
+	F4BF44F411EEF2BB0039FEE0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/loom/Documents/work/iphone/Projects/Jahia's Mobile iOS JahiaMobile Project/Entitlements.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
 	};
 	F4CD4AE211B6824700FD666E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1018,17 +1017,6 @@
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 92;
-	};
-	F4EF593F11EEE8CD0020F0A2 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Entitlements.plist;
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	F4F48F97115E6B0300A8F49B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
