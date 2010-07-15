@@ -1,0 +1,888 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* PadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PadAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2804200B108E984D000629CD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28042008108E984D000629CD /* MasterViewController.m */; };
+		2804200C108E984D000629CD /* PadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804200A108E984D000629CD /* PadDetailViewController.m */; };
+		2804203C108E9BAB000629CD /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2804203B108E9BAB000629CD /* DetailView.xib */; };
+		280420C1108EA07E000629CD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280420C0108EA07E000629CD /* CoreData.framework */; };
+		28042144108EA4AA000629CD /* iPadJahia.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 280420B3108E9F58000629CD /* iPadJahia.xcdatamodel */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		F403F97C1157D538008B7AE0 /* AbstractAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */; };
+		F403F97D1157D538008B7AE0 /* AbstractAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */; };
+		F40E44A41163DEDC00EE2549 /* PadInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40E44A31163DEDC00EE2549 /* PadInputViewController.m */; };
+		F41884851124336900585DA9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41884831124336900585DA9 /* SearchViewController.m */; };
+		F41884861124336900585DA9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41884841124336900585DA9 /* SearchViewController.xib */; };
+		F41884CF1124437000585DA9 /* PhoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F41884CE1124437000585DA9 /* PhoneAppDelegate.m */; };
+		F41885321124444D00585DA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		F41885831124445300585DA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		F41885A51124445800585DA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		F41885C21124445D00585DA9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280420C0108EA07E000629CD /* CoreData.framework */; };
+		F41885C51124447300585DA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		F41885C61124449B00585DA9 /* MainPhoneWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41884CB1124433700585DA9 /* MainPhoneWindow.xib */; };
+		F41885ED1124457A00585DA9 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691711111706B300CD69E5 /* ASINSStringAdditions.m */; };
+		F41885EE1124457B00585DA9 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F469170F111706B300CD69E5 /* ASINetworkQueue.m */; };
+		F41885EF1124457C00585DA9 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F469170D111706B300CD69E5 /* ASIInputStream.m */; };
+		F41885F01124457F00585DA9 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F469170A111706B300CD69E5 /* ASIHTTPRequest.m */; };
+		F41885F11124458000585DA9 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691708111706B300CD69E5 /* ASIFormDataRequest.m */; };
+		F41885F21124458100585DA9 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691706111706B300CD69E5 /* ASIAuthenticationDialog.m */; };
+		F41885F31124459700585DA9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41884841124336900585DA9 /* SearchViewController.xib */; };
+		F41885F41124459900585DA9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41884831124336900585DA9 /* SearchViewController.m */; };
+		F41885F51124459A00585DA9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917281117084000CD69E5 /* SBJsonWriter.m */; };
+		F41885F61124459C00585DA9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917261117084000CD69E5 /* SBJsonParser.m */; };
+		F41885F71124459D00585DA9 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917241117084000CD69E5 /* SBJsonBase.m */; };
+		F41885F81124459F00585DA9 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917221117084000CD69E5 /* SBJSON.m */; };
+		F41885F9112445A000585DA9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691713111706B300CD69E5 /* Reachability.m */; };
+		F41885FA112445A100585DA9 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917201117084000CD69E5 /* NSString+SBJSON.m */; };
+		F41885FB112445A200585DA9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F469171E1117084000CD69E5 /* NSObject+SBJSON.m */; };
+		F41885FC112445A400585DA9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28042008108E984D000629CD /* MasterViewController.m */; };
+		F41885FD112445A500585DA9 /* MasterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4251D8C111DE37F00C47777 /* MasterTabBarController.m */; };
+		F41885FE112445AB00585DA9 /* MailComposerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4251D59111DDEC400C47777 /* MailComposerViewController.m */; };
+		F418866F1124534400585DA9 /* CommonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F418866E1124534400585DA9 /* CommonDetailViewController.m */; };
+		F41886801124549200585DA9 /* CommonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F418866E1124534400585DA9 /* CommonDetailViewController.m */; };
+		F4188728112458A100585DA9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173511170CC400CD69E5 /* SystemConfiguration.framework */; };
+		F4188729112458A200585DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4251D15111DDC1500C47777 /* MessageUI.framework */; };
+		F418872A112458A300585DA9 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173911170CE100CD69E5 /* libz.1.2.3.dylib */; };
+		F418872B112458A500585DA9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173111170CB500CD69E5 /* CFNetwork.framework */; };
+		F41887611124599500585DA9 /* MailComposerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4251D5B111DDEF700C47777 /* MailComposerViewController.xib */; };
+		F41887621124599C00585DA9 /* iPadJahia.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 280420B3108E9F58000629CD /* iPadJahia.xcdatamodel */; };
+		F4251D16111DDC1500C47777 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4251D15111DDC1500C47777 /* MessageUI.framework */; };
+		F4251D5A111DDEC400C47777 /* MailComposerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4251D59111DDEC400C47777 /* MailComposerViewController.m */; };
+		F4251D5C111DDEF700C47777 /* MailComposerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4251D5B111DDEF700C47777 /* MailComposerViewController.xib */; };
+		F4251D8D111DE37F00C47777 /* MasterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4251D8C111DE37F00C47777 /* MasterTabBarController.m */; };
+		F42E0328115A45A300DF5888 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F42E0327115A45A300DF5888 /* FileUtils.m */; };
+		F42E0329115A45A300DF5888 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F42E0327115A45A300DF5888 /* FileUtils.m */; };
+		F42ECEE8115CF40300838F1A /* PhoneDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42ECEE7115CF40300838F1A /* PhoneDetailView.xib */; };
+		F455F0BD11246DFF0023CB67 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F455F0BC11246DFF0023CB67 /* Settings.bundle */; };
+		F455F0BE11246DFF0023CB67 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F455F0BC11246DFF0023CB67 /* Settings.bundle */; };
+		F455F0C611246F280023CB67 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F455F0C411246F280023CB67 /* 1.png */; };
+		F455F0C711246F280023CB67 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F455F0C511246F280023CB67 /* 2.png */; };
+		F455F0C811246F280023CB67 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F455F0C411246F280023CB67 /* 1.png */; };
+		F455F0C911246F280023CB67 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F455F0C511246F280023CB67 /* 2.png */; };
+		F45FBB58115680AE00F020C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F45FBB56115680AE00F020C2 /* Default.png */; };
+		F45FBB59115680AE00F020C2 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = F45FBB55115680AE00F020C2 /* Default-Portrait.png */; };
+		F463C3D41125EA750078D302 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F463C3D21125EA750078D302 /* InputViewController.m */; };
+		F463C3D51125EA750078D302 /* PadInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F463C3D31125EA750078D302 /* PadInputViewController.xib */; };
+		F463C3D61125EA750078D302 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F463C3D21125EA750078D302 /* InputViewController.m */; };
+		F463C3D71125EA750078D302 /* PadInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F463C3D31125EA750078D302 /* PadInputViewController.xib */; };
+		F4691714111706B300CD69E5 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691706111706B300CD69E5 /* ASIAuthenticationDialog.m */; };
+		F4691715111706B300CD69E5 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691708111706B300CD69E5 /* ASIFormDataRequest.m */; };
+		F4691716111706B300CD69E5 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F469170A111706B300CD69E5 /* ASIHTTPRequest.m */; };
+		F4691717111706B300CD69E5 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F469170D111706B300CD69E5 /* ASIInputStream.m */; };
+		F4691718111706B300CD69E5 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F469170F111706B300CD69E5 /* ASINetworkQueue.m */; };
+		F4691719111706B300CD69E5 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691711111706B300CD69E5 /* ASINSStringAdditions.m */; };
+		F469171A111706B300CD69E5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F4691713111706B300CD69E5 /* Reachability.m */; };
+		F46917291117084000CD69E5 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F469171E1117084000CD69E5 /* NSObject+SBJSON.m */; };
+		F469172A1117084000CD69E5 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917201117084000CD69E5 /* NSString+SBJSON.m */; };
+		F469172B1117084000CD69E5 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917221117084000CD69E5 /* SBJSON.m */; };
+		F469172C1117084000CD69E5 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917241117084000CD69E5 /* SBJsonBase.m */; };
+		F469172D1117084000CD69E5 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917261117084000CD69E5 /* SBJsonParser.m */; };
+		F469172E1117084000CD69E5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917281117084000CD69E5 /* SBJsonWriter.m */; };
+		F469173211170CB500CD69E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173111170CB500CD69E5 /* CFNetwork.framework */; };
+		F469173611170CC400CD69E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173511170CC400CD69E5 /* SystemConfiguration.framework */; };
+		F469173A11170CE100CD69E5 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173911170CE100CD69E5 /* libz.1.2.3.dylib */; };
+		F4786525116494770044E498 /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4786524116494770044E498 /* InputViewController.xib */; };
+		F48DC5C5115B44F3000F8DBA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F48DC5C4115B44F3000F8DBA /* libxml2.dylib */; };
+		F48DC5EC115B4AC0000F8DBA /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC5E6115B4AC0000F8DBA /* XPathQuery.m */; };
+		F48DC5ED115B4AC0000F8DBA /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC5E9115B4AC0000F8DBA /* TFHpple.m */; };
+		F48DC5EE115B4AC0000F8DBA /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC5EB115B4AC0000F8DBA /* TFHppleElement.m */; };
+		F48DC5EF115B4AC0000F8DBA /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC5E6115B4AC0000F8DBA /* XPathQuery.m */; };
+		F48DC5F0115B4AC0000F8DBA /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC5E9115B4AC0000F8DBA /* TFHpple.m */; };
+		F48DC5F1115B4AC0000F8DBA /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC5EB115B4AC0000F8DBA /* TFHppleElement.m */; };
+		F48DC60F115B4C01000F8DBA /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC60E115B4C01000F8DBA /* Configuration.m */; };
+		F48DC610115B4C01000F8DBA /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC60E115B4C01000F8DBA /* Configuration.m */; };
+		F48DC761115B722F000F8DBA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F48DC5C4115B44F3000F8DBA /* libxml2.dylib */; };
+		F48DC791115B9BBA000F8DBA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = F48DC790115B9BBA000F8DBA /* Default-Landscape.png */; };
+		F48DC797115B9BE5000F8DBA /* jahia57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = F48DC796115B9BE5000F8DBA /* jahia57x57.png */; };
+		F48DC799115B9BF7000F8DBA /* jahia72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = F48DC798115B9BF7000F8DBA /* jahia72x72.png */; };
+		F48DC88A115BE059000F8DBA /* jahia72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = F48DC798115B9BF7000F8DBA /* jahia72x72.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* PadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* PadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* JahiaPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JahiaPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28042007108E984D000629CD /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		28042008108E984D000629CD /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		28042009108E984D000629CD /* PadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadDetailViewController.h; sourceTree = "<group>"; };
+		2804200A108E984D000629CD /* PadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadDetailViewController.m; sourceTree = "<group>"; };
+		2804203B108E9BAB000629CD /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		280420B3108E9F58000629CD /* iPadJahia.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = iPadJahia.xcdatamodel; sourceTree = "<group>"; };
+		280420C0108EA07E000629CD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* iPadJahia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadJahia_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* JahiaPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JahiaPad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		F403F97A1157D538008B7AE0 /* AbstractAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAppDelegate.h; sourceTree = "<group>"; };
+		F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractAppDelegate.m; sourceTree = "<group>"; };
+		F40E44A21163DEDB00EE2549 /* PadInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadInputViewController.h; sourceTree = "<group>"; };
+		F40E44A31163DEDC00EE2549 /* PadInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadInputViewController.m; sourceTree = "<group>"; };
+		F41884821124336900585DA9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F41884831124336900585DA9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F41884841124336900585DA9 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Classes/SearchViewController.xib; sourceTree = "<group>"; };
+		F41884C5112442E200585DA9 /* JahiaPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JahiaPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41884C7112442E200585DA9 /* JahiaPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JahiaPhone-Info.plist"; sourceTree = "<group>"; };
+		F41884CB1124433700585DA9 /* MainPhoneWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainPhoneWindow.xib; sourceTree = "<group>"; };
+		F41884CD1124437000585DA9 /* PhoneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneAppDelegate.h; sourceTree = "<group>"; };
+		F41884CE1124437000585DA9 /* PhoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneAppDelegate.m; sourceTree = "<group>"; };
+		F418866D1124534400585DA9 /* CommonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailViewController.h; sourceTree = "<group>"; };
+		F418866E1124534400585DA9 /* CommonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailViewController.m; sourceTree = "<group>"; };
+		F4251D15111DDC1500C47777 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F4251D58111DDEC400C47777 /* MailComposerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailComposerViewController.h; sourceTree = "<group>"; };
+		F4251D59111DDEC400C47777 /* MailComposerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailComposerViewController.m; sourceTree = "<group>"; };
+		F4251D5B111DDEF700C47777 /* MailComposerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailComposerViewController.xib; sourceTree = "<group>"; };
+		F4251D8B111DE37F00C47777 /* MasterTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTabBarController.h; sourceTree = "<group>"; };
+		F4251D8C111DE37F00C47777 /* MasterTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTabBarController.m; sourceTree = "<group>"; };
+		F42E0326115A45A200DF5888 /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		F42E0327115A45A300DF5888 /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		F42ECEE7115CF40300838F1A /* PhoneDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneDetailView.xib; sourceTree = "<group>"; };
+		F455F0BC11246DFF0023CB67 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		F455F0C411246F280023CB67 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F455F0C511246F280023CB67 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F45FBB55115680AE00F020C2 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "images/Default-Portrait.png"; sourceTree = "<group>"; };
+		F45FBB56115680AE00F020C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		F463C3D11125EA750078D302 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		F463C3D21125EA750078D302 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
+		F463C3D31125EA750078D302 /* PadInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PadInputViewController.xib; path = Classes/PadInputViewController.xib; sourceTree = "<group>"; };
+		F4691705111706B300CD69E5 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		F4691706111706B300CD69E5 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		F4691707111706B300CD69E5 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		F4691708111706B300CD69E5 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		F4691709111706B300CD69E5 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		F469170A111706B300CD69E5 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		F469170B111706B300CD69E5 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		F469170C111706B300CD69E5 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		F469170D111706B300CD69E5 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		F469170E111706B300CD69E5 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		F469170F111706B300CD69E5 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		F4691710111706B300CD69E5 /* ASINSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINSStringAdditions.h; sourceTree = "<group>"; };
+		F4691711111706B300CD69E5 /* ASINSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINSStringAdditions.m; sourceTree = "<group>"; };
+		F4691712111706B300CD69E5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F4691713111706B300CD69E5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F469171C1117084000CD69E5 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F469171D1117084000CD69E5 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		F469171E1117084000CD69E5 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		F469171F1117084000CD69E5 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		F46917201117084000CD69E5 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		F46917211117084000CD69E5 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		F46917221117084000CD69E5 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		F46917231117084000CD69E5 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		F46917241117084000CD69E5 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		F46917251117084000CD69E5 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		F46917261117084000CD69E5 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		F46917271117084000CD69E5 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		F46917281117084000CD69E5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		F469173111170CB500CD69E5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F469173511170CC400CD69E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F469173911170CE100CD69E5 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		F4758CA211EEE3D100245CB8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		F4786524116494770044E498 /* InputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InputViewController.xib; path = Classes/InputViewController.xib; sourceTree = "<group>"; };
+		F48DC5C4115B44F3000F8DBA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		F48DC5E6115B4AC0000F8DBA /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPathQuery.m; path = "../../Resources/Libraries/brutella-hpple-40d225d/XPathQuery.m"; sourceTree = SOURCE_ROOT; };
+		F48DC5E7115B4AC0000F8DBA /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPathQuery.h; path = "../../Resources/Libraries/brutella-hpple-40d225d/XPathQuery.h"; sourceTree = SOURCE_ROOT; };
+		F48DC5E8115B4AC0000F8DBA /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHpple.h; path = "../../Resources/Libraries/brutella-hpple-40d225d/TFHpple.h"; sourceTree = SOURCE_ROOT; };
+		F48DC5E9115B4AC0000F8DBA /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHpple.m; path = "../../Resources/Libraries/brutella-hpple-40d225d/TFHpple.m"; sourceTree = SOURCE_ROOT; };
+		F48DC5EA115B4AC0000F8DBA /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHppleElement.h; path = "../../Resources/Libraries/brutella-hpple-40d225d/TFHppleElement.h"; sourceTree = SOURCE_ROOT; };
+		F48DC5EB115B4AC0000F8DBA /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleElement.m; path = "../../Resources/Libraries/brutella-hpple-40d225d/TFHppleElement.m"; sourceTree = SOURCE_ROOT; };
+		F48DC60D115B4C01000F8DBA /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		F48DC60E115B4C01000F8DBA /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		F48DC790115B9BBA000F8DBA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "images/Default-Landscape.png"; sourceTree = "<group>"; };
+		F48DC796115B9BE5000F8DBA /* jahia57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jahia57x57.png; path = images/icons/jahia57x57.png; sourceTree = "<group>"; };
+		F48DC798115B9BF7000F8DBA /* jahia72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jahia72x72.png; path = images/icons/jahia72x72.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				280420C1108EA07E000629CD /* CoreData.framework in Frameworks */,
+				F469173211170CB500CD69E5 /* CFNetwork.framework in Frameworks */,
+				F469173611170CC400CD69E5 /* SystemConfiguration.framework in Frameworks */,
+				F469173A11170CE100CD69E5 /* libz.1.2.3.dylib in Frameworks */,
+				F4251D16111DDC1500C47777 /* MessageUI.framework in Frameworks */,
+				F48DC761115B722F000F8DBA /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F41884C3112442E200585DA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41885321124444D00585DA9 /* UIKit.framework in Frameworks */,
+				F41885831124445300585DA9 /* Foundation.framework in Frameworks */,
+				F41885A51124445800585DA9 /* CoreGraphics.framework in Frameworks */,
+				F41885C21124445D00585DA9 /* CoreData.framework in Frameworks */,
+				F4188728112458A100585DA9 /* SystemConfiguration.framework in Frameworks */,
+				F4188729112458A200585DA9 /* MessageUI.framework in Frameworks */,
+				F418872A112458A300585DA9 /* libz.1.2.3.dylib in Frameworks */,
+				F418872B112458A500585DA9 /* CFNetwork.framework in Frameworks */,
+				F48DC5C5115B44F3000F8DBA /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F469171B1117084000CD69E5 /* JSON */,
+				F4691704111706B300CD69E5 /* ASIHttpRequest */,
+				F42ECED3115CF32E00838F1A /* iPad */,
+				F42ECED4115CF33600838F1A /* iPhone */,
+				28042007108E984D000629CD /* MasterViewController.h */,
+				28042008108E984D000629CD /* MasterViewController.m */,
+				F4251D8B111DE37F00C47777 /* MasterTabBarController.h */,
+				F4251D8C111DE37F00C47777 /* MasterTabBarController.m */,
+				F41884821124336900585DA9 /* SearchViewController.h */,
+				F41884831124336900585DA9 /* SearchViewController.m */,
+				F418866D1124534400585DA9 /* CommonDetailViewController.h */,
+				F418866E1124534400585DA9 /* CommonDetailViewController.m */,
+				F4251D58111DDEC400C47777 /* MailComposerViewController.h */,
+				F4251D59111DDEC400C47777 /* MailComposerViewController.m */,
+				F463C3D11125EA750078D302 /* InputViewController.h */,
+				F463C3D21125EA750078D302 /* InputViewController.m */,
+				F403F97A1157D538008B7AE0 /* AbstractAppDelegate.h */,
+				F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */,
+				F42E0326115A45A200DF5888 /* FileUtils.h */,
+				F42E0327115A45A300DF5888 /* FileUtils.m */,
+				F48DC60D115B4C01000F8DBA /* Configuration.h */,
+				F48DC60E115B4C01000F8DBA /* Configuration.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* JahiaPad.app */,
+				F41884C5112442E200585DA9 /* JahiaPhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F48DC5E4115B4AC0000F8DBA /* Hpple */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				F455F0BC11246DFF0023CB67 /* Settings.bundle */,
+				F4758CA211EEE3D100245CB8 /* Entitlements.plist */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* iPadJahia_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F48DC78F115B9B63000F8DBA /* iPhone */,
+				F48DC78E115B9B58000F8DBA /* iPad */,
+				F455F0C411246F280023CB67 /* 1.png */,
+				F455F0C511246F280023CB67 /* 2.png */,
+				F48DC798115B9BF7000F8DBA /* jahia72x72.png */,
+				F41884841124336900585DA9 /* SearchViewController.xib */,
+				F4251D5B111DDEF700C47777 /* MailComposerViewController.xib */,
+				280420B3108E9F58000629CD /* iPadJahia.xcdatamodel */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F469173111170CB500CD69E5 /* CFNetwork.framework */,
+				F469173511170CC400CD69E5 /* SystemConfiguration.framework */,
+				F469173911170CE100CD69E5 /* libz.1.2.3.dylib */,
+				F4251D15111DDC1500C47777 /* MessageUI.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+				280420C0108EA07E000629CD /* CoreData.framework */,
+				F48DC5C4115B44F3000F8DBA /* libxml2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F42ECED3115CF32E00838F1A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				28042009108E984D000629CD /* PadDetailViewController.h */,
+				2804200A108E984D000629CD /* PadDetailViewController.m */,
+				1D3623240D0F684500981E51 /* PadAppDelegate.h */,
+				1D3623250D0F684500981E51 /* PadAppDelegate.m */,
+				F40E44A21163DEDB00EE2549 /* PadInputViewController.h */,
+				F40E44A31163DEDC00EE2549 /* PadInputViewController.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		F42ECED4115CF33600838F1A /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F41884CD1124437000585DA9 /* PhoneAppDelegate.h */,
+				F41884CE1124437000585DA9 /* PhoneAppDelegate.m */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		F4691704111706B300CD69E5 /* ASIHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				F4691705111706B300CD69E5 /* ASIAuthenticationDialog.h */,
+				F4691706111706B300CD69E5 /* ASIAuthenticationDialog.m */,
+				F4691707111706B300CD69E5 /* ASIFormDataRequest.h */,
+				F4691708111706B300CD69E5 /* ASIFormDataRequest.m */,
+				F4691709111706B300CD69E5 /* ASIHTTPRequest.h */,
+				F469170A111706B300CD69E5 /* ASIHTTPRequest.m */,
+				F469170B111706B300CD69E5 /* ASIHTTPRequestConfig.h */,
+				F469170C111706B300CD69E5 /* ASIInputStream.h */,
+				F469170D111706B300CD69E5 /* ASIInputStream.m */,
+				F469170E111706B300CD69E5 /* ASINetworkQueue.h */,
+				F469170F111706B300CD69E5 /* ASINetworkQueue.m */,
+				F4691710111706B300CD69E5 /* ASINSStringAdditions.h */,
+				F4691711111706B300CD69E5 /* ASINSStringAdditions.m */,
+				F4691712111706B300CD69E5 /* Reachability.h */,
+				F4691713111706B300CD69E5 /* Reachability.m */,
+			);
+			path = ASIHttpRequest;
+			sourceTree = "<group>";
+		};
+		F469171B1117084000CD69E5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F469171C1117084000CD69E5 /* JSON.h */,
+				F469171D1117084000CD69E5 /* NSObject+SBJSON.h */,
+				F469171E1117084000CD69E5 /* NSObject+SBJSON.m */,
+				F469171F1117084000CD69E5 /* NSString+SBJSON.h */,
+				F46917201117084000CD69E5 /* NSString+SBJSON.m */,
+				F46917211117084000CD69E5 /* SBJSON.h */,
+				F46917221117084000CD69E5 /* SBJSON.m */,
+				F46917231117084000CD69E5 /* SBJsonBase.h */,
+				F46917241117084000CD69E5 /* SBJsonBase.m */,
+				F46917251117084000CD69E5 /* SBJsonParser.h */,
+				F46917261117084000CD69E5 /* SBJsonParser.m */,
+				F46917271117084000CD69E5 /* SBJsonWriter.h */,
+				F46917281117084000CD69E5 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		F48DC5E4115B4AC0000F8DBA /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				F48DC5E8115B4AC0000F8DBA /* TFHpple.h */,
+				F48DC5E9115B4AC0000F8DBA /* TFHpple.m */,
+				F48DC5EA115B4AC0000F8DBA /* TFHppleElement.h */,
+				F48DC5EB115B4AC0000F8DBA /* TFHppleElement.m */,
+				F48DC5E5115B4AC0000F8DBA /* XPath */,
+			);
+			name = Hpple;
+			sourceTree = "<group>";
+		};
+		F48DC5E5115B4AC0000F8DBA /* XPath */ = {
+			isa = PBXGroup;
+			children = (
+				F48DC5E6115B4AC0000F8DBA /* XPathQuery.m */,
+				F48DC5E7115B4AC0000F8DBA /* XPathQuery.h */,
+			);
+			name = XPath;
+			sourceTree = "<group>";
+		};
+		F48DC78E115B9B58000F8DBA /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				2804203B108E9BAB000629CD /* DetailView.xib */,
+				F463C3D31125EA750078D302 /* PadInputViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				F48DC790115B9BBA000F8DBA /* Default-Landscape.png */,
+				8D1107310486CEB800E47090 /* JahiaPad-Info.plist */,
+				F45FBB55115680AE00F020C2 /* Default-Portrait.png */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		F48DC78F115B9B63000F8DBA /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F41884CB1124433700585DA9 /* MainPhoneWindow.xib */,
+				F48DC796115B9BE5000F8DBA /* jahia57x57.png */,
+				F4786524116494770044E498 /* InputViewController.xib */,
+				F41884C7112442E200585DA9 /* JahiaPhone-Info.plist */,
+				F45FBB56115680AE00F020C2 /* Default.png */,
+				F42ECEE7115CF40300838F1A /* PhoneDetailView.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* JahiaPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "JahiaPad" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JahiaPad;
+			productName = iPadJahia;
+			productReference = 1D6058910D05DD3D006BFB54 /* JahiaPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F41884C4112442E200585DA9 /* JahiaPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F41884CA112442E300585DA9 /* Build configuration list for PBXNativeTarget "JahiaPhone" */;
+			buildPhases = (
+				F41884C1112442E200585DA9 /* Resources */,
+				F41884C2112442E200585DA9 /* Sources */,
+				F41884C3112442E200585DA9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JahiaPhone;
+			productName = JahiaPhone;
+			productReference = F41884C5112442E200585DA9 /* JahiaPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Jahia Solutions";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "JahiaMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* JahiaPad */,
+				F41884C4112442E200585DA9 /* JahiaPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				2804203C108E9BAB000629CD /* DetailView.xib in Resources */,
+				F4251D5C111DDEF700C47777 /* MailComposerViewController.xib in Resources */,
+				F41884861124336900585DA9 /* SearchViewController.xib in Resources */,
+				F455F0BE11246DFF0023CB67 /* Settings.bundle in Resources */,
+				F455F0C811246F280023CB67 /* 1.png in Resources */,
+				F455F0C911246F280023CB67 /* 2.png in Resources */,
+				F463C3D71125EA750078D302 /* PadInputViewController.xib in Resources */,
+				F45FBB59115680AE00F020C2 /* Default-Portrait.png in Resources */,
+				F48DC791115B9BBA000F8DBA /* Default-Landscape.png in Resources */,
+				F48DC799115B9BF7000F8DBA /* jahia72x72.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F41884C1112442E200585DA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41885C61124449B00585DA9 /* MainPhoneWindow.xib in Resources */,
+				F41885F31124459700585DA9 /* SearchViewController.xib in Resources */,
+				F41887611124599500585DA9 /* MailComposerViewController.xib in Resources */,
+				F455F0BD11246DFF0023CB67 /* Settings.bundle in Resources */,
+				F455F0C611246F280023CB67 /* 1.png in Resources */,
+				F455F0C711246F280023CB67 /* 2.png in Resources */,
+				F463C3D51125EA750078D302 /* PadInputViewController.xib in Resources */,
+				F45FBB58115680AE00F020C2 /* Default.png in Resources */,
+				F48DC797115B9BE5000F8DBA /* jahia57x57.png in Resources */,
+				F48DC88A115BE059000F8DBA /* jahia72x72.png in Resources */,
+				F42ECEE8115CF40300838F1A /* PhoneDetailView.xib in Resources */,
+				F4786525116494770044E498 /* InputViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* PadAppDelegate.m in Sources */,
+				2804200B108E984D000629CD /* MasterViewController.m in Sources */,
+				2804200C108E984D000629CD /* PadDetailViewController.m in Sources */,
+				28042144108EA4AA000629CD /* iPadJahia.xcdatamodel in Sources */,
+				F4691714111706B300CD69E5 /* ASIAuthenticationDialog.m in Sources */,
+				F4691715111706B300CD69E5 /* ASIFormDataRequest.m in Sources */,
+				F4691716111706B300CD69E5 /* ASIHTTPRequest.m in Sources */,
+				F4691717111706B300CD69E5 /* ASIInputStream.m in Sources */,
+				F4691718111706B300CD69E5 /* ASINetworkQueue.m in Sources */,
+				F4691719111706B300CD69E5 /* ASINSStringAdditions.m in Sources */,
+				F469171A111706B300CD69E5 /* Reachability.m in Sources */,
+				F46917291117084000CD69E5 /* NSObject+SBJSON.m in Sources */,
+				F469172A1117084000CD69E5 /* NSString+SBJSON.m in Sources */,
+				F469172B1117084000CD69E5 /* SBJSON.m in Sources */,
+				F469172C1117084000CD69E5 /* SBJsonBase.m in Sources */,
+				F469172D1117084000CD69E5 /* SBJsonParser.m in Sources */,
+				F469172E1117084000CD69E5 /* SBJsonWriter.m in Sources */,
+				F4251D5A111DDEC400C47777 /* MailComposerViewController.m in Sources */,
+				F4251D8D111DE37F00C47777 /* MasterTabBarController.m in Sources */,
+				F41884851124336900585DA9 /* SearchViewController.m in Sources */,
+				F41886801124549200585DA9 /* CommonDetailViewController.m in Sources */,
+				F463C3D61125EA750078D302 /* InputViewController.m in Sources */,
+				F403F97D1157D538008B7AE0 /* AbstractAppDelegate.m in Sources */,
+				F42E0328115A45A300DF5888 /* FileUtils.m in Sources */,
+				F48DC5EC115B4AC0000F8DBA /* XPathQuery.m in Sources */,
+				F48DC5ED115B4AC0000F8DBA /* TFHpple.m in Sources */,
+				F48DC5EE115B4AC0000F8DBA /* TFHppleElement.m in Sources */,
+				F48DC610115B4C01000F8DBA /* Configuration.m in Sources */,
+				F40E44A41163DEDC00EE2549 /* PadInputViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F41884C2112442E200585DA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41884CF1124437000585DA9 /* PhoneAppDelegate.m in Sources */,
+				F41885C51124447300585DA9 /* main.m in Sources */,
+				F41885ED1124457A00585DA9 /* ASINSStringAdditions.m in Sources */,
+				F41885EE1124457B00585DA9 /* ASINetworkQueue.m in Sources */,
+				F41885EF1124457C00585DA9 /* ASIInputStream.m in Sources */,
+				F41885F01124457F00585DA9 /* ASIHTTPRequest.m in Sources */,
+				F41885F11124458000585DA9 /* ASIFormDataRequest.m in Sources */,
+				F41885F21124458100585DA9 /* ASIAuthenticationDialog.m in Sources */,
+				F41885F41124459900585DA9 /* SearchViewController.m in Sources */,
+				F41885F51124459A00585DA9 /* SBJsonWriter.m in Sources */,
+				F41885F61124459C00585DA9 /* SBJsonParser.m in Sources */,
+				F41885F71124459D00585DA9 /* SBJsonBase.m in Sources */,
+				F41885F81124459F00585DA9 /* SBJSON.m in Sources */,
+				F41885F9112445A000585DA9 /* Reachability.m in Sources */,
+				F41885FA112445A100585DA9 /* NSString+SBJSON.m in Sources */,
+				F41885FB112445A200585DA9 /* NSObject+SBJSON.m in Sources */,
+				F41885FC112445A400585DA9 /* MasterViewController.m in Sources */,
+				F41885FD112445A500585DA9 /* MasterTabBarController.m in Sources */,
+				F41885FE112445AB00585DA9 /* MailComposerViewController.m in Sources */,
+				F418866F1124534400585DA9 /* CommonDetailViewController.m in Sources */,
+				F41887621124599C00585DA9 /* iPadJahia.xcdatamodel in Sources */,
+				F463C3D41125EA750078D302 /* InputViewController.m in Sources */,
+				F403F97C1157D538008B7AE0 /* AbstractAppDelegate.m in Sources */,
+				F42E0329115A45A300DF5888 /* FileUtils.m in Sources */,
+				F48DC5EF115B4AC0000F8DBA /* XPathQuery.m in Sources */,
+				F48DC5F0115B4AC0000F8DBA /* TFHpple.m in Sources */,
+				F48DC5F1115B4AC0000F8DBA /* TFHppleElement.m in Sources */,
+				F48DC60F115B4C01000F8DBA /* Configuration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Serge Huber (BUZ87GS5CQ)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
+				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				PRODUCT_NAME = JahiaPad;
+				PROVISIONING_PROFILE = "16510E19-C6EB-47EE-9855-D2820317D7D7";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
+				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				PRODUCT_NAME = JahiaPad;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+		F41884C8112442E200585DA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Serge Huber (BUZ87GS5CQ)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "JahiaPhone-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-DIPHONE_ONLY";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JahiaPhone;
+				PROVISIONING_PROFILE = "16510E19-C6EB-47EE-9855-D2820317D7D7";
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		F41884C9112442E200585DA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "JahiaPhone-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-DIPHONE_ONLY";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JahiaPhone;
+				SDKROOT = iphoneos3.2;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		F4758C9311EEE28500245CB8 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Distribution;
+		};
+		F4758C9411EEE28500245CB8 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
+				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				PRODUCT_NAME = JahiaPad;
+				PROVISIONING_PROFILE = "500596EC-FED4-4F97-A23D-1E1826D00175";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F4758C9511EEE28500245CB8 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "JahiaPhone-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-DIPHONE_ONLY";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JahiaPhone;
+				PROVISIONING_PROFILE = "500596EC-FED4-4F97-A23D-1E1826D00175";
+				SDKROOT = iphoneos3.2;
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		F4758CA311EEE3F600245CB8 /* Adhoc distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = "Adhoc distribution";
+		};
+		F4758CA411EEE3F600245CB8 /* Adhoc distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
+				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				PRODUCT_NAME = JahiaPad;
+				PROVISIONING_PROFILE = "72FAFFA7-0176-4505-AE69-588C17A651BC";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Adhoc distribution";
+		};
+		F4758CA511EEE3F600245CB8 /* Adhoc distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "JahiaPhone-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-DIPHONE_ONLY";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JahiaPhone;
+				PROVISIONING_PROFILE = "72FAFFA7-0176-4505-AE69-588C17A651BC";
+				SDKROOT = iphoneos3.2;
+				ZERO_LINK = NO;
+			};
+			name = "Adhoc distribution";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "JahiaPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				F4758C9411EEE28500245CB8 /* Distribution */,
+				F4758CA411EEE3F600245CB8 /* Adhoc distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "JahiaMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				F4758C9311EEE28500245CB8 /* Distribution */,
+				F4758CA311EEE3F600245CB8 /* Adhoc distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F41884CA112442E300585DA9 /* Build configuration list for PBXNativeTarget "JahiaPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F41884C8112442E200585DA9 /* Debug */,
+				F41884C9112442E200585DA9 /* Release */,
+				F4758C9511EEE28500245CB8 /* Distribution */,
+				F4758CA511EEE3F600245CB8 /* Adhoc distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,27 @@
+
+How to install & use JahiaPad : 
+
+1. Uncompress the contents of the mobile.zip file into tomcat/webapps/mobile . The configuration
+for the iPhone App is in the appconfig.plist file and may be customized to fit the site you want 
+to access
+
+2. Deploy both the certificate and the app onto the iPad/iPhone by drag & dropping them onto the
+iTunes Window
+
+3. Sync your device with iTunes
+
+4. Install and Start Jahia, install the ACME demo as the first website !
+
+5. You now need to setup your network on the iPad so that it can connect to the Jahia server. The easiest case is when both the iPad and the Jahia server are on the same network and can talk to each other. One way to test this is simply to use the Safari browser on the iPad to connect to the Jahia server. If it works that's fine. If you are using a laptop for a demonstration, you will need to setup an adhoc network and internet connection sharing for the iPad to be able to connect to the Jahia server running on your laptop. 
+
+6. Launch JahiaPad once, it will not work, don't worry :) 
+
+7. Go into the device Settings -> JahiaPad and enter the proper connect information. Make sure you
+point it to EDIT mode and the proper IP address of your machine on the adhoc network. Make sure you
+use either "en" or "fr" for the language.
+
+8. Launch JahiaPad again, it should now connect to your Jahia server and you should see the requests
+coming through and content render
+
+9. Make sure you demo on the iPad the fact that the device rotation changes the view, and also that
+you show how PDFs can be opened directly in the application. The contribution part is currently not working, so clicking on the + buttons and performing input will not perform as expected and will be fixed at a later time.
