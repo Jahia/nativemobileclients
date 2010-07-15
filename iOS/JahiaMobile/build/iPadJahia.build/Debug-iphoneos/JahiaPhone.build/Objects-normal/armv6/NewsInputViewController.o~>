@@ -1,2 +1,0 @@
-/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/NewsInputViewController.m: In function '-[NewsInputViewController saveAction:forEvent:]':
-/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/NewsInputViewController.m:72: warning: unused variable 'response'

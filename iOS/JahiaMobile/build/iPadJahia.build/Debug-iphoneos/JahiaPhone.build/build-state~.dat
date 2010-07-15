@@ -1,1162 +1,0 @@
-TJahiaPhone
-v7
-r0
-t287605234.164297
-cCheck dependencies
-cCpResource build/Debug-iphoneos/JahiaPhone.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/ResourceRules.plist
-cProcessInfoPlistFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Info.plist JahiaPhone-Info.plist
-cCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/MainPhoneWindow.xib
-cCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/jahiaicon57x57.png jahiaicon57x57.png
-cCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.xib
-cCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default.png phone/Default.png
-cCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/MailComposerViewController.xib
-cCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/DetailView.xib
-cCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default-Landscape.png Default-Landscape.png
-cCpResource build/Debug-iphoneos/JahiaPhone.app/Settings.bundle Settings.bundle
-cCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/1.png 1.png
-cCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/2.png 2.png
-cProcessPCH /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h.gch /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal armv6 objective-c com.apple.compilers.gcc.4_2
-cDataModelCompile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/iPadJahia.mom /Users/loom/Documents/work/iphone/Projects/iPadJahia/iPadJahia.xcdatamodel
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/JahiaPhoneAppDelegate.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/main.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINSStringAdditions.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINetworkQueue.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIInputStream.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIHTTPRequest.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIFormDataRequest.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIAuthenticationDialog.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SearchViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonWriter.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonParser.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonBase.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJSON.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/Reachability.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSString+SBJSON.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSObject+SBJSON.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterTabBarController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MailComposerViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/PhoneDetailViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone normal armv6
-cGenerateDSYMFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app.dSYM /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone
-cProcessProductPackaging "/Users/loom/Library/MobileDevice/Provisioning Profiles/7336FCF3-AFC0-4D9E-A0C4-009488E37F6C.mobileprovision" /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/embedded.mobileprovision
-cTouch /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app
-cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/Entitlements.plist /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent
-cCodeSign /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk
-c000000004B47D7B70000000000000110
-t1262999479
-s272
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/Entitlements.plist
-c000000004ABDB88400000000000000DD
-t1253947524
-s221
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/ResourceRules.plist
-c000000004ABDB88400000000000001E5
-t1253947524
-s485
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
-c000000004ABDBCDC0000000000290770
-t1253948636
-s2688880
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
-c000000004ABDBC2B00000000000004CF
-t1253948459
-s1231
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/CoreData.framework/CoreData
-c000000004ABDBE6E0000000000296760
-t1253949038
-s2713440
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
-c000000004ABDBE5C000000000000046B
-t1253949020
-s1131
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
-c000000004ABDB8B40000000000000A99
-t1253947572
-s2713
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004ABDBA1300000000005F49B0
-t1253947923
-s6244784
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004ABDBDCF0000000000501440
-t1253948879
-s5248064
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004ABDBDA40000000000001355
-t1253948836
-s4949
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
-c000000004ABDD36400000000000028E4
-t1253954404
-s10468
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.h
-c000000004ABDD3640000000000000092
-t1253954404
-s146
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/MessageUI.framework/MessageUI
-c000000004ABDD36F00000000000C3370
-t1253954415
-s799600
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
-c000000004ABDBB690000000000001A78
-t1253948265
-s6776
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-c000000004ABDBB7700000000000D74C0
-t1253948279
-s881856
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004ABDD0D10000000000000788
-t1253953745
-s1928
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004ABDD2250000000001B3F550
-t1253954085
-s28570960
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/arpa/inet.h
-c000000004ABDAF5B0000000000001533
-t1253945179
-s5427
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/ifaddrs.h
-c000000004ABDAF660000000000000782
-t1253945190
-s1922
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/netdb.h
-c000000004ABDAF8C0000000000003057
-t1253945228
-s12375
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/netinet/in.h
-c000000004ABDB473000000000000535B
-t1253946483
-s21339
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/netinet6/in6.h
-c000000004ABDB4740000000000004F5B
-t1253946484
-s20315
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/stdio.h
-c000000004ABDAF790000000000003D1D
-t1253945209
-s15645
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/sys/socket.h
-c000000004ABDB4790000000000005660
-t1253946489
-s22112
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/include/zlib.h
-c000000004ABDB4BA00000000000102A5
-t1253946554
-s66213
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/usr/lib/libz.1.2.3.dylib
-c000000004ABDB4BC0000000000033620
-t1253946556
-s210464
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/1.png
-c000000004B7437180000000000000180
-t1265907480
-s384
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/2.png
-c000000004B74374B00000000000001AF
-t1265907531
-s431
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.h
-c000000004B63314E0000000000000388
-t1264791886
-s904
-i<Foundation/Foundation.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.m
-c000000004B63314E0000000000002124
-t1264791886
-s8484
-i"ASIAuthenticationDialog.h"
-i"ASIHTTPRequest.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.h
-c000000004B63314E0000000000000737
-t1264791886
-s1847
-i<Foundation/Foundation.h>
-i"ASIHTTPRequest.h"
-i"ASIHTTPRequestConfig.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.m
-c000000004B63314E0000000000002668
-t1264791886
-s9832
-i"ASIFormDataRequest.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.h
-c000000004B63314E0000000000007A7C
-t1264791886
-s31356
-i<Foundation/Foundation.h>
-i<CFNetwork/CFNetwork.h>
-i<stdio.h>
-i"ASIHTTPRequestConfig.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.m
-c000000004B63314E0000000000021633
-t1264791886
-s136755
-i"ASIHTTPRequest.h"
-i<zlib.h>
-i"Reachability.h"
-i"ASIAuthenticationDialog.h"
-i<SystemConfiguration/SystemConfiguration.h>
-i"ASIInputStream.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequestConfig.h
-c000000004B66D5A50000000000000832
-t1265030565
-s2098
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.h
-c000000004B63314E00000000000003C9
-t1264791886
-s969
-i<Foundation/Foundation.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.m
-c000000004B63314E0000000000000814
-t1264791886
-s2068
-i"ASIInputStream.h"
-i"ASIHTTPRequest.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.h
-c000000004B63314E0000000000000173
-t1264791886
-s371
-i<Foundation/Foundation.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.m
-c000000004B63314E000000000000030B
-t1264791886
-s779
-i"ASINSStringAdditions.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.h
-c000000004B63314E0000000000001454
-t1264791886
-s5204
-i<Foundation/Foundation.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.m
-c000000004B63314E0000000000002F43
-t1264791886
-s12099
-i"ASINetworkQueue.h"
-i"ASIHTTPRequest.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.h
-c000000004B63314E0000000000000F19
-t1264791886
-s3865
-i<Foundation/Foundation.h>
-i<SystemConfiguration/SystemConfiguration.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.m
-c000000004B63314E00000000000023A7
-t1264791886
-s9127
-i<sys/socket.h>
-i<netinet/in.h>
-i<netinet6/in6.h>
-i<arpa/inet.h>
-i<ifaddrs.h>
-i<netdb.h>
-i<CoreFoundation/CoreFoundation.h>
-i"Reachability.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/JSON.h
-c000000004A748DD200000000000008F9
-t1249152466
-s2297
-i"SBJSON.h"
-i"NSObject+SBJSON.h"
-i"NSString+SBJSON.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.h
-c000000004A748DD20000000000000A01
-t1249152466
-s2561
-i<Foundation/Foundation.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.m
-c000000004AAB9B07000000000000089E
-t1252760327
-s2206
-i"NSObject+SBJSON.h"
-i"SBJsonWriter.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.h
-c000000004A748DD20000000000000916
-t1249152466
-s2326
-i<Foundation/Foundation.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.m
-c000000004AAB9B07000000000000087D
-t1252760327
-s2173
-i"NSString+SBJSON.h"
-i"SBJsonParser.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.h
-c000000004A748DD20000000000000AED
-t1249152466
-s2797
-i<Foundation/Foundation.h>
-i"SBJsonParser.h"
-i"SBJsonWriter.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.m
-c000000004A748DD20000000000001ABC
-t1249152466
-s6844
-i"SBJSON.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.h
-c000000004A748DD20000000000000B82
-t1249152466
-s2946
-i<Foundation/Foundation.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.m
-c000000004A748DD20000000000000AC1
-t1249152466
-s2753
-i"SBJsonBase.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.h
-c000000004A748DD20000000000000C0B
-t1249152466
-s3083
-i<Foundation/Foundation.h>
-i"SBJsonBase.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.m
-c000000004A748DD200000000000036CF
-t1249152466
-s14031
-i"SBJsonParser.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.h
-c000000004A748DD20000000000001140
-t1249152466
-s4416
-i<Foundation/Foundation.h>
-i"SBJsonBase.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.m
-c000000004A748DD20000000000001E83
-t1249152466
-s7811
-i"SBJsonWriter.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.h
-c000000004B741C4600000000000003CE
-t1265900614
-s974
-i<Foundation/Foundation.h>
-i<CoreData/CoreData.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m
-c000000004B7439750000000000001E01
-t1265908085
-s7681
-i"JahiaPhoneAppDelegate.h"
-i"MasterViewController.h"
-i"PhoneDetailViewController.h"
-i"MailComposerViewController.h"
-i"SearchViewController.h"
-i"MasterTabBarController.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.h
-c000000004A21E52F0000000000000B5E
-t1243735343
-s2910
-i<UIKit/UIKit.h>
-i<MessageUI/MessageUI.h>
-i<MessageUI/MFMailComposeViewController.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.m
-c000000004B6DA9B900000000000019A5
-t1265478073
-s6565
-i"MailComposerViewController.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.h
-c000000004B6DAC3B00000000000000F2
-t1265478715
-s242
-i<UIKit/UIKit.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.m
-c000000004B6DAC1F00000000000005E9
-t1265478687
-s1513
-i"MasterTabBarController.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.h
-c000000004B741CE700000000000003F5
-t1265900775
-s1013
-i<UIKit/UIKit.h>
-i<CoreData/CoreData.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m
-c000000004B74416F0000000000002B67
-t1265910127
-s11111
-i"MasterViewController.h"
-i"PhoneDetailViewController.h"
-i"ASIFormDataRequest.h"
-i"JSON.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.h
-c000000004B741F030000000000000269
-t1265901315
-s617
-i<UIKit/UIKit.h>
-i<CoreData/CoreData.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.m
-c000000004B741DC60000000000001939
-t1265900998
-s6457
-i"PhoneDetailViewController.h"
-i"MasterViewController.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.h
-c000000004B7420AF00000000000004F8
-t1265901743
-s1272
-i<UIKit/UIKit.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.m
-c000000004B7441BB0000000000002C9C
-t1265910203
-s11420
-i"SearchViewController.h"
-i"ASIFormDataRequest.h"
-i"JSON.h"
-i"PhoneDetailViewController.h"
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.xib
-c000000004B74173A00000000000057FF
-t1265899322
-s22527
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Default-Landscape.png
-c000000004B61EEFB00000000000105EF
-t1264709371
-s67055
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/DetailView.xib
-c000000004B61A74E0000000000005A45
-t1264691022
-s23109
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/MailComposerViewController.xib
-c000000004B6DA9A40000000000005996
-t1265478052
-s22934
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/MainPhoneWindow.xib
-c000000004B7413CB0000000000004DDA
-t1265898443
-s19930
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/Settings.bundle
-c000000004B743E180000000000000088
-t1265909272
-s136
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app
-t1265912434
-s680
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app.dSYM
-t1265912433
-s102
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/1.png
-t1265912430
-s527
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/2.png
-t1265912430
-s651
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default-Landscape.png
-t1265912431
-s72704
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default.png
-t1265912429
-s19700
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/DetailView.nib
-t1265912430
-s2010
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Info.plist
-t1265912429
-s625
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone
-t1265912433
-s335308
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/MailComposerViewController.nib
-t1265912430
-s3026
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/MainPhoneWindow.nib
-t1265912429
-s1332
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/PkgInfo
-t1265912429
-s8
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/ResourceRules.plist
-t1265912429
-s485
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/SearchViewController.nib
-t1265912429
-s2051
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Settings.bundle
-t1265912430
-s136
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/embedded.mobileprovision
-t1265912433
-s9216
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/iPadJahia.mom
-t1265912431
-s1216
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/jahiaicon57x57.png
-t1265912429
-s5668
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent
-t1265912433
-s323
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIAuthenticationDialog.o
-t1265912432
-s68380
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIFormDataRequest.o
-t1265912432
-s36736
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIHTTPRequest.o
-t1265912433
-s329424
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIInputStream.o
-t1265912431
-s19820
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINSStringAdditions.o
-t1265912431
-s9260
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINetworkQueue.o
-t1265912432
-s53280
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/JahiaPhone.LinkFileList
-c000000004B744A6D0000000000000B80
-t1265912429
-s2944
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/JahiaPhoneAppDelegate.o
-t1265912431
-s62200
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MailComposerViewController.o
-t1265912433
-s44976
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterTabBarController.o
-t1265912433
-s32600
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterViewController.o
-t1265912433
-s66724
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSObject+SBJSON.o
-t1265912433
-s8332
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSString+SBJSON.o
-t1265912432
-s8256
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/PhoneDetailViewController.o
-t1265912433
-s43028
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/Reachability.o
-t1265912432
-s22428
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJSON.o
-t1265912432
-s18512
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonBase.o
-t1265912432
-s12944
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonParser.o
-t1265912432
-s34600
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonWriter.o
-t1265912432
-s24180
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SearchViewController.o
-t1265912432
-s71444
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/main.o
-t1265912431
-s6476
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/iPadJahia.xcdatamodel
-c000000004B61A2A70000000000000088
-t1264689831
-s136
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/jahiaicon57x57.png
-c000000004B61ABD6000000000000140A
-t1264692182
-s5130
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/main.m
-c000000004B61A2A80000000000000163
-t1264689832
-s355
-i<UIKit/UIKit.h>
-
-N/Users/loom/Documents/work/iphone/Projects/iPadJahia/phone/Default.png
-c000000004B74200F0000000000004731
-t1265901583
-s18225
-
-N/Users/loom/Library/MobileDevice/Provisioning Profiles/7336FCF3-AFC0-4D9E-A0C4-009488E37F6C.mobileprovision
-c000000004996EFB80000000000002400
-t1234628536
-s9216
-
-N/var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-dvqdfezbmyzoahbscztklqaykohl/UIKit.h.gch
-t2
-s0
-
-N/var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h.gch
-t1265912431
-s8388764
-
-NJahiaPhone-Info.plist
-c000000004B740D8600000000000002F8
-t1265896838
-s760
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies287605229#287605229#0(0"0(0#1#0"4300903632#0"0#
-
-CCodeSign /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app
-s287605233.763000
-e287605234.164169
-r1
-xCodeSign
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app
-lSLF07#2@44"CodeSign build/Debug-iphoneos/JahiaPhone.app287605233#287605241#0(0"0(0#0#88"/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app4300903632#723"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv IGNORE_CODESIGN_ALLOCATE_RADAR_7181968 /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign -f -s "iPhone Developer: Serge Huber" --resource-rules=/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/ResourceRules.plist --entitlements /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIAuthenticationDialog.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.148983
-e287605232.278864
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIAuthenticationDialog.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@109"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.m287605232#287605241#0(0"0(0#0#101"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.m4300903632#1984"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIAuthenticationDialog.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIAuthenticationDialog.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIFormDataRequest.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.030211
-e287605232.148881
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIFormDataRequest.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@104"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.m287605232#287605241#0(0"0(0#0#96"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.m4300903632#1974"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIFormDataRequest.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIFormDataRequest.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIHTTPRequest.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605231.972225
-e287605233.065572
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIHTTPRequest.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@100"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.m287605231#287605241#0(0"0(0#0#92"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.m4300903632#1966"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIHTTPRequest.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIHTTPRequest.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIInputStream.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605231.896834
-e287605231.972126
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIInputStream.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@100"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.m287605231#287605241#0(0"0(0#0#92"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.m4300903632#1966"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASIInputStream.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASIInputStream.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINSStringAdditions.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605231.839405
-e287605231.896732
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINSStringAdditions.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@106"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.m287605231#287605241#0(0"0(0#0#98"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.m4300903632#1978"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINSStringAdditions.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINSStringAdditions.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINetworkQueue.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605231.859362
-e287605232.030112
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINetworkQueue.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@101"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.m287605231#287605241#0(0"0(0#0#93"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.m4300903632#1968"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/ASINetworkQueue.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/ASINetworkQueue.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/JahiaPhoneAppDelegate.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605231.666183
-e287605231.859262
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/JahiaPhoneAppDelegate.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m: In function '-[JahiaPhoneAppDelegate persistentStoreCoordinator]':
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: 'JahiaPhoneAppDelegate' may not respond to '-applicationDocumentsDirectory'
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: (Messages without a matching method signature
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: will be assumed to return 'id' and accept
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: '...' as arguments.)
-lSLF07#2@92"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m287605231#287605241#0(734"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m: In function '-[JahiaPhoneAppDelegate persistentStoreCoordinator]':/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: 'JahiaPhoneAppDelegate' may not respond to '-applicationDocumentsDirectory'/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: (Messages without a matching method signature/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: will be assumed to return 'id' and accept/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m:135: warning: '...' as arguments.)2(22@75"'JahiaPhoneAppDelegate' may not respond to '-applicationDocumentsDirectory'287605231#153#175#0(6@84"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m287600885#135#0#135#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)287605231#328#145#0(6@84"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m287600885#135#0#135#0#0"0(0#0#84"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m4300903632#1965"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JahiaPhoneAppDelegate.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/JahiaPhoneAppDelegate.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MailComposerViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605233.121944
-e287605233.201201
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MailComposerViewController.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@97"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.m287605233#287605241#0(0"0(0#0#89"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.m4300903632#1975"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MailComposerViewController.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MailComposerViewController.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterTabBarController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605233.065672
-e287605233.121845
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterTabBarController.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@93"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.m287605233#287605241#0(0"0(0#0#85"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.m4300903632#1967"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterTabBarController.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterTabBarController.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605233.024790
-e287605233.216463
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterViewController.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m: In function '-[MasterViewController viewDidLoad]':
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: 'MasterViewController' may not respond to '-displayElementAtIndex:'
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: (Messages without a matching method signature
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: will be assumed to return 'id' and accept
-o/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: '...' as arguments.)
-lSLF07#2@91"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m287605233#287605241#0(701"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m: In function '-[MasterViewController viewDidLoad]':/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: 'MasterViewController' may not respond to '-displayElementAtIndex:'/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: (Messages without a matching method signature/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: will be assumed to return 'id' and accept/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m:90: warning: '...' as arguments.)2(22@67"'MasterViewController' may not respond to '-displayElementAtIndex:'287605233#136#165#0(6@83"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m287602927#90#0#90#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)287605233#301#143#0(6@83"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m287602927#90#0#90#0#0"0(0#0#83"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m4300903632#1963"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/MasterViewController.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/MasterViewController.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSObject+SBJSON.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.968310
-e287605233.024671
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSObject+SBJSON.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.m287605232#287605241#0(0"0(0#0#83"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.m4300903632#1958"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSObject+SBJSON.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSObject+SBJSON.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSString+SBJSON.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.914211
-e287605232.968210
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSString+SBJSON.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.m287605232#287605241#0(0"0(0#0#83"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.m4300903632#1958"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/NSString+SBJSON.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/NSString+SBJSON.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/PhoneDetailViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605233.201303
-e287605233.281426
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/PhoneDetailViewController.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@96"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.m287605233#287605241#0(0"0(0#0#88"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.m4300903632#1973"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/PhoneDetailViewController.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/PhoneDetailViewController.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/Reachability.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.808753
-e287605232.914112
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/Reachability.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@98"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.m287605232#287605241#0(0"0(0#0#90"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.m4300903632#1962"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/ASIHttpRequest/Reachability.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/Reachability.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJSON.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.733020
-e287605232.808651
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJSON.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.m287605232#287605241#0(0"0(0#0#74"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.m4300903632#1940"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJSON.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJSON.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonBase.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.671749
-e287605232.732919
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonBase.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@86"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.m287605232#287605241#0(0"0(0#0#78"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.m4300903632#1948"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonBase.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonBase.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonParser.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.519997
-e287605232.671641
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonParser.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@88"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.m287605232#287605241#0(0"0(0#0#80"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.m4300903632#1952"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonParser.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonParser.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonWriter.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.426445
-e287605232.519812
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonWriter.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@88"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.m287605232#287605241#0(0"0(0#0#80"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.m4300903632#1952"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/JSON/SBJsonWriter.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SBJsonWriter.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SearchViewController.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605232.278965
-e287605232.426347
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SearchViewController.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.m287605232#287605241#0(0"0(0#0#83"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.m4300903632#1963"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/SearchViewController.o0#
-
-CCompileC build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/main.o /Users/loom/Documents/work/iphone/Projects/iPadJahia/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605231.770460
-e287605231.839302
-r1
-xCompileC
-xbuild/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/main.o
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/main.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/main.m287605231#287605241#0(0"0(0#0#59"/Users/loom/Documents/work/iphone/Projects/iPadJahia/main.m4300903632#1923"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -include /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/main.m -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/main.o0#
-
-CCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.xib
-s287605229.539600
-e287605229.976592
-r1
-xCompileXIB
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.xib
-lSLF07#2@43"CompileXIB Classes/SearchViewController.xib287605229#287605229#0(0"0(0#0#85"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.xib4300903632#541"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/SearchViewController.nib /Users/loom/Documents/work/iphone/Projects/iPadJahia/Classes/SearchViewController.xib0#
-
-CCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/DetailView.xib
-s287605229.995389
-e287605230.574435
-r1
-xCompileXIB
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/DetailView.xib
-lSLF07#2@25"CompileXIB DetailView.xib287605229#287605230#0(0"0(0#0#67"/Users/loom/Documents/work/iphone/Projects/iPadJahia/DetailView.xib4300903632#513"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/DetailView.nib /Users/loom/Documents/work/iphone/Projects/iPadJahia/DetailView.xib0#
-
-CCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/MailComposerViewController.xib
-s287605229.976689
-e287605230.422069
-r1
-xCompileXIB
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/MailComposerViewController.xib
-lSLF07#2@41"CompileXIB MailComposerViewController.xib287605229#287605230#0(0"0(0#0#83"/Users/loom/Documents/work/iphone/Projects/iPadJahia/MailComposerViewController.xib4300903632#545"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/MailComposerViewController.nib /Users/loom/Documents/work/iphone/Projects/iPadJahia/MailComposerViewController.xib0#
-
-CCompileXIB /Users/loom/Documents/work/iphone/Projects/iPadJahia/MainPhoneWindow.xib
-s287605229.488550
-e287605229.804811
-r1
-xCompileXIB
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/MainPhoneWindow.xib
-lSLF07#2@30"CompileXIB MainPhoneWindow.xib287605229#287605229#0(0"0(0#0#72"/Users/loom/Documents/work/iphone/Projects/iPadJahia/MainPhoneWindow.xib4300903632#523"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/MainPhoneWindow.nib /Users/loom/Documents/work/iphone/Projects/iPadJahia/MainPhoneWindow.xib0#
-
-CCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/1.png 1.png
-s287605230.577436
-e287605230.636056
-r1
-xCopyPNGFile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/1.png
-x1.png
-lSLF07#2@59"CopyPNGFile build/Debug-iphoneos/JahiaPhone.app/1.png 1.png287605230#287605230#0(0"0(0#0#58"/Users/loom/Documents/work/iphone/Projects/iPadJahia/1.png4300903632#595"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/loom/Documents/work/iphone/Projects/iPadJahia/1.png /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/1.png0#
-
-CCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/2.png 2.png
-s287605230.636151
-e287605230.669442
-r1
-xCopyPNGFile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/2.png
-x2.png
-lSLF07#2@59"CopyPNGFile build/Debug-iphoneos/JahiaPhone.app/2.png 2.png287605230#287605230#0(0"0(0#0#58"/Users/loom/Documents/work/iphone/Projects/iPadJahia/2.png4300903632#595"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/loom/Documents/work/iphone/Projects/iPadJahia/2.png /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/2.png0#
-
-CCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default-Landscape.png Default-Landscape.png
-s287605230.422168
-e287605231.005327
-r1
-xCopyPNGFile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default-Landscape.png
-xDefault-Landscape.png
-lSLF07#2@91"CopyPNGFile build/Debug-iphoneos/JahiaPhone.app/Default-Landscape.png Default-Landscape.png287605230#287605241#0(0"0(0#0#74"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Default-Landscape.png4300903632#627"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/loom/Documents/work/iphone/Projects/iPadJahia/Default-Landscape.png /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default-Landscape.png0#
-
-CCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default.png phone/Default.png
-s287605229.804906
-e287605229.995298
-r1
-xCopyPNGFile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default.png
-xphone/Default.png
-lSLF07#2@77"CopyPNGFile build/Debug-iphoneos/JahiaPhone.app/Default.png phone/Default.png287605229#287605229#0(0"0(0#0#70"/Users/loom/Documents/work/iphone/Projects/iPadJahia/phone/Default.png4300903632#613"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/loom/Documents/work/iphone/Projects/iPadJahia/phone/Default.png /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Default.png0#
-
-CCopyPNGFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/jahiaicon57x57.png jahiaicon57x57.png
-s287605229.489322
-e287605229.539511
-r1
-xCopyPNGFile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/jahiaicon57x57.png
-xjahiaicon57x57.png
-lSLF07#2@85"CopyPNGFile build/Debug-iphoneos/JahiaPhone.app/jahiaicon57x57.png jahiaicon57x57.png287605229#287605229#0(0"0(0#0#71"/Users/loom/Documents/work/iphone/Projects/iPadJahia/jahiaicon57x57.png4300903632#621"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/loom/Documents/work/iphone/Projects/iPadJahia/jahiaicon57x57.png /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/jahiaicon57x57.png0#
-
-CCpResource build/Debug-iphoneos/JahiaPhone.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/ResourceRules.plist
-s287605229.469229
-e287605229.488464
-r1
-xCpResource
-xbuild/Debug-iphoneos/JahiaPhone.app/ResourceRules.plist
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/ResourceRules.plist
-lSLF07#2@96"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/ResourceRules.plist287605229#287605229#0(0"0(0#0#91"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/ResourceRules.plist4300903632#513"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/ResourceRules.plist /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app0#
-
-CCpResource build/Debug-iphoneos/JahiaPhone.app/Settings.bundle Settings.bundle
-s287605230.574521
-e287605230.590180
-r1
-xCpResource
-xbuild/Debug-iphoneos/JahiaPhone.app/Settings.bundle
-xSettings.bundle
-lSLF07#2@20"Copy Settings.bundle287605230#287605230#0(0"0(0#0#68"/Users/loom/Documents/work/iphone/Projects/iPadJahia/Settings.bundle4300903632#490"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/loom/Documents/work/iphone/Projects/iPadJahia/Settings.bundle /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app0#
-
-CDataModelCompile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/iPadJahia.mom /Users/loom/Documents/work/iphone/Projects/iPadJahia/iPadJahia.xcdatamodel
-s287605231.665360
-e287605231.770355
-r1
-xDataModelCompile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/iPadJahia.mom
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/iPadJahia.xcdatamodel
-lSLF07#2@82"Compile /Users/loom/Documents/work/iphone/Projects/iPadJahia/iPadJahia.xcdatamodel287605231#287605241#0(0"0(0#0#74"/Users/loom/Documents/work/iphone/Projects/iPadJahia/iPadJahia.xcdatamodel4300903632#390"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc /Users/loom/Documents/work/iphone/Projects/iPadJahia/iPadJahia.xcdatamodel /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/iPadJahia.mom0#
-
-CGenerateDSYMFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app.dSYM /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone
-s287605233.632601
-e287605233.718038
-r1
-xGenerateDSYMFile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app.dSYM
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone
-lSLF07#2@104"GenerateDSYMFile build/Debug-iphoneos/JahiaPhone.app.dSYM build/Debug-iphoneos/JahiaPhone.app/JahiaPhone287605233#287605241#0(0"0(0#0#99"/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone4300903632#413"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app.dSYM0#
-
-CLd /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone normal armv6
-s287605233.281518
-e287605233.632502
-r1
-xLd
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone
-xnormal
-xarmv6
-lSLF07#2@104"Link /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone287605233#287605241#0(0"0(0#0#0"4300903632#1054"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -L/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -filelist /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/Objects-normal/armv6/JahiaPhone.LinkFileList -dead_strip -framework Foundation -framework UIKit -miphoneos-version-min=3.1.2 -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreData -framework SystemConfiguration -framework MessageUI -lz.1.2.3 -framework CFNetwork -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/JahiaPhone0#
-
-CProcessInfoPlistFile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Info.plist JahiaPhone-Info.plist
-s287605229.470505
-e287605229.483370
-r1
-xProcessInfoPlistFile
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Info.plist
-xJahiaPhone-Info.plist
-lSLF07#2@29"Process JahiaPhone-Info.plist287605229#287605229#0(0"0(0#0#74"/Users/loom/Documents/work/iphone/Projects/iPadJahia/JahiaPhone-Info.plist4300903632#630"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility JahiaPhone-Info.plist -genpkginfo /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/ResourceRules.plist -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/Info.plist0#
-
-CProcessPCH /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-dvqdfezbmyzoahbscztklqaykohl/UIKit.h.gch /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal armv6 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h.gch /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal armv6 objective-c com.apple.compilers.gcc.4_2
-s287605231.005530
-e287605231.665247
-r1
-xProcessPCH
-x/var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h.gch
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@140"Precompile /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h287605231#287605241#0(0"0(0#0#129"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h4300903632#1860"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.2 -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-generated-files.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-own-target-headers.hmap -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-all-target-headers.hmap -iquote /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone-project-headers.hmap -F/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/include -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources/armv6 -I/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/DerivedSources -DIPHONE_ONLY -c /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h -o /var/folders/95/95xwCQ0mEeivSCrcsKn1i++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-gyunqnjtygtamqefohzoysullhqy/UIKit.h.gch0#
-
-CProcessProductPackaging "/Users/loom/Library/MobileDevice/Provisioning Profiles/7336FCF3-AFC0-4D9E-A0C4-009488E37F6C.mobileprovision" /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/embedded.mobileprovision
-s287605233.718160
-e287605233.719566
-r1
-xProcessProductPackaging
-x/Users/loom/Library/MobileDevice/Provisioning Profiles/7336FCF3-AFC0-4D9E-A0C4-009488E37F6C.mobileprovision
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/embedded.mobileprovision
-lSLF07#2@194"ProcessProductPackaging "/Users/loom/Library/MobileDevice/Provisioning Profiles/7336FCF3-AFC0-4D9E-A0C4-009488E37F6C.mobileprovision" build/Debug-iphoneos/JahiaPhone.app/embedded.mobileprovision287605233#287605241#0(0"0(0#0#113"/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/embedded.mobileprovision4300903632#453"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/loom/Library/MobileDevice/Provisioning Profiles/7336FCF3-AFC0-4D9E-A0C4-009488E37F6C.mobileprovision" -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app/embedded.mobileprovision0#
-
-CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/Entitlements.plist /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent
-s287605233.742871
-e287605233.762930
-r1
-xProcessProductPackaging
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/Entitlements.plist
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent
-lSLF07#2@185"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/Entitlements.plist build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent287605233#287605241#0(0"0(0#0#123"/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent4300903632#470"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/iPadJahia.build/Debug-iphoneos/JahiaPhone.build/JahiaPhone.xcent0#
-
-CTouch /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app
-s287605233.719636
-e287605233.742765
-r1
-xTouch
-x/Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app
-lSLF07#2@94"Touch /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app287605233#287605241#0(0"0(0#0#0"4300903632#295"    cd /Users/loom/Documents/work/iphone/Projects/iPadJahia    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/loom/Documents/work/iphone/Projects/iPadJahia/build/Debug-iphoneos/JahiaPhone.app0#
-
