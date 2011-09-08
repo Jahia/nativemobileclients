@@ -59,10 +59,12 @@
 	NSString *findString = [NSString stringWithFormat:@"%@/cms/find/%@/%@", config.baseURL, [config getWorkspace], config.language, nil];
 	NSURL *findUrl = [NSURL URLWithString:findString];
 	ASIFormDataRequest *findRequest = [ASIFormDataRequest requestWithURL:findUrl];
+    NSLog(@"Using query : %@", listQuery);
 	[findRequest setPostValue:listQuery forKey:@"query"];
 	[findRequest setPostValue:@"JCR-SQL2" forKey:@"language"];	
-	[findRequest setPostValue:@"4" forKey:@"depthLimit"];	
+	[findRequest setPostValue:@"1" forKey:@"depthLimit"];	
 	[findRequest setPostValue:@"20" forKey:@"limit"];	
+    [findRequest setPostValue:@"true" forKey:@"getNodes"];
 	[findRequest startSynchronous];
 	error = [findRequest error];
 	NSString *findResponse = nil;
@@ -228,7 +230,7 @@
 			} else if ([subNode isKindOfClass:[NSArray class]]) {
 				NSEnumerator *e = [subNode objectEnumerator];
 				id object;
-				while (object = [e nextObject]) {
+				while ((object = [e nextObject])) {
 					if ([object isKindOfClass:[NSDictionary class]]) {
 						result = [self findObjectInNodeOrSubNodes:object forKey:key];
 						if (result != nil) {
@@ -253,17 +255,19 @@
 	}
 
 	Configuration *config = [Configuration sharedInstance];
-		
+
+	NSDictionary *mappings = [config mappingsForTabBarConfig:self.listName];
+    
 	NSMutableDictionary *node = [searchResults objectAtIndex:index];
 	NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@/cms/render/%@/%@", config.baseURL, [config getWorkspace], config.language, nil];
-	NSString *fullPath = [node objectForKey:@"path"];
+	NSString *fullPath = [node objectForKey:[mappings objectForKey:@"path"]];
 	if (fullPath != nil) {
 		[urlString appendString:fullPath];
 		[urlString appendString:@".html"];
 		
-		[detailViewController changeURL:urlString urlTitle:[node objectForKey:@"jcr:title"] element:node];		
+		[detailViewController changeURL:urlString urlTitle:[node objectForKey:[mappings objectForKey:@"title"]] element:node];		
 	} else {
-		NSLog(@"Full path not found, cannot load content !");
+		NSLog(@"Full path %@ not found, cannot load content !", fullPath);
 	}
 
 }

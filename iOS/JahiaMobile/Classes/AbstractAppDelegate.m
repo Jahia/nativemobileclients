@@ -44,8 +44,36 @@
 		NSLog(@"currentDiskCapacity=%d totalCapacity=%d currentMemoryCapacity=%d totalCapacity=%d", 
 			  [urlCache currentDiskUsage], [urlCache diskCapacity],
 			  [urlCache currentMemoryUsage], [urlCache memoryCapacity]);
+		
+		/*
+		if ([UIScreen respondsToSelector:@selector(screens)]) {
+			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(screensChanged:) name:@"UIScreenDidConnectNotification" object:nil];
+			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(screensChanged:) name:@"UIScreenDidDisconnectNotification" object:nil];
+		}
+		 */
 	}
 	return self;
+}
+
+-(void)screensChanged:(NSNotification *)notification {
+	if ([UIScreen respondsToSelector:@selector(screens)] && [[UIScreen screens] count] > 1) {
+		// if there are more than 1 screens connected to the device, set up screen 1 for output
+		externalScreen = [[UIScreen screens] objectAtIndex:1];
+	}
+	UIScreenMode *maxScreenMode;
+	CGSize max = CGSizeMake(0, 0);
+	
+	for (UIScreenMode *mode in [externalScreen availableModes]) {
+		if (mode.size.width * mode.size.height > max.width * max.height) {
+			max = mode.size;
+			maxScreenMode = mode;
+		}
+	}
+	externalScreen.currentMode = maxScreenMode;
+	
+	windowExternal = [[UIWindow alloc] initWithFrame:[externalScreen bounds]];
+	windowExternal.screen = externalScreen;
+	
 }
 
 -(NSArray *) getTabBarConfig {

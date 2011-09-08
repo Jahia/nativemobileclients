@@ -491,6 +491,7 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "JahiaMobile" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -638,6 +639,7 @@
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
 				PRODUCT_NAME = JahiaPad;
 				PROVISIONING_PROFILE = "16510E19-C6EB-47EE-9855-D2820317D7D7";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -651,6 +653,7 @@
 				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
 				PRODUCT_NAME = JahiaPad;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -664,8 +667,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -677,8 +681,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -704,7 +709,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
 				PROVISIONING_PROFILE = "16510E19-C6EB-47EE-9855-D2820317D7D7";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -728,7 +733,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -741,8 +746,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Distribution;
 		};
@@ -757,6 +763,7 @@
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
 				PRODUCT_NAME = JahiaPad;
 				PROVISIONING_PROFILE = "500596EC-FED4-4F97-A23D-1E1826D00175";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -784,7 +791,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
 				PROVISIONING_PROFILE = "500596EC-FED4-4F97-A23D-1E1826D00175";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = Distribution;
@@ -797,8 +804,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = "Adhoc distribution";
 		};
@@ -813,7 +821,8 @@
 				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
 				PRODUCT_NAME = JahiaPad;
-				PROVISIONING_PROFILE = "72FAFFA7-0176-4505-AE69-588C17A651BC";
+				PROVISIONING_PROFILE = "210F4635-0DF7-4F88-B609-B20FA43569D6";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -841,7 +850,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
 				PROVISIONING_PROFILE = "72FAFFA7-0176-4505-AE69-588C17A651BC";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = "Adhoc distribution";

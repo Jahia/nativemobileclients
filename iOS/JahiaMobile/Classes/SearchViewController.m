@@ -127,10 +127,11 @@
 	}
 	
 	Configuration *config = [Configuration sharedInstance];
+	NSDictionary *mappings = [config mappingsForTabBarConfig:self.listName];
 		
 	NSDictionary *node = [searchResults objectAtIndex:index];
 	NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@/cms/render/%@/en", config.baseURL, [config getWorkspace], nil];
-	NSString *fullPath = [node objectForKey:@"path"];
+	NSString *fullPath = [node objectForKey:[mappings objectForKey:@"path"]];
 	if (fullPath != nil) {
 		[urlString appendString:fullPath];
 		[urlString appendString:@".html"];
@@ -205,6 +206,7 @@
 	[findRequest setPostValue:userQuery forKey:@"query"];
 	[findRequest setPostValue:@"JCR-SQL2" forKey:@"language"];	
 	[findRequest setPostValue:@"1" forKey:@"depthLimit"];	
+    [findRequest setPostValue:@"true" forKey:@"getNodes"];
 	[findRequest startSynchronous];
 	error = [findRequest error];
 	NSString *findResponse = nil;

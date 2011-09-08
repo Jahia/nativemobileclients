@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -269,6 +271,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>080E96DDFE201D6D7F000001</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>F455F0BC11246DFF0023CB67</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -276,7 +279,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
+									<integer>12</integer>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -316,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>F48DC88B115BE05F000F8DBA</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Entitlements.plist</string>
+								<string>SearchViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>F48DC88C115BE05F000F8DBA</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Entitlements.plist</string>
+										<string>SearchViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>F45FCBBB11EEF46F003C079A</string>
+										<string>F45FCBEA11EF593C003C079A</string>
 										<key>history</key>
 										<array>
 											<string>F422B572115C091C00DA0BA1</string>
@@ -354,14 +358,14 @@
 											<string>F462E98211B913650063CA17</string>
 											<string>F462E98711B913650063CA17</string>
 											<string>F462E98811B913650063CA17</string>
-											<string>F462E99011B914BA0063CA17</string>
-											<string>F462E99111B914BA0063CA17</string>
 											<string>F462EA0711B91FD00063CA17</string>
 											<string>F462EA0811B91FD00063CA17</string>
 											<string>F462EA4511B922330063CA17</string>
 											<string>F464F09E11EEE08F0073BBB6</string>
-											<string>F4758CAC11EEE44A00245CB8</string>
-											<string>F4BF44F411EEF2BB0039FEE0</string>
+											<string>F45FCBE711EF593C003C079A</string>
+											<string>F45FCBE811EF593C003C079A</string>
+											<string>F45FCBE911EF593C003C079A</string>
+											<string>F462E99111B914BA0063CA17</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -375,23 +379,21 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1019, 190}}</string>
+								<string>{{0, 0}, {1019, 502}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 127 1280 651 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>190pt</string>
+							<string>502pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>415pt</string>
+							<string>103pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
-									<key>BecomeActive</key>
-									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
@@ -402,7 +404,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1019, 388}}</string>
+										<string>{{10, 27}, {1019, 76}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 127 1280 651 0 0 1280 778 </string>
 									</dict>
@@ -507,11 +509,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>F45FCB8D11EEF2D4003C079A</string>
+				<string>F45FCBEB11EF593C003C079A</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>F45FCB8E11EEF2D4003C079A</string>
+				<string>F45FCBEC11EF593C003C079A</string>
 				<string>F48DC88B115BE05F000F8DBA</string>
-				<string>F45FCB8F11EEF2D4003C079A</string>
+				<string>F45FCBED11EF593C003C079A</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>

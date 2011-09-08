@@ -84,6 +84,7 @@
 		[dateFormatter setDateFormat:@"yyyy-MM-dd_HH-mm-ss"];
 		NSString *fileName = [NSString stringWithFormat:@"image-%@.png", [dateFormatter stringFromDate:[NSDate date]], nil];
 		[dateFormatter release];
+        [fileFormRequest setPostValue:@"true" forKey:@"jcrContributePost"];
 		[fileFormRequest setData:UIImagePNGRepresentation(selectedImage) withFileName:fileName andContentType:@"image/png" forKey:[mappings objectForKey:@"image"]];
 		[fileFormRequest startSynchronous];
 		NSError *error = [fileFormRequest error];
@@ -101,7 +102,7 @@
 			}
 			[parser release];
 		} else {
-			NSLog(@"Error creating new content : %@", error);
+			NSLog(@"Error uploading image file : %@", error);
 		}
 		[fileFormRequest release];
 	}
@@ -109,9 +110,11 @@
 	ASIFormDataRequest *formRequest = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:newsSubmitURL]];
 	[formRequest addRequestHeader:@"accept" value:@"application/json"];
 	[formRequest addRequestHeader:@"x-requested-with" value:@"XMLHttpRequest"];
-	[formRequest setPostValue:@"jnt:news" forKey:@"nodeType"];
+	[formRequest setPostValue:@"jnt:news" forKey:@"jcrNodeType"];
+    [formRequest setPostValue:@"true" forKey:@"jcrContributePost"];
+    
 	NSString *nodeName = [titleField.text stringByReplacingOccurrencesOfString:@" " withString:@"_"];
-	[formRequest setPostValue:nodeName forKey:@"nodeName"];
+	[formRequest setPostValue:nodeName forKey:@"jcrNodeName"];
 	// [formRequest setPostValue:@"json" forKey:@"newNodeOutputFormat"];
 	[formRequest setPostValue:titleField.text forKey:[mappings objectForKey:@"title"]];
 	[formRequest setPostValue:bodyTextView.text forKey:[mappings objectForKey:@"subtitle"]];
@@ -124,7 +127,7 @@
 		NSString *response = [formRequest responseString];
 		NSLog(@"Response=%@", response);
 	} else {
-		NSLog(@"Error creating new content : %@", error);
+		NSLog(@"Error adding new content : %@", error);
 	}
 	[formRequest release];
 	[imageUUID release];

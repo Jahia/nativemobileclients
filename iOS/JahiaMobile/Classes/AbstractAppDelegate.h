@@ -12,6 +12,8 @@
 @interface AbstractAppDelegate : NSObject {
 
 	NSDictionary *appConfigDictionary;
+	UIScreen *externalScreen;
+	UIWindow *windowExternal;
 }
 
 - (NSString *)applicationDocumentsDirectory;

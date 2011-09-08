@@ -31,9 +31,9 @@
 	};
 	28042008108E984D000629CD /* MasterViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2343, 4576}}";
+			sepNavIntBoundsRect = "{{0, 0}, {2343, 4901}}";
 			sepNavSelRange = "{2893, 0}";
-			sepNavVisRange = "{2274, 654}";
+			sepNavVisRange = "{9516, 1113}";
 			sepNavWindowFrame = "{{84, 152}, {750, 558}}";
 		};
 	};
@@ -219,7 +219,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = "Adhoc distribution";
 		activeExecutable = F469C1AE1111DA2800D0FEE5 /* JahiaPad */;
-		activeSDKPreference = iphoneos3.2;
+		activeSDKPreference = iphonesimulator3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* JahiaPad */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* JahiaPad */,
@@ -263,7 +263,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					780,
+					526,
 					20,
 					48,
 					43,
@@ -285,7 +285,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					740,
+					678,
 					60,
 					20,
 					48,
@@ -302,46 +302,15 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 300872391;
-			PBXWorkspaceStateSaveDate = 300872391;
+			PBXPerProjectTemplateStateSaveDate = 313247830;
+			PBXWorkspaceStateSaveDate = 313247830;
 		};
 		perUserProjectItems = {
-			F422B572115C091C00DA0BA1 = F422B572115C091C00DA0BA1 /* PBXBookmark */;
-			F422B574115C091C00DA0BA1 = F422B574115C091C00DA0BA1 /* PBXTextBookmark */;
-			F42ECF86115D2AE000838F1A = F42ECF86115D2AE000838F1A /* PBXTextBookmark */;
-			F456304E11EEEF94001F61FA = F456304E11EEEF94001F61FA /* PlistBookmark */;
-			F45FCB8C11EEF2D4003C079A /* PlistBookmark */ = F45FCB8C11EEF2D4003C079A /* PlistBookmark */;
-			F45FCBBB11EEF46F003C079A /* PlistBookmark */ = F45FCBBB11EEF46F003C079A /* PlistBookmark */;
-			F462E94B11B90ABD0063CA17 = F462E94B11B90ABD0063CA17 /* PBXTextBookmark */;
-			F462E98111B913650063CA17 = F462E98111B913650063CA17 /* PBXTextBookmark */;
-			F462E98211B913650063CA17 = F462E98211B913650063CA17 /* PBXTextBookmark */;
-			F462E98311B913650063CA17 = F462E98311B913650063CA17 /* PBXTextBookmark */;
-			F462E98711B913650063CA17 = F462E98711B913650063CA17 /* PBXTextBookmark */;
-			F462E98811B913650063CA17 = F462E98811B913650063CA17 /* PBXTextBookmark */;
-			F462E99011B914BA0063CA17 = F462E99011B914BA0063CA17 /* PBXTextBookmark */;
-			F462E99111B914BA0063CA17 = F462E99111B914BA0063CA17 /* PBXTextBookmark */;
-			F462EA0711B91FD00063CA17 = F462EA0711B91FD00063CA17 /* PBXTextBookmark */;
-			F462EA0811B91FD00063CA17 = F462EA0811B91FD00063CA17 /* PBXTextBookmark */;
-			F462EA4511B922330063CA17 = F462EA4511B922330063CA17 /* PBXTextBookmark */;
-			F464F09E11EEE08F0073BBB6 = F464F09E11EEE08F0073BBB6 /* PBXTextBookmark */;
-			F4758CAC11EEE44A00245CB8 = F4758CAC11EEE44A00245CB8 /* PBXTextBookmark */;
-			F47864D211648B950044E498 = F47864D211648B950044E498 /* PlistBookmark */;
-			F4786544116497470044E498 = F4786544116497470044E498 /* PBXBookmark */;
-			F47865791164A2C50044E498 = F47865791164A2C50044E498 /* PBXTextBookmark */;
-			F478663D1164BC5E0044E498 = F478663D1164BC5E0044E498 /* PBXTextBookmark */;
-			F48A07B5119EE555002D8620 = F48A07B5119EE555002D8620 /* PBXTextBookmark */;
-			F48A07B6119EE555002D8620 = F48A07B6119EE555002D8620 /* PBXTextBookmark */;
-			F4BF44F411EEF2BB0039FEE0 = F4BF44F411EEF2BB0039FEE0 /* PlistBookmark */;
-			F4CD4AE211B6824700FD666E = F4CD4AE211B6824700FD666E /* PBXTextBookmark */;
-			F4CD4AE411B6824700FD666E = F4CD4AE411B6824700FD666E /* PBXTextBookmark */;
-			F4EC4FDB11676BFA0012142B = F4EC4FDB11676BFA0012142B /* PBXTextBookmark */;
-			F4EC500311676DE10012142B = F4EC500311676DE10012142B /* PBXTextBookmark */;
-			F4EC500411676DE10012142B = F4EC500411676DE10012142B /* PBXTextBookmark */;
-			F4EC5014116770AA0012142B = F4EC5014116770AA0012142B /* PBXTextBookmark */;
-			F4EC50761168B5AE0012142B = F4EC50761168B5AE0012142B /* PBXTextBookmark */;
-			F4EC50791168B5AE0012142B = F4EC50791168B5AE0012142B /* PBXTextBookmark */;
-			F4F48F97115E6B0300A8F49B = F4F48F97115E6B0300A8F49B /* PBXTextBookmark */;
-			F4F48F99115E6B0300A8F49B = F4F48F99115E6B0300A8F49B /* PBXTextBookmark */;
+			F41637F012A8418B0084AAE7 /* PBXTextBookmark */ = F41637F012A8418B0084AAE7 /* PBXTextBookmark */;
+			F4B51BC512ABF5D600987430 /* PBXTextBookmark */ = F4B51BC512ABF5D600987430 /* PBXTextBookmark */;
+			F4E8F9BF129ADEB400CF6902 /* PBXTextBookmark */ = F4E8F9BF129ADEB400CF6902 /* PBXTextBookmark */;
+			F4E8F9D4129ADFDE00CF6902 /* PBXTextBookmark */ = F4E8F9D4129ADFDE00CF6902 /* PBXTextBookmark */;
+			F4E8F9D5129ADFDE00CF6902 /* PBXTextBookmark */ = F4E8F9D5129ADFDE00CF6902 /* PBXTextBookmark */;
 		};
 		sourceControlManager = F469C1BC1111DA4800D0FEE5 /* Source Control */;
 		userBuildSettings = {
@@ -356,16 +325,16 @@
 	};
 	F403F97A1157D538008B7AE0 /* AbstractAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {896, 440}}";
-			sepNavSelRange = "{311, 0}";
-			sepNavVisRange = "{0, 402}";
+			sepNavIntBoundsRect = "{{0, 0}, {896, 435}}";
+			sepNavSelRange = "{181, 0}";
+			sepNavVisRange = "{0, 456}";
 		};
 	};
 	F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1258, 715}}";
-			sepNavSelRange = "{603, 173}";
-			sepNavVisRange = "{332, 1481}";
+			sepNavIntBoundsRect = "{{0, 0}, {1258, 1053}}";
+			sepNavSelRange = "{1875, 0}";
+			sepNavVisRange = "{1387, 1337}";
 		};
 	};
 	F40E44A21163DEDB00EE2549 /* PadInputViewController.h */ = {
@@ -382,6 +351,16 @@
 			sepNavVisRange = "{0, 1361}";
 		};
 	};
+	F41637F012A8418B0084AAE7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */;
+		name = "AbstractAppDelegate.m: 50";
+		rLen = 0;
+		rLoc = 1875;
+		rType = 0;
+		vrLen = 1341;
+		vrLoc = 1387;
+	};
 	F41884821124336900585DA9 /* SearchViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1219, 429}}";
@@ -391,9 +370,9 @@
 	};
 	F41884831124336900585DA9 /* SearchViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1566, 4264}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1566, 4368}}";
 			sepNavSelRange = "{6416, 0}";
-			sepNavVisRange = "{7646, 1350}";
+			sepNavVisRange = "{7985, 1097}";
 			sepNavWindowFrame = "{{15, 46}, {1218, 727}}";
 		};
 	};
@@ -465,20 +444,6 @@
 			sepNavWindowFrame = "{{61, 173}, {750, 558}}";
 		};
 	};
-	F422B572115C091C00DA0BA1 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = F455F0C411246F280023CB67 /* 1.png */;
-	};
-	F422B574115C091C00DA0BA1 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F4691709111706B300CD69E5 /* ASIHTTPRequest.h */;
-		name = "ASIHTTPRequest.h: 379";
-		rLen = 16;
-		rLoc = 16811;
-		rType = 0;
-		vrLen = 2772;
-		vrLoc = 15116;
-	};
 	F4251D58111DDEC400C47777 /* MailComposerViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1555, 793}}";
@@ -502,9 +467,9 @@
 	};
 	F4251D8C111DE37F00C47777 /* MasterTabBarController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 819}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 884}}";
 			sepNavSelRange = "{1120, 0}";
-			sepNavVisRange = "{731, 782}";
+			sepNavVisRange = "{964, 358}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
@@ -522,159 +487,6 @@
 			sepNavVisRange = "{4020, 582}";
 		};
 	};
-	F42ECF86115D2AE000838F1A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */;
-		name = "AbstractAppDelegate.m: 29";
-		rLen = 173;
-		rLoc = 603;
-		rType = 0;
-		vrLen = 1481;
-		vrLoc = 332;
-	};
-	F456304E11EEEF94001F61FA /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Entitlements.plist;
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	F45FCB8C11EEF2D4003C079A /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/loom/Documents/work/iphone/Projects/Jahia's Mobile iOS JahiaMobile Project/Entitlements.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	F45FCBBB11EEF46F003C079A /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/loom/Documents/work/iphone/Projects/Jahia's Mobile iOS JahiaMobile Project/Entitlements.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	F462E94B11B90ABD0063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F41884821124336900585DA9 /* SearchViewController.h */;
-		name = "SearchViewController.h: 31";
-		rLen = 0;
-		rLoc = 935;
-		rType = 0;
-		vrLen = 941;
-		vrLoc = 0;
-	};
-	F462E98111B913650063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F48DC60D115B4C01000F8DBA /* Configuration.h */;
-		name = "Configuration.h: 31";
-		rLen = 0;
-		rLoc = 869;
-		rType = 0;
-		vrLen = 908;
-		vrLoc = 0;
-	};
-	F462E98211B913650063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F48DC60E115B4C01000F8DBA /* Configuration.m */;
-		name = "Configuration.m: 38";
-		rLen = 0;
-		rLoc = 1153;
-		rType = 0;
-		vrLen = 1015;
-		vrLoc = 0;
-	};
-	F462E98311B913650063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F47864D111648B950044E498 /* Root.strings */;
-		name = "Root.strings: 10";
-		rLen = 0;
-		rLoc = 390;
-		rType = 0;
-		vrLen = 391;
-		vrLoc = 0;
-	};
-	F462E98711B913650063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F463C3D21125EA750078D302 /* InputViewController.m */;
-		name = "InputViewController.m: 152";
-		rLen = 0;
-		rLoc = 6149;
-		rType = 0;
-		vrLen = 2030;
-		vrLoc = 2027;
-	};
-	F462E98811B913650063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F40E44A31163DEDC00EE2549 /* PadInputViewController.m */;
-		name = "PadInputViewController.m: 25";
-		rLen = 546;
-		rLoc = 813;
-		rType = 0;
-		vrLen = 1361;
-		vrLoc = 0;
-	};
-	F462E99011B914BA0063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F4251D8C111DE37F00C47777 /* MasterTabBarController.m */;
-		name = "MasterTabBarController.m: 41";
-		rLen = 0;
-		rLoc = 1120;
-		rType = 0;
-		vrLen = 782;
-		vrLoc = 731;
-	};
-	F462E99111B914BA0063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F41884831124336900585DA9 /* SearchViewController.m */;
-		name = "SearchViewController.m: 200";
-		rLen = 0;
-		rLoc = 6416;
-		rType = 0;
-		vrLen = 1350;
-		vrLoc = 7646;
-	};
-	F462EA0711B91FD00063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F42E0327115A45A300DF5888 /* FileUtils.m */;
-		name = "FileUtils.m: 91";
-		rLen = 0;
-		rLoc = 4164;
-		rType = 0;
-		vrLen = 1903;
-		vrLoc = 3617;
-	};
-	F462EA0811B91FD00063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28042007108E984D000629CD /* MasterViewController.h */;
-		name = "MasterViewController.h: 37";
-		rLen = 12;
-		rLoc = 1170;
-		rType = 0;
-		vrLen = 1243;
-		vrLoc = 3;
-	};
-	F462EA4511B922330063CA17 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2804200A108E984D000629CD /* PadDetailViewController.m */;
-		name = "PadDetailViewController.m: 24";
-		rLen = 0;
-		rLoc = 606;
-		rType = 0;
-		vrLen = 1090;
-		vrLoc = 2043;
-	};
 	F463C3D11125EA750078D302 /* InputViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {958, 533}}";
@@ -686,19 +498,9 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1160, 2288}}";
 			sepNavSelRange = "{6149, 0}";
-			sepNavVisRange = "{2027, 2030}";
+			sepNavVisRange = "{2053, 2004}";
 			sepNavWindowFrame = "{{61, 173}, {750, 558}}";
 		};
-	};
-	F464F09E11EEE08F0073BBB6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F418866E1124534400585DA9 /* CommonDetailViewController.m */;
-		name = "CommonDetailViewController.m: 101";
-		rLen = 0;
-		rLoc = 3514;
-		rType = 0;
-		vrLen = 2808;
-		vrLoc = 2568;
 	};
 	F4691707111706B300CD69E5 /* ASIFormDataRequest.h */ = {
 		uiCtxt = {
@@ -802,85 +604,6 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	F4758CAC11EEE44A00245CB8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28042008108E984D000629CD /* MasterViewController.m */;
-		name = "MasterViewController.m: 83";
-		rLen = 0;
-		rLoc = 2893;
-		rType = 0;
-		vrLen = 652;
-		vrLoc = 2274;
-	};
-	F47864D111648B950044E498 /* Root.strings */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = text.plist.strings;
-		name = Root.strings;
-		path = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Settings.bundle/en.lproj/Root.strings;
-		sourceTree = "<absolute>";
-	};
-	F47864D211648B950044E498 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = F47864D311648B950044E498 /* Root.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Settings.bundle/Root.plist;
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	F47864D311648B950044E498 /* Root.plist */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = text.plist.xml;
-		name = Root.plist;
-		path = /Users/loom/Documents/work/iphone/Projects/JahiaMobile/Settings.bundle/Root.plist;
-		sourceTree = "<absolute>";
-	};
-	F4786544116497470044E498 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = F48DC798115B9BF7000F8DBA /* jahia72x72.png */;
-	};
-	F47865791164A2C50044E498 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F4691708111706B300CD69E5 /* ASIFormDataRequest.m */;
-		name = "ASIFormDataRequest.m: 128";
-		rLen = 0;
-		rLoc = 3950;
-		rType = 0;
-		vrLen = 568;
-		vrLoc = 3169;
-	};
-	F478663D1164BC5E0044E498 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F42E0326115A45A200DF5888 /* FileUtils.h */;
-		name = "FileUtils.h: 19";
-		rLen = 0;
-		rLoc = 547;
-		rType = 0;
-		vrLen = 553;
-		vrLoc = 0;
-	};
-	F48A07B5119EE555002D8620 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F40E44A21163DEDB00EE2549 /* PadInputViewController.h */;
-		name = "PadInputViewController.h: 13";
-		rLen = 41;
-		rLoc = 277;
-		rType = 0;
-		vrLen = 327;
-		vrLoc = 0;
-	};
-	F48A07B6119EE555002D8620 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F463C3D11125EA750078D302 /* InputViewController.h */;
-		name = "InputViewController.h: 36";
-		rLen = 57;
-		rLoc = 1044;
-		rType = 0;
-		vrLen = 875;
-		vrLoc = 400;
-	};
 	F48DC5E8115B4AC0000F8DBA /* TFHpple.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {896, 637}}";
@@ -897,7 +620,7 @@
 	};
 	F48DC60D115B4C01000F8DBA /* Configuration.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {958, 463}}";
+			sepNavIntBoundsRect = "{{0, 0}, {896, 442}}";
 			sepNavSelRange = "{869, 0}";
 			sepNavVisRange = "{0, 908}";
 		};
@@ -922,120 +645,48 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 105;
-		location = JahiaPad;
-		modificationTime = 300870741.0057951;
+		modificationTime = 313255177.645137;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	F4BF44F411EEF2BB0039FEE0 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = F4758CA211EEE3D100245CB8 /* Entitlements.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/loom/Documents/work/iphone/Projects/Jahia's Mobile iOS JahiaMobile Project/Entitlements.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	F4CD4AE211B6824700FD666E /* PBXTextBookmark */ = {
+	F4B51BC512ABF5D600987430 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* PadAppDelegate.m */;
-		name = "PadAppDelegate.m: 16";
+		fRef = F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */;
+		name = "AbstractAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 346;
+		rLoc = 1875;
 		rType = 0;
-		vrLen = 1587;
-		vrLoc = 3;
+		vrLen = 1337;
+		vrLoc = 1387;
 	};
-	F4CD4AE411B6824700FD666E /* PBXTextBookmark */ = {
+	F4E8F9BF129ADEB400CF6902 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = F4251D8B111DE37F00C47777 /* MasterTabBarController.h */;
-		name = "MasterTabBarController.h: 12";
+		fRef = F48DC60D115B4C01000F8DBA /* Configuration.h */;
+		name = "Configuration.h: 31";
 		rLen = 0;
-		rLoc = 220;
+		rLoc = 869;
 		rType = 0;
-		vrLen = 242;
+		vrLen = 908;
 		vrLoc = 0;
 	};
-	F4EC4FDB11676BFA0012142B /* PBXTextBookmark */ = {
+	F4E8F9D4129ADFDE00CF6902 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = F41884CE1124437000585DA9 /* PhoneAppDelegate.m */;
-		name = "PhoneAppDelegate.m: 88";
+		fRef = F463C3D21125EA750078D302 /* InputViewController.m */;
+		name = "InputViewController.m: 152";
 		rLen = 0;
-		rLoc = 4554;
+		rLoc = 6149;
 		rType = 0;
-		vrLen = 1461;
-		vrLoc = 251;
+		vrLen = 2004;
+		vrLoc = 2053;
 	};
-	F4EC500311676DE10012142B /* PBXTextBookmark */ = {
+	F4E8F9D5129ADFDE00CF6902 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = F469171C1117084000CD69E5 /* JSON.h */;
-		name = "JSON.h: 1";
+		fRef = F403F97A1157D538008B7AE0 /* AbstractAppDelegate.h */;
+		name = "AbstractAppDelegate.h: 10";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 181;
 		rType = 0;
-		vrLen = 1243;
-		vrLoc = 1054;
-	};
-	F4EC500411676DE10012142B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F46917211117084000CD69E5 /* SBJSON.h */;
-		name = "SBJSON.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 967;
-		vrLoc = 1870;
-	};
-	F4EC5014116770AA0012142B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F4691707111706B300CD69E5 /* ASIFormDataRequest.h */;
-		name = "ASIFormDataRequest.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 949;
-		vrLoc = 893;
-	};
-	F4EC50761168B5AE0012142B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28042009108E984D000629CD /* PadDetailViewController.h */;
-		name = "PadDetailViewController.h: 21";
-		rLen = 0;
-		rLoc = 592;
-		rType = 0;
-		vrLen = 598;
-		vrLoc = 0;
-	};
-	F4EC50791168B5AE0012142B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F418866D1124534400585DA9 /* CommonDetailViewController.h */;
-		name = "CommonDetailViewController.h: 12";
-		rLen = 0;
-		rLoc = 236;
-		rType = 0;
-		vrLen = 1021;
-		vrLoc = 92;
-	};
-	F4F48F97115E6B0300A8F49B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* PadAppDelegate.h */;
-		name = "PadAppDelegate.h: 44";
-		rLen = 0;
-		rLoc = 1448;
-		rType = 0;
-		vrLen = 778;
-		vrLoc = 0;
-	};
-	F4F48F99115E6B0300A8F49B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F41884CD1124437000585DA9 /* PhoneAppDelegate.h */;
-		name = "PhoneAppDelegate.h: 11";
-		rLen = 0;
-		rLoc = 244;
-		rType = 0;
-		vrLen = 1011;
+		vrLen = 456;
 		vrLoc = 0;
 	};
 }
