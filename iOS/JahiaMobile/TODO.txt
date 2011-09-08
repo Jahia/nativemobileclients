@@ -1,0 +1,7 @@
+
+My profile integration : 
+- My settings
+- My tasks
+- My connections
+- My status
+- My messages
