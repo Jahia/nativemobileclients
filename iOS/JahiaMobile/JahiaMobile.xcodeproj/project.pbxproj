@@ -52,10 +52,11 @@
 		F41886801124549200585DA9 /* CommonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F418866E1124534400585DA9 /* CommonDetailViewController.m */; };
 		F4188728112458A100585DA9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173511170CC400CD69E5 /* SystemConfiguration.framework */; };
 		F4188729112458A200585DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4251D15111DDC1500C47777 /* MessageUI.framework */; };
-		F418872A112458A300585DA9 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173911170CE100CD69E5 /* libz.1.2.3.dylib */; };
 		F418872B112458A500585DA9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173111170CB500CD69E5 /* CFNetwork.framework */; };
 		F41887611124599500585DA9 /* MailComposerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4251D5B111DDEF700C47777 /* MailComposerViewController.xib */; };
 		F41887621124599C00585DA9 /* iPadJahia.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 280420B3108E9F58000629CD /* iPadJahia.xcdatamodel */; };
+		F423182D152B4E12004975B9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F423182C152B4E12004975B9 /* libz.dylib */; };
+		F423182E152B4E1E004975B9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F423182C152B4E12004975B9 /* libz.dylib */; };
 		F4251D16111DDC1500C47777 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4251D15111DDC1500C47777 /* MessageUI.framework */; };
 		F4251D5A111DDEC400C47777 /* MailComposerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4251D59111DDEC400C47777 /* MailComposerViewController.m */; };
 		F4251D5C111DDEF700C47777 /* MailComposerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4251D5B111DDEF700C47777 /* MailComposerViewController.xib */; };
@@ -90,7 +91,6 @@
 		F469172E1117084000CD69E5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F46917281117084000CD69E5 /* SBJsonWriter.m */; };
 		F469173211170CB500CD69E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173111170CB500CD69E5 /* CFNetwork.framework */; };
 		F469173611170CC400CD69E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173511170CC400CD69E5 /* SystemConfiguration.framework */; };
-		F469173A11170CE100CD69E5 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F469173911170CE100CD69E5 /* libz.1.2.3.dylib */; };
 		F4786525116494770044E498 /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4786524116494770044E498 /* InputViewController.xib */; };
 		F48DC5C5115B44F3000F8DBA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F48DC5C4115B44F3000F8DBA /* libxml2.dylib */; };
 		F48DC5EC115B4AC0000F8DBA /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F48DC5E6115B4AC0000F8DBA /* XPathQuery.m */; };
@@ -110,21 +110,21 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* PadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* PadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* PadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PadAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D3623250D0F684500981E51 /* PadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PadAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1D6058910D05DD3D006BFB54 /* JahiaPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JahiaPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		28042007108E984D000629CD /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		28042008108E984D000629CD /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		28042009108E984D000629CD /* PadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadDetailViewController.h; sourceTree = "<group>"; };
-		2804200A108E984D000629CD /* PadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadDetailViewController.m; sourceTree = "<group>"; };
+		28042007108E984D000629CD /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MasterViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		28042008108E984D000629CD /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MasterViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		28042009108E984D000629CD /* PadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PadDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2804200A108E984D000629CD /* PadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PadDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2804203B108E9BAB000629CD /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		280420B3108E9F58000629CD /* iPadJahia.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = iPadJahia.xcdatamodel; sourceTree = "<group>"; };
 		280420C0108EA07E000629CD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* iPadJahia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadJahia_Prefix.pch; sourceTree = "<group>"; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8D1107310486CEB800E47090 /* JahiaPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JahiaPad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		F403F97A1157D538008B7AE0 /* AbstractAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAppDelegate.h; sourceTree = "<group>"; };
 		F403F97B1157D538008B7AE0 /* AbstractAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractAppDelegate.m; sourceTree = "<group>"; };
@@ -140,6 +140,7 @@
 		F41884CE1124437000585DA9 /* PhoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneAppDelegate.m; sourceTree = "<group>"; };
 		F418866D1124534400585DA9 /* CommonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailViewController.h; sourceTree = "<group>"; };
 		F418866E1124534400585DA9 /* CommonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailViewController.m; sourceTree = "<group>"; };
+		F423182C152B4E12004975B9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F4251D15111DDC1500C47777 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F4251D58111DDEC400C47777 /* MailComposerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailComposerViewController.h; sourceTree = "<group>"; };
 		F4251D59111DDEC400C47777 /* MailComposerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailComposerViewController.m; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		F46917281117084000CD69E5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		F469173111170CB500CD69E5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F469173511170CC400CD69E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		F469173911170CE100CD69E5 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		F4758CA211EEE3D100245CB8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		F4786524116494770044E498 /* InputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InputViewController.xib; path = Classes/InputViewController.xib; sourceTree = "<group>"; };
 		F48DC5C4115B44F3000F8DBA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -209,13 +209,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F423182D152B4E12004975B9 /* libz.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				280420C1108EA07E000629CD /* CoreData.framework in Frameworks */,
 				F469173211170CB500CD69E5 /* CFNetwork.framework in Frameworks */,
 				F469173611170CC400CD69E5 /* SystemConfiguration.framework in Frameworks */,
-				F469173A11170CE100CD69E5 /* libz.1.2.3.dylib in Frameworks */,
 				F4251D16111DDC1500C47777 /* MessageUI.framework in Frameworks */,
 				F48DC761115B722F000F8DBA /* libxml2.dylib in Frameworks */,
 			);
@@ -225,13 +225,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F423182E152B4E1E004975B9 /* libz.dylib in Frameworks */,
 				F41885321124444D00585DA9 /* UIKit.framework in Frameworks */,
 				F41885831124445300585DA9 /* Foundation.framework in Frameworks */,
 				F41885A51124445800585DA9 /* CoreGraphics.framework in Frameworks */,
 				F41885C21124445D00585DA9 /* CoreData.framework in Frameworks */,
 				F4188728112458A100585DA9 /* SystemConfiguration.framework in Frameworks */,
 				F4188729112458A200585DA9 /* MessageUI.framework in Frameworks */,
-				F418872A112458A300585DA9 /* libz.1.2.3.dylib in Frameworks */,
 				F418872B112458A500585DA9 /* CFNetwork.framework in Frameworks */,
 				F48DC5C5115B44F3000F8DBA /* libxml2.dylib in Frameworks */,
 			);
@@ -281,6 +281,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F423182C152B4E12004975B9 /* libz.dylib */,
 				F48DC5E4115B4AC0000F8DBA /* Hpple */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -322,7 +323,6 @@
 			children = (
 				F469173111170CB500CD69E5 /* CFNetwork.framework */,
 				F469173511170CC400CD69E5 /* SystemConfiguration.framework */,
-				F469173911170CE100CD69E5 /* libz.1.2.3.dylib */,
 				F4251D15111DDC1500C47777 /* MessageUI.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -487,6 +487,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Jahia Solutions";
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "JahiaMobile" */;
@@ -630,15 +631,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Serge Huber (BUZ87GS5CQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = JahiaPad;
-				PROVISIONING_PROFILE = "16510E19-C6EB-47EE-9855-D2820317D7D7";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -648,11 +650,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = JahiaPad;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -668,7 +673,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -682,7 +686,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -691,7 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Serge Huber (BUZ87GS5CQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -699,6 +702,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "JahiaPhone-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DIPHONE_ONLY";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -706,9 +710,8 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
-				PROVISIONING_PROFILE = "16510E19-C6EB-47EE-9855-D2820317D7D7";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -717,13 +720,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "JahiaPhone-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DIPHONE_ONLY";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -731,8 +735,8 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
@@ -747,7 +751,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -756,13 +759,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = JahiaPad;
-				PROVISIONING_PROFILE = "500596EC-FED4-4F97-A23D-1E1826D00175";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -773,14 +777,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "JahiaPhone-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DIPHONE_ONLY";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -788,9 +792,8 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
-				PROVISIONING_PROFILE = "500596EC-FED4-4F97-A23D-1E1826D00175";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
@@ -805,7 +808,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = "Adhoc distribution";
@@ -815,13 +817,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPadJahia_Prefix.pch;
 				INFOPLIST_FILE = "JahiaPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = JahiaPad;
-				PROVISIONING_PROFILE = "210F4635-0DF7-4F88-B609-B20FA43569D6";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -832,14 +835,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Serge Huber";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "JahiaPhone-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DIPHONE_ONLY";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -847,9 +850,8 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = JahiaPhone;
-				PROVISIONING_PROFILE = "72FAFFA7-0176-4505-AE69-588C17A651BC";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};

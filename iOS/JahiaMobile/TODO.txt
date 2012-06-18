@@ -1,7 +1,16 @@
 
-My profile integration : 
+1. My profile integration : 
 - My settings
 - My tasks
 - My connections
 - My status
 - My messages
+
+2. Forum integration : 
+- See latest messages
+- Browse forum
+- Reply and create new topics
+
+3. Merge iPhone and iPad targets into a single one
+
+4. Integrate background and clean up look and feel

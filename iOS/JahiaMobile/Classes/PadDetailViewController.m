@@ -3,7 +3,7 @@
 //  iPadJahia
 //
 //  Created by Serge Huber on 28.01.10.
-//  Copyright Apple Inc 2010. All rights reserved.
+//  Copyright Jahia Solutions Inc 2010-2011. All Rights Reserved.
 //
 
 #import "PadDetailViewController.h"
