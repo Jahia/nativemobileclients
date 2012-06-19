@@ -2,16 +2,25 @@
 <html>
 <head>
     <title>Jahia Wise</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="jquery.mobile-1.1.0.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!--link rel="stylesheet" href="jquery.mobile-1.1.0.css"/-->
+    <link rel="stylesheet" href="jquery.mobile-splitview-version.css"/>
+    <link rel="stylesheet" href="jquery.mobile.splitview.css" />
+    <link rel="stylesheet"  href="jquery.mobile.grids.collapsible.css" />
+
     <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
     <script type="text/javascript" src="json2.js"></script>
     <script type="text/javascript" src="cycle.js"></script>
-    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="jquery-1.7.1.js"></script>
+    <!--script type="text/javascript" src="jquery-1.7.2.js"></script-->
     <!--script src="jquery.mobile-1.1.0.js" type="text/javascript"></script-->
-    <script src="jquery.mobile-20120607.js" type="text/javascript"></script>
+    <!--script src="jquery.mobile-20120607.js" type="text/javascript"></script-->
+    <script type="text/javascript" src="jquery.mobile.splitview.js"></script>
+    <script src="jquery.mobile-splitview-version.js" type="text/javascript"></script>
     <script src="jsrender-1.0pre.js" type="text/javascript"></script>
     <script src="aes.js" type="text/javascript"></script>
+    <script type="text/javascript" src="iscroll-wrapper.js"></script>
+    <script type="text/javascript" src="iscroll.js"></script>
 
     <script type="text/javascript">
 
@@ -31,22 +40,37 @@
 </head>
 <body>
 
-<div data-role="page" id="home">
+<div data-role="panel" data-id="menu">
+
+<div data-role="page" id="home" data-hash="false">
     <div data-role="header">
         <!-- This div with data-role is the header, shown in the black -->
         <h1><img src="images/jahia-logo-wise.png" /></h1>
     </div>
     <div data-role="content">
         <!-- This div is the body of the page -->
+
         <h3>Your spaces</h3>
         <ul id="docspaceList" data-role="listview" data-inset="true" data-filter="false"></ul>
+
+
 
         <div id="deviceView" data-role="collapsible">
             <h3>Device properties</h3>
 
             <p id="deviceProperties">Loading device properties...</p>
         </div>
+
     </div>
+    <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#main" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <h2>&copy; 2012 Jahia Solutions Inc.</h2>
+    </div><!-- /footer -->
+
 </div>
 
 <div data-role="page" id="viewNode_nt_base" data-add-back-btn="true">
@@ -236,7 +260,6 @@
             });
 
         </script>
-
     </div>
 </div>
 
@@ -301,6 +324,27 @@
         </script>
 
     </div>
+</div>
+
+</div>
+
+<div data-role="panel" data-id="main">
+    <!-- Start of second page -->
+    <div data-role="page" id="bar">
+
+        <div data-role="header">
+            <h1>Welcome to Jahia Wise</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>I'm first in the source order so I'm shown as the page.</p>
+            <p><a href="#foo">Back to foo</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h2>&copy; 2012 Jahia Solutions Inc.</h2>
+        </div><!-- /footer -->
+    </div><!-- /page -->
 </div>
 
 </body>
