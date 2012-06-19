@@ -2,7 +2,6 @@ package com.jahia.mobile.phonegap.wise;
 
 import org.apache.cordova.DroidGap;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 public class JahiaWiseActivity extends DroidGap {
