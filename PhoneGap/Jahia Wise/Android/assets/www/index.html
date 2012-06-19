@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Jahia Wise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.1.0.css"/>
+    <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+    <script type="text/javascript" src="json2.js"></script>
+    <script type="text/javascript" src="cycle.js"></script>
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <!--script src="jquery.mobile-1.1.0.js" type="text/javascript"></script-->
+    <script src="jquery.mobile-20120607.js" type="text/javascript"></script>
+    <script src="jsrender-1.0pre.js" type="text/javascript"></script>
+    <script src="aes.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        var currentNodePath = null;
+        // var jahiaServer = "10.8.37.154:8080";
+        // var jahiaServer = "10.0.1.27:8080";
+        var jahiaServer = "10.0.1.60:8080";
+        var jahiaUserName = "root", jahiaUserPassword = "root1234";
+        var ignoreNodeTypes = [ "jnt:acl", "jnt:tasks", "docnt:pollsContainer", "docnt:links", "jnt:contentList" ];
+        var leafNodeTypes = [ "docnt:note", "jnt:file", "jnt:blogPost", "jnt:post", "jnt:wikiPage" ];
+
+    </script>
+
+    <script src="jahia-wise-1.0.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div data-role="page" id="home">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Jahia Wise</h1>
+    </div>
+    <div data-role="content">
+        <!-- This div is the body of the page -->
+        <h3>Your spaces</h3>
+        <ul id="docspaceList" data-role="listview" data-inset="true" data-filter="false"></ul>
+
+        <div id="deviceView" data-role="collapsible">
+            <h3>Device properties</h3>
+
+            <p id="deviceProperties">Loading device properties...</p>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_nt_base" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Node details</h1>
+    </div>
+    <div data-role="content">
+        <script id="baseTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{if hasChildren}}
+                <ul data-role='listview' data-inset='true'>
+                    {{for childNodes}}
+                    {{if ~isIgnoredType(jcr_primaryType)}}
+                    {{else}}
+                    <li>
+                        <a href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                    </li>
+                    {{/if}}
+                    {{/for}}
+                </ul>
+                {{else}}
+                <p>Node empty</p>
+                {{/if}}
+
+                <div id="propertiesView" data-role="collapsible">
+                    <h3>Properties</h3>
+
+                    <div class="ui-grid-a">
+                        {{for ~getFields(#data)}}
+                        <div class="ui-block-a"><strong>{{>key}}</strong></div>
+                        <div class="ui-block-b">{{>value}}</div>
+                        {{/for}}
+                    </div>
+                </div>
+
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+        <script language="javascript" type="text/javascript">
+            function nt_base_pageInit() {
+                console.log("Initializing page controls...");
+                $("#propertiesView").collapsible();
+            }
+        </script>
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_docnt_note" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Note </h1>
+    </div>
+    <div data-role="content">
+        <script id="noteTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:body}}
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+        <p></p>
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_jnt_wikiPage" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Note </h1>
+    </div>
+    <div data-role="content">
+        <script id="wikiTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:wikiContent}}
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_jnt_blogPost" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Note </h1>
+    </div>
+    <div data-role="content">
+        <script id="blogTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:body}}
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_jnt_post" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Note </h1>
+    </div>
+    <div data-role="content">
+        <script id="postTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:content}}
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_jnt_file" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>File </h1>
+    </div>
+    <div data-role="content" id="downloadReady">
+        <script id="fileTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:#index+1}}: <b>{{:name}}</b> ({{:releaseYear}})
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_jnt_folder" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>File </h1>
+    </div>
+    <div data-role="content">
+        <script id="folderTemplate" class="nodeTemplate" type="text/x-jsrender">
+
+            {{if hasChildren}}
+            <ul data-role='listview' data-inset='true'>
+                {{for childNodes}}
+                {{if ~isIgnoredType(jcr_primaryType)}}
+                {{else}}
+                <li>
+                    <a href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                </li>
+                {{/if}}
+                {{/for}}
+            </ul>
+            {{else}}
+            <p>Folder empty</p>
+            {{/if}}
+
+        </script>
+        <div class="nodeContent"></div>
+        <div id="folderActions" data-role="collapsible">
+            <h3>Folder actions</h3>
+            <fieldset data-role="controlgroup">
+                <legend>Upload image from:</legend>
+                <input type="button" class="send-image" value="Camera"/>
+                <input type="button" class="send-image" value="Library"/>
+            </fieldset>
+            <form id="newFolderForm">
+                <fieldset data-role="controlgroup">
+                    <legend>New folder:</legend>
+                    <input type="text" name="folderName"/>
+                    <input type="button" class="new-folder" value="Create"/>
+                </fieldset>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function jnt_folder_pageInit(data) {
+                console.log("Initializing page controls for " + data.path + "...");
+                currentNodePath = data.path;
+            }
+
+            $('.send-image').click(function () {
+                sendImage($(this).val(), currentNodePath);
+            });
+
+            $('.new-folder').click(function () {
+                var folderName = $("input[type='text'][name='folderName']").val();
+                console.log("Creating a new folder named " + folderName + " in " + currentNodePath);
+                createNode(currentNodePath, 'jnt:folder' ,
+                        {
+                            jcrNodeName : folderName,
+                            jcrMixinTypes : 'docmix:docspaceFolder'
+                        },
+                        function(data, textStatus, jqXHR) {
+                            alert('Folder ' + folderName + ' created successfully !');
+                            refreshNodeDetails();
+                        });
+            });
+
+        </script>
+
+    </div>
+</div>
+
+<div data-role="page" id="viewNode_docnt_notesContainer" data-add-back-btn="true">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>File </h1>
+    </div>
+    <div data-role="content">
+        <script id="notesContainerTemplate" class="nodeTemplate" type="text/x-jsrender">
+
+            {{if hasChildren}}
+            <ul data-role='listview' data-inset='true'>
+                {{for childNodes}}
+                {{if ~isIgnoredType(jcr_primaryType)}}
+                {{else}}
+                <li>
+                    <a href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                </li>
+                {{/if}}
+                {{/for}}
+            </ul>
+            {{else}}
+            <p>Folder empty</p>
+            {{/if}}
+
+        </script>
+        <div class="nodeContent"></div>
+        <div id="notesContainerAction" data-role="collapsible">
+            <h3>Note actions</h3>
+
+            <form id="newNoteForm">
+                <fieldset data-role="controlgroup">
+                    <legend>New folder:</legend>
+                    <input type="text" name="noteTitle"/>
+                    <textarea name="noteBody"></textarea>
+                    <input type="button" class="new-note" value="Create"/>
+                </fieldset>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function docnt_notesContainer_pageInit(data) {
+                console.log("Initializing page controls for " + data.path + "...");
+                currentNodePath = data.path;
+            }
+
+            $('.new-note').click(function () {
+                var noteTitle = $("input[type='text'][name='noteTitle']").val();
+                var noteBody = $("textarea[name='noteBody']").val();
+                console.log("Creating a new note named with title " + noteTitle + " and body " + noteBody + " in " + currentNodePath);
+                createNode(currentNodePath, 'docnt:note',
+                        {
+                            'jcr:title': noteTitle,
+                            body: noteBody
+                        },
+                        function(data, textStatus, jqXHR) {
+                            alert('Note ' + noteTitle + ' created successfully !');
+                            refreshNodeDetails();
+                        });
+            });
+
+        </script>
+
+    </div>
+</div>
+
+</body>
+</html>
