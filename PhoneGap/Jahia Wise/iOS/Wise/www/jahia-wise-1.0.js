@@ -32,7 +32,7 @@ function getNodeData(nodePath, callback) {
         },
         dataType: 'json',
         error: function(jqXHR, textStatus, errorThrown) {
-            alert('Error executing node children AJAX query:' + textStatus + " thrown:" + errorThrown);
+            alert('Error retrieving node at '+nodePath+':' + textStatus + " error:" + errorThrown);
         }
     }
     if (my_saved_cookie != null) {
@@ -70,41 +70,39 @@ function createNode(parentNodePath, nodeType, extraData, callback) {
     $.ajax(nodeCreationRequest);
 }
 
-function resolveChildPageName(childNodeType, mixinTypes, superTypes) {
-    var childPageName = '#viewNode_' + nodeTypeToPath(childNodeType),
-        childPageSelector = $(childPageName);
-    if (childPageSelector.length == 0) {
-        console.log('resolveChildPageName: Child page name ' + childPageName + " not found, searching in mixinTypes");
+function resolvePageName(nodeType, mixinTypes, superTypes) {
+    var pageName = '#viewNode_' + nodeTypeToPath(nodeType),
+        pageSelector = $(pageName);
+    if (pageSelector.length == 0) {
+        console.log('resolvePageName: Page name ' + pageName + " not found, searching in mixinTypes");
         for (mixinType in mixinTypes) {
-            childPageName = '#viewNode_' + nodeTypeToPath(mixinType);
-            if ($(childPageName).length > 0) {
-                console.log('resolveChildPageName: Found childPageName=' + childPageName);
-                return childPageName;
+            pageName = '#viewNode_' + nodeTypeToPath(mixinType);
+            if ($(pageName).length > 0) {
+                console.log('resolvePageName: Found pageName=' + pageName);
+                return pageName;
             }
         }
-        console.log("resolveChildPageName: Nothing found in for mixinTypes, searching in superTypes");
+        console.log("resolvePageName: Nothing found in for mixinTypes, searching in superTypes");
         for (superType in superTypes) {
-            childPageName = '#viewNode_' + nodeTypeToPath(superType);
-            if ($(childPageName).length > 0) {
-                console.log('resolveChildPageName: Found childPageName=' + childPageName);
-                return childPageName;
+            pageName = '#viewNode_' + nodeTypeToPath(superType);
+            if ($(pageName).length > 0) {
+                console.log('resolvePageName: Found pageName=' + pageName);
+                return pageName;
             }
         }
-        console.log("Nothing found for superTypes, defaulting to nt_base");
-        childPageName = "#viewNode_nt_base";
+        console.log("resolvePageName: Nothing found for superTypes, defaulting to #viewNode_nt_base");
+        pageName = "#viewNode_nt_base";
     } else {
-        console.log('resolveChildPageName: Found childPageName=' + childPageName);
+        console.log('resolvePageName: Found childPageName=' + pageName);
     }
-    return childPageName;
+    return pageName;
 }
 
 function isIgnoredType(childNodeType) {
-    console.log('isIgnoredType: checking if ' + childNodeType + " is an ignored type");
     return ($.inArray(childNodeType, ignoreNodeTypes) !== -1);
 }
 
 function isLeafType(childNodeType) {
-    console.log('isLeafType: checking if ' + childNodeType + " is a leaf type");
     return ($.inArray(childNodeType, leafNodeTypes) !== -1);
 }
 
@@ -151,7 +149,7 @@ function renderNode(pageSelector, node) {
 
     // Find the h1 element in our header and inject the name of
     // the category into it.
-    $header.find("h1").html(node.text);
+    // $header.find("h1").html(node.text);
 
     // Pages are lazily enhanced. We call page() on the page
     // element to make sure it is always enhanced before we
@@ -161,7 +159,7 @@ function renderNode(pageSelector, node) {
     $page.page();
 
     // Enhance the listview we just injected.
-    $content.find(":jqmData(role=listview)").listview();
+    // $content.find(":jqmData(role=listview)").listview();
 
     var callbackFunction = pageSelector.substring("#viewNode_".length) + "_pageInit";
     if (window[callbackFunction]) {
@@ -170,6 +168,9 @@ function renderNode(pageSelector, node) {
     } else {
         console.log("No page init callback with name " + callbackFunction + " found.")
     }
+
+    $(pageSelector + " .nodeContent").trigger("create");
+
     return $page;
 }
 
@@ -223,7 +224,7 @@ function displayNode(node) {
     console.log('Node ' + node.path + ':');
     dumpObjectProperties(node);
     var newMarkup = '';
-    var childPageName = resolveChildPageName(node.primaryNodeType, node.mixinTypes, node.supertypes);
+    var childPageName = resolvePageName(node.primaryNodeType, node.mixinTypes, node.supertypes);
     newMarkup += "<a href='" + childPageName + "?nodePath=" + encodeURIComponent(node.path) + "'>";
 
     newMarkup += '<h3>' + node.jcr_title + '</h3>';
@@ -474,7 +475,10 @@ function initApp() {
             return isLeafType(nodeType);
         },
         getChildPageName: function (node) {
-            return resolveChildPageName(node.primaryNodeType, node.mixinTypes, node.supertypes);
+            return resolvePageName(node.primaryNodeType, node.mixinTypes, node.supertypes);
+        },
+        getParentPageName: function (node) {
+            return resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes);
         },
         getFields: function( object ) {
             var key, value,
@@ -491,6 +495,14 @@ function initApp() {
             }
             // Return the array, to be rendered using {{for ~fields(object)}}
             return fieldsArray;
+        },
+        getParent: function (path) {
+            var lastSlashPos = path.lastIndexOf('/');
+            if (lastSlashPos > -1) {
+                return path.substring(0, lastSlashPos);
+            }  else {
+                return "";
+            }
         }
     });
 }
