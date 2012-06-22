@@ -33,7 +33,8 @@ function getNodeData(nodePath, callback) {
         dataType: 'json',
         error: function(jqXHR, textStatus, errorThrown) {
             alert('Error retrieving node at '+nodePath+':' + textStatus + " error:" + errorThrown);
-        }
+        },
+        timeout: 5000
     }
     if (my_saved_cookie != null) {
         nodeDataRequest.headers = { Cookie: my_saved_cookie };
@@ -57,7 +58,8 @@ function createNode(parentNodePath, nodeType, extraData, callback) {
         dataType: 'json',
         error: function(jqXHR, textStatus, errorThrown) {
             alert('Error executing node creation AJAX query:' + textStatus + " thrown:" + errorThrown);
-        }
+        },
+        timeout: 10000
     }
     if (extraData) {
         console.log("Merging extra data.");
@@ -268,7 +270,8 @@ function executeFind() {
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert('Error executing find AJAX query:' + textStatus + " thrown:" + errorThrown);
-        }
+        },
+        timeout: 5000
     }
     // alert("Setting cookie: " + my_saved_cookie);
     if (my_saved_cookie != null) {
@@ -289,7 +292,8 @@ function login() {
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert('Error executing login AJAX query:' + textStatus + " thrown:" + errorThrown);
-        }
+        },
+        timeout: 3000
     };
 
     if (my_saved_cookie != null) {

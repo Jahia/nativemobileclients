@@ -27,9 +27,9 @@
     <script type="text/javascript">
 
         var currentNodePath = null;
-        var jahiaServer = "10.8.37.154:8080";
+        // var jahiaServer = "10.8.37.154:8080";
         // var jahiaServer = "10.0.1.27:8080";
-        // var jahiaServer = "10.0.1.60:8080";
+        var jahiaServer = "10.0.1.60:8080";
         var jahiaUserName = "root", jahiaUserPassword = "root1234";
         var ignoreNodeTypes = [ "jnt:acl", "jnt:tasks", "docnt:pollsContainer", "docnt:links", "jnt:contentList" ];
         var leafNodeTypes = [ "docnt:note", "jnt:file", "jnt:blogPost", "jnt:post", "jnt:wikiPage" ];
@@ -76,6 +76,7 @@
         <div data-role="header">
             <!-- This div with data-role is the header, shown in the black -->
             <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
+
             <h1>{{:text}}</h1>
         </div>
         <div data-role="content">
@@ -125,13 +126,13 @@
 
 <div data-role="page" id="viewNode_jnt_folder">
     <div class="nodeContent"></div>
-        <script id="folderTemplate" class="nodeTemplate" type="text/x-jsrender">
-            <div data-role="header">
-                <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
-                <!-- This div with data-role is the header, shown in the black -->
-                <h1>{{:text}}</h1>
-            </div>
-            <div data-role="content">
+    <script id="folderTemplate" class="nodeTemplate" type="text/x-jsrender">
+        <div data-role="header">
+            <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
+            <!-- This div with data-role is the header, shown in the black -->
+            <h1>{{:text}}</h1>
+        </div>
+        <div data-role="content">
 
             {{if hasChildren}}
             <ul data-role='listview' data-inset='true'>
@@ -153,28 +154,27 @@
             {{else}}
             <p>Folder empty</p>
             {{/if}}
-                <div id="folderActions" data-role="collapsible">
-                    <h3>Folder actions</h3>
+            <div id="folderActions" data-role="collapsible">
+                <h3>Folder actions</h3>
+                <fieldset data-role="controlgroup">
+                    <legend>Upload image from:</legend>
+                    <input type="button" class="send-image" value="Camera"/>
+                    <input type="button" class="send-image" value="Library"/>
+                </fieldset>
+                <form id="newFolderForm">
                     <fieldset data-role="controlgroup">
-                        <legend>Upload image from:</legend>
-                        <input type="button" class="send-image" value="Camera"/>
-                        <input type="button" class="send-image" value="Library"/>
+                        <legend>New folder:</legend>
+                        <input type="text" name="folderName"/>
+                        <input type="button" class="new-folder" value="Create"/>
                     </fieldset>
-                    <form id="newFolderForm">
-                        <fieldset data-role="controlgroup">
-                            <legend>New folder:</legend>
-                            <input type="text" name="folderName"/>
-                            <input type="button" class="new-folder" value="Create"/>
-                        </fieldset>
-                    </form>
-                </div>
-                </div>
-        </script>
-        <script type="text/javascript">
-            function jnt_folder_pageInit(data) {
-                console.log("Initializing page controls for " + data.path + "...");
-                currentNodePath = data.path;
-            }
+                </form>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript">
+        function jnt_folder_pageInit(data) {
+            console.log("Initializing page controls for " + data.path + "...");
+            currentNodePath = data.path;
 
             $('.send-image').click(function () {
                 sendImage($(this).val(), currentNodePath);
@@ -193,19 +193,21 @@
                             refreshNodeDetails();
                         });
             });
+        }
 
-        </script>
+
+    </script>
 </div>
 
 <div data-role="page" id="viewNode_docnt_notesContainer">
     <div class="nodeContent"></div>
-        <script id="notesContainerTemplate" class="nodeTemplate" type="text/x-jsrender">
-            <div data-role="header">
-                <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
-                <!-- This div with data-role is the header, shown in the black -->
-                <h1>{{:text}}</h1>
-            </div>
-            <div data-role="content">
+    <script id="notesContainerTemplate" class="nodeTemplate" type="text/x-jsrender">
+        <div data-role="header">
+            <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
+            <!-- This div with data-role is the header, shown in the black -->
+            <h1>{{:text}}</h1>
+        </div>
+        <div data-role="content">
 
             {{if hasChildren}}
             <ul data-role='listview' data-inset='true'>
@@ -227,25 +229,24 @@
             {{else}}
             <p>Folder empty</p>
             {{/if}}
-                <div id="notesContainerAction" data-role="collapsible">
-                    <h3>Note actions</h3>
+            <div id="notesContainerAction" data-role="collapsible">
+                <h3>Note actions</h3>
 
-                    <form id="newNoteForm">
-                        <fieldset data-role="controlgroup">
-                            <legend>New note :</legend>
-                            <input type="text" name="noteTitle"/>
-                            <textarea name="noteBody"></textarea>
-                            <input type="button" class="new-note" value="Create"/>
-                        </fieldset>
-                    </form>
-                </div>
+                <form id="newNoteForm">
+                    <fieldset data-role="controlgroup">
+                        <legend>New note :</legend>
+                        <input type="text" name="noteTitle"/>
+                        <textarea name="noteBody"></textarea>
+                        <input type="button" class="new-note" value="Create"/>
+                    </fieldset>
+                </form>
             </div>
-        </script>
-        <script type="text/javascript">
-            function docnt_notesContainer_pageInit(data) {
-                console.log("Initializing page controls for " + data.path + "...");
-                currentNodePath = data.path;
-            }
+        </div>
+    </script>
+    <script type="text/javascript">
+        function docnt_notesContainer_pageInit(data) {
+            console.log("Initializing page controls for " + data.path + "...");
+            currentNodePath = data.path;
 
             $('.new-note').click(function () {
                 var noteTitle = $("input[type='text'][name='noteTitle']").val();
@@ -261,8 +262,9 @@
                             refreshNodeDetails();
                         });
             });
+        }
 
-        </script>
+    </script>
 
 </div>
 
@@ -370,18 +372,18 @@
     </div>
 
     <div data-role="page" id="viewNode_jnt_post">
-        <div data-role="header">
-            <!-- This div with data-role is the header, shown in the black -->
-            <h1>Note </h1>
-        </div>
-        <div data-role="content">
-            <script id="postTemplate" class="nodeTemplate" type="text/x-jsrender">
+        <div class="nodeContent"></div>
+        <script id="postTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div data-role="header">
+                <!-- This div with data-role is the header, shown in the black -->
+                <h1>{{:text}}</h1>
+            </div>
+            <div data-role="content">
                 <div>
                     {{:content}}
                 </div>
-            </script>
-            <div class="nodeContent"></div>
-        </div>
+            </div>
+        </script>
         <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
             <div data-role="navbar">
                 <ul>
@@ -391,7 +393,6 @@
             <!-- /navbar -->
         </div>
         <!-- /footer -->
-
     </div>
 
     <div data-role="page" id="viewNode_jnt_file">
