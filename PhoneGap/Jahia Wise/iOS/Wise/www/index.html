@@ -15,7 +15,7 @@
     -->
     <!-- /JQuery Mobile Multiview CSS -->
 
-    <link rel="stylesheet" href="jqm-docs/jqm-docs.css" />
+    <link rel="stylesheet" href="jqm-docs/jqm-docs.css"/>
 
     <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
     <!--
@@ -23,12 +23,13 @@
     <script type="text/javascript" charset="utf-8" src="cordovadesktop/cordova-desktop.js"></script>
     -->
 
-    <script type="text/javascript" src="aes.js" ></script>
+    <script type="text/javascript" src="aes.js"></script>
 
     <!-- JQuery Mobile simple scripts -->
     <script type="text/javascript" src="jqm/jquery-1.7.2.js"></script>
     <!--script type="text/javascript" src="jqm/jquery.mobile-1.1.0.js" ></script-->
-    <script type="text/javascript" src="jqm/jquery.mobile-20120607.js" ></script> <!-- This version fixes back button -->
+    <script type="text/javascript" src="jqm/jquery.mobile-20120607.js"></script>
+    <!-- This version fixes back button -->
     <!-- /JQuery Mobile simple scripts -->
 
     <!-- JQuery Mobile Multiview scripts -->
@@ -43,7 +44,7 @@
     <script type="text/javascript" src="jqm-docs/jqm-docs.js"></script>
 
     <!-- JSRender script -->
-    <script type="text/javascript" src="jsrender-1.0pre.js" ></script>
+    <script type="text/javascript" src="jsrender-1.0pre.js"></script>
     <!-- /JSRender script -->
 
 
@@ -62,7 +63,7 @@
     </script>
 
     <!-- Main application script -->
-    <script type="text/javascript" src="jahia-wise-1.0.js" ></script>
+    <script type="text/javascript" src="jahia-wise-1.0.js"></script>
     <!-- /Main application script -->
 
 </head>
@@ -104,11 +105,12 @@
 <div data-role="page" id="viewNode_nt_base">
     <div data-role="header">
         <a data-panel="menu" href="#">Up</a>
+
         <h1>Node</h1>
     </div>
-    <div class="nodeContent"></div>
-    <script id="baseTemplate" class="nodeTemplate" type="text/x-jsrender">
-        <div data-role="content">
+    <div data-role="content">
+        <div class="nodeContent"></div>
+        <script id="baseTemplate" class="nodeTemplate" type="text/x-jsrender">
             <div class="content-primary">
                 {{if hasChildren}}
                 <ul data-role='listview' data-inset='true'>
@@ -130,9 +132,9 @@
                 {{else}}
                 <p>Node empty</p>
                 {{/if}}
-                </div>
+            </div>
 
-                <div class="content-secondary">
+            <div class="content-secondary">
 
                 <div id="propertiesView" data-role="collapsible">
                     <h3>Properties</h3>
@@ -146,92 +148,93 @@
                 </div>
 
             </div>
-        </div>
-    </script>
-    <script language="javascript" type="text/javascript">
-        function nt_base_pageInit() {
-            console.log("Initializing page controls...");
-            $("#propertiesView").collapsible();
-        }
-    </script>
+        </script>
+        <script language="javascript" type="text/javascript">
+            function nt_base_pageInit() {
+                console.log("Initializing page controls...");
+                $("#propertiesView").collapsible();
+            }
+        </script>
+    </div>
 </div>
 
 <div data-role="page" id="viewNode_jnt_folder" data-url="viewNode_jnt_folder">
     <div data-role="header">
         <a data-panel="menu" href="#">Up</a>
+
         <h1>{{:text}}</h1>
     </div>
     <div data-role="content">
         <div class="nodeContent"></div>
-    <script id="folderTemplate" class="nodeTemplate" type="text/x-jsrender">
+        <script id="folderTemplate" class="nodeTemplate" type="text/x-jsrender">
 
-        <div class="content-primary">
-            {{if hasChildren}}
-            <ul data-role='listview' data-inset='true'>
-                {{for childNodes}}
-                {{if ~isIgnoredType(jcr_primaryType)}}
+            <div class="content-primary">
+                {{if hasChildren}}
+                <ul data-role='listview' data-inset='true'>
+                    {{for childNodes}}
+                    {{if ~isIgnoredType(jcr_primaryType)}}
+                    {{else}}
+                    {{if ~isLeafType(jcr_primaryType)}}
+                    <li>
+                        <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                    </li>
+                    {{/if}}
+                    {{/if}}
+                    {{/for}}
+                </ul>
                 {{else}}
-                {{if ~isLeafType(jcr_primaryType)}}
-                <li>
-                    <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
-                </li>
-                {{else}}
-                <li>
-                    <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
-                </li>
+                <p>Folder empty</p>
                 {{/if}}
-                {{/if}}
-                {{/for}}
-            </ul>
-            {{else}}
-            <p>Folder empty</p>
-            {{/if}}
-        </div>
-        <div class="content-secondary">
-            <div id="folderActions" data-role="collapsible">
-                <h3>Folder actions</h3>
-                <fieldset data-role="controlgroup">
-                    <legend>Upload image from:</legend>
-                    <input type="button" class="send-image" value="Camera"/>
-                    <input type="button" class="send-image" value="Library"/>
-                </fieldset>
-                <form id="newFolderForm">
+            </div>
+            <div class="content-secondary">
+                <div id="folderActions" data-role="collapsible">
+                    <h3>Folder actions</h3>
                     <fieldset data-role="controlgroup">
-                        <legend>New folder:</legend>
-                        <input type="text" name="folderName"/>
-                        <input type="button" class="new-folder" value="Create"/>
+                        <legend>Upload image from:</legend>
+                        <input type="button" class="send-image" value="Camera"/>
+                        <input type="button" class="send-image" value="Library"/>
                     </fieldset>
-                </form>
+                    <form id="newFolderForm">
+                        <fieldset data-role="controlgroup">
+                            <legend>New folder:</legend>
+                            <input type="text" name="folderName"/>
+                            <input type="button" class="new-folder" value="Create"/>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-            </div>
-    </script>
-    <script type="text/javascript">
-        function jnt_folder_pageInit(data) {
-            console.log("Initializing page controls for " + data.path + "...");
-            currentNodePath = data.path;
+        </script>
+        <script type="text/javascript">
+            function jnt_folder_pageInit(data) {
+                console.log("Initializing page controls for " + data.path + "...");
+                currentNodePath = data.path;
 
-            $('.send-image').click(function () {
-                sendImage($(this).val(), currentNodePath);
-            });
+                $('.send-image').click(function () {
+                    sendImage($(this).val(), currentNodePath);
+                });
 
-            $('.new-folder').click(function () {
-                var folderName = $("input[type='text'][name='folderName']").val();
-                console.log("Creating a new folder named " + folderName + " in " + currentNodePath);
-                createNode(currentNodePath, 'jnt:folder',
-                        {
-                            jcrNodeName : folderName,
-                            jcrMixinTypes : 'docmix:docspaceFolder'
-                        },
-                        function(data, textStatus, jqXHR) {
-                            alert('Folder ' + folderName + ' created successfully !');
-                            refreshNodeDetails();
-                        });
-            });
-        }
+                $('.new-folder').click(function () {
+                    var folderName = $("input[type='text'][name='folderName']").val();
+                    console.log("Creating a new folder named " + folderName + " in " + currentNodePath);
+                    createNode(currentNodePath, 'jnt:folder',
+                            {
+                                jcrNodeName : folderName,
+                                jcrMixinTypes : 'docmix:docspaceFolder'
+                            },
+                            function(data, textStatus, jqXHR) {
+                                alert('Folder ' + folderName + ' created successfully !');
+                                refreshNodeDetails();
+                            });
+                });
+            }
 
 
-    </script>
-        </div>
+        </script>
+    </div>
 </div>
 
 <div data-role="page" id="viewNode_docnt_notesContainer">
@@ -240,201 +243,201 @@
         <!-- This div with data-role is the header, shown in the black -->
         <h1>Notes</h1>
     </div>
-    <div class="nodeContent"></div>
-    <script id="notesContainerTemplate" class="nodeTemplate" type="text/x-jsrender">
-        <div data-role="content">
-            <div class="content-primary">
-            {{if hasChildren}}
-            <ul data-role='listview' data-inset='true'>
-                {{for childNodes}}
-                {{if ~isIgnoredType(jcr_primaryType)}}
-                {{else}}
-                {{if ~isLeafType(jcr_primaryType)}}
-                <li>
-                    <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
-                </li>
-                {{else}}
-                <li>
-                    <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
-                </li>
-                {{/if}}
-                {{/if}}
-                {{/for}}
-            </ul>
-            {{else}}
-            <p>Folder empty</p>
-            {{/if}}
-                </div>
-            <div class="content-secondary">
-            <div id="notesContainerAction" data-role="collapsible">
-                <h3>Note actions</h3>
-
-                <form id="newNoteForm">
-                    <fieldset data-role="controlgroup">
-                        <legend>New note :</legend>
-                        <input type="text" name="noteTitle"/>
-                        <textarea name="noteBody"></textarea>
-                        <input type="button" class="new-note" value="Create"/>
-                    </fieldset>
-                </form>
-            </div>
-                </div>
-        </div>
-    </script>
-    <script type="text/javascript">
-        function docnt_notesContainer_pageInit(data) {
-            console.log("Initializing page controls for " + data.path + "...");
-            currentNodePath = data.path;
-
-            $('.new-note').click(function () {
-                var noteTitle = $("input[type='text'][name='noteTitle']").val();
-                var noteBody = $("textarea[name='noteBody']").val();
-                console.log("Creating a new note named with title " + noteTitle + " and body " + noteBody + " in " + currentNodePath);
-                createNode(currentNodePath, 'docnt:note',
-                        {
-                            'jcr:title': noteTitle,
-                            body: noteBody
-                        },
-                        function(data, textStatus, jqXHR) {
-                            alert('Note ' + noteTitle + ' created successfully !');
-                            refreshNodeDetails();
-                        });
-            });
-        }
-
-    </script>
-
-</div>
-
-    <div data-role="page" id="viewNode_docnt_note">
-        <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
-            <!-- This div with data-role is the header, shown in the black -->
-            <h1>Note </h1>
-        </div>
-        <div data-role="content">
-            <script id="noteTemplate" class="nodeTemplate" type="text/x-jsrender">
-                <div>
-                    {{:body}}
-                </div>
-            </script>
-            <div class="nodeContent"></div>
-            <p></p>
-        </div>
-        <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
-                </ul>
-            </div>
-            <!-- /navbar -->
-        </div>
-        <!-- /footer -->
-
-    </div>
-
-    <div data-role="page" id="viewNode_jnt_wikiPage">
-        <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
-            <!-- This div with data-role is the header, shown in the black -->
-            <h1>Note </h1>
-        </div>
-        <div data-role="content">
-            <script id="wikiTemplate" class="nodeTemplate" type="text/x-jsrender">
-                <div>
-                    {{:wikiContent}}
-                </div>
-            </script>
-            <div class="nodeContent"></div>
-        </div>
-        <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
-                </ul>
-            </div>
-            <!-- /navbar -->
-        </div>
-        <!-- /footer -->
-
-    </div>
-
-    <div data-role="page" id="viewNode_jnt_blogPost">
-        <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
-            <!-- This div with data-role is the header, shown in the black -->
-            <h1>Note </h1>
-        </div>
-        <div data-role="content">
-            <script id="blogTemplate" class="nodeTemplate" type="text/x-jsrender">
-                <div>
-                    {{:body}}
-                </div>
-            </script>
-            <div class="nodeContent"></div>
-        </div>
-        <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
-                </ul>
-            </div>
-            <!-- /navbar -->
-        </div>
-        <!-- /footer -->
-
-    </div>
-
-    <div data-role="page" id="viewNode_jnt_post">
-        <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
-            <!-- This div with data-role is the header, shown in the black -->
-            <h1>{{:text}}</h1>
-        </div>
+    <div data-role="content">
         <div class="nodeContent"></div>
-        <script id="postTemplate" class="nodeTemplate" type="text/x-jsrender">
-            <div data-role="content">
-                <div>
-                    {{:content}}
+        <script id="notesContainerTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div class="content-primary">
+                {{if hasChildren}}
+                <ul data-role='listview' data-inset='true'>
+                    {{for childNodes}}
+                    {{if ~isIgnoredType(jcr_primaryType)}}
+                    {{else}}
+                    {{if ~isLeafType(jcr_primaryType)}}
+                    <li>
+                        <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                    </li>
+                    {{/if}}
+                    {{/if}}
+                    {{/for}}
+                </ul>
+                {{else}}
+                <p>Folder empty</p>
+                {{/if}}
+            </div>
+            <div class="content-secondary">
+                <div id="notesContainerAction" data-role="collapsible">
+                    <h3>Note actions</h3>
+
+                    <form id="newNoteForm">
+                        <fieldset data-role="controlgroup">
+                            <legend>New note :</legend>
+                            <input type="text" name="noteTitle"/>
+                            <textarea name="noteBody"></textarea>
+                            <input type="button" class="new-note" value="Create"/>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </script>
-        <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
-                </ul>
-            </div>
-            <!-- /navbar -->
-        </div>
-        <!-- /footer -->
+        <script type="text/javascript">
+            function docnt_notesContainer_pageInit(data) {
+                console.log("Initializing page controls for " + data.path + "...");
+                currentNodePath = data.path;
+
+                $('.new-note').click(function () {
+                    var noteTitle = $("input[type='text'][name='noteTitle']").val();
+                    var noteBody = $("textarea[name='noteBody']").val();
+                    console.log("Creating a new note named with title " + noteTitle + " and body " + noteBody + " in " + currentNodePath);
+                    createNode(currentNodePath, 'docnt:note',
+                            {
+                                'jcr:title': noteTitle,
+                                body: noteBody
+                            },
+                            function(data, textStatus, jqXHR) {
+                                alert('Note ' + noteTitle + ' created successfully !');
+                                refreshNodeDetails();
+                            });
+                });
+            }
+
+        </script>
     </div>
 
-    <div data-role="page" id="viewNode_jnt_file">
-        <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
-            <!-- This div with data-role is the header, shown in the black -->
-            <h1>File </h1>
-        </div>
-        <div data-role="content" id="downloadReady">
-            <script id="fileTemplate" class="nodeTemplate" type="text/x-jsrender">
-                <div>
-                    {{:#index+1}}: <b>{{:name}}</b> ({{:releaseYear}})
-                </div>
-            </script>
-            <div class="nodeContent"></div>
-        </div>
-        <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
-                </ul>
-            </div>
-            <!-- /navbar -->
-        </div>
-        <!-- /footer -->
+</div>
 
+<div data-role="page" id="viewNode_docnt_note">
+    <div data-role="header">
+        <a data-panel="menu" href="#">Up</a>
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Note </h1>
     </div>
+    <div data-role="content">
+        <script id="noteTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:body}}
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+        <p></p>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+
+</div>
+
+<div data-role="page" id="viewNode_jnt_wikiPage">
+    <div data-role="header">
+        <a data-panel="menu" href="#">Up</a>
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Note </h1>
+    </div>
+    <div data-role="content">
+        <script id="wikiTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:wikiContent}}
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+
+</div>
+
+<div data-role="page" id="viewNode_jnt_blogPost">
+    <div data-role="header">
+        <a data-panel="menu" href="#">Up</a>
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Note </h1>
+    </div>
+    <div data-role="content">
+        <script id="blogTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:body}}
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+
+</div>
+
+<div data-role="page" id="viewNode_jnt_post">
+    <div data-role="header">
+        <a data-panel="menu" href="#">Up</a>
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>{{:text}}</h1>
+    </div>
+    <div data-role="content">
+        <div class="nodeContent"></div>
+        <script id="postTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:content}}
+            </div>
+        </script>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+</div>
+
+<div data-role="page" id="viewNode_jnt_file">
+    <div data-role="header">
+        <a data-panel="menu" href="#">Up</a>
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>File </h1>
+    </div>
+    <div data-role="content" id="downloadReady">
+        <script id="fileTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div>
+                {{:#index+1}}: <b>{{:name}}</b> ({{:releaseYear}})
+            </div>
+        </script>
+        <div class="nodeContent"></div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+
+</div>
 
 
 </body>
