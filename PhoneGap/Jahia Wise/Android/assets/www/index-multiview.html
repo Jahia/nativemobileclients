@@ -68,29 +68,26 @@
 </head>
 <body>
 
-<div data-role="page" id="home">
+<div data-role="page" data-wrapper="true">
+
+<div data-role="panel" data-id="menu" data-panel="menu">
+
+<div data-role="page" id="home" data-show="first">
     <div data-role="header">
         <!-- This div with data-role is the header, shown in the black -->
         <h1><img src="images/jahia-logo-wise.png"/></h1>
     </div>
     <div data-role="content">
-        <div class="content-primary">
+        <!-- This div is the body of the page -->
 
-            <!-- This div is the body of the page -->
+        <h3>Your spaces</h3>
+        <ul id="docspaceList" data-role="listview" data-inset="true" data-filter="false"></ul>
 
-            <h3>Your spaces</h3>
-            <ul id="docspaceList" data-role="listview" data-inset="true" data-filter="false"></ul>
 
-        </div>
+        <div id="deviceView" data-role="collapsible">
+            <h3>Device properties</h3>
 
-        <div class="content-secondary">
-
-            <div id="deviceView" data-role="collapsible">
-                <h3>Device properties</h3>
-
-                <p id="deviceProperties">Loading device properties...</p>
-            </div>
-
+            <p id="deviceProperties">Loading device properties...</p>
         </div>
 
     </div>
@@ -109,7 +106,7 @@
     <div class="nodeContent"></div>
     <script id="baseTemplate" class="nodeTemplate" type="text/x-jsrender">
         <div data-role="content">
-            <div class="content-primary">
+            <div>
                 {{if hasChildren}}
                 <ul data-role='listview' data-inset='true'>
                     {{for childNodes}}
@@ -130,9 +127,6 @@
                 {{else}}
                 <p>Node empty</p>
                 {{/if}}
-                </div>
-
-                <div class="content-secondary">
 
                 <div id="propertiesView" data-role="collapsible">
                     <h3>Properties</h3>
@@ -165,7 +159,6 @@
         <div class="nodeContent"></div>
     <script id="folderTemplate" class="nodeTemplate" type="text/x-jsrender">
 
-        <div class="content-primary">
             {{if hasChildren}}
             <ul data-role='listview' data-inset='true'>
                 {{for childNodes}}
@@ -186,8 +179,6 @@
             {{else}}
             <p>Folder empty</p>
             {{/if}}
-        </div>
-        <div class="content-secondary">
             <div id="folderActions" data-role="collapsible">
                 <h3>Folder actions</h3>
                 <fieldset data-role="controlgroup">
@@ -202,7 +193,6 @@
                         <input type="button" class="new-folder" value="Create"/>
                     </fieldset>
                 </form>
-            </div>
             </div>
     </script>
     <script type="text/javascript">
@@ -243,7 +233,7 @@
     <div class="nodeContent"></div>
     <script id="notesContainerTemplate" class="nodeTemplate" type="text/x-jsrender">
         <div data-role="content">
-            <div class="content-primary">
+
             {{if hasChildren}}
             <ul data-role='listview' data-inset='true'>
                 {{for childNodes}}
@@ -264,8 +254,6 @@
             {{else}}
             <p>Folder empty</p>
             {{/if}}
-                </div>
-            <div class="content-secondary">
             <div id="notesContainerAction" data-role="collapsible">
                 <h3>Note actions</h3>
 
@@ -278,7 +266,6 @@
                     </fieldset>
                 </form>
             </div>
-                </div>
         </div>
     </script>
     <script type="text/javascript">
@@ -306,9 +293,35 @@
 
 </div>
 
+</div>
+
+<div data-role="panel" data-id="main" data-panel="main">
+    <!-- Start of second page -->
+    <div data-role="page" id="bar" data-show="first">
+
+        <div data-role="header">
+            <h1>Welcome to Jahia Wise</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
     <div data-role="page" id="viewNode_docnt_note">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>Note </h1>
         </div>
@@ -335,7 +348,6 @@
 
     <div data-role="page" id="viewNode_jnt_wikiPage">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>Note </h1>
         </div>
@@ -361,7 +373,6 @@
 
     <div data-role="page" id="viewNode_jnt_blogPost">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>Note </h1>
         </div>
@@ -387,7 +398,6 @@
 
     <div data-role="page" id="viewNode_jnt_post">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>{{:text}}</h1>
         </div>
@@ -412,7 +422,6 @@
 
     <div data-role="page" id="viewNode_jnt_file">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>File </h1>
         </div>
@@ -436,6 +445,9 @@
 
     </div>
 
+</div>
+
+</div>
 
 </body>
 </html>

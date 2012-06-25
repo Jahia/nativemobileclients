@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- JQuery Mobile simple CSS -->
-    <link rel="stylesheet" href="jqm/jquery.mobile-1.1.0.css"/>
+    <!--link rel="stylesheet" href="jqm/jquery.mobile-1.1.0.css"/-->
     <!-- /JQuery Mobile simple CSS -->
+
+    <!-- JQuery Mobile Splitview CSS -->
+    <link rel="stylesheet" href="splitview/jquery.mobile-splitview-version.css"/>
+    <link rel="stylesheet" href="splitview/jquery.mobile.splitview.css"/>
+    <link rel="stylesheet" href="splitview/jquery.mobile.grids.collapsible.css"/>
+    <!-- /JQuery Mobile Splitview CSS -->
 
     <!-- JQuery Mobile Multiview CSS -->
     <!--
@@ -15,37 +21,36 @@
     -->
     <!-- /JQuery Mobile Multiview CSS -->
 
-    <link rel="stylesheet" href="jqm-docs/jqm-docs.css" />
-
     <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
-    <!--
-    <script type="text/javascript" charset="utf-8" src="cordovadesktop/debugdata.js"></script>
-    <script type="text/javascript" charset="utf-8" src="cordovadesktop/cordova-desktop.js"></script>
-    -->
-
+    <script type="text/javascript" src="json2.js"></script>
+    <script type="text/javascript" src="cycle.js"></script>
     <script type="text/javascript" src="aes.js" ></script>
 
     <!-- JQuery Mobile simple scripts -->
-    <script type="text/javascript" src="jqm/jquery-1.7.2.js"></script>
+    <!--script type="text/javascript" src="jqm/jquery-1.7.2.js"></script-->
     <!--script type="text/javascript" src="jqm/jquery.mobile-1.1.0.js" ></script-->
-    <script type="text/javascript" src="jqm/jquery.mobile-20120607.js" ></script> <!-- This version fixes back button -->
+    <!--script type="text/javascript" src="jqm/jquery.mobile-20120607.js" ></script--> <!-- This version fixes back button -->
     <!-- /JQuery Mobile simple scripts -->
+
+    <!-- JQuery Mobile Splitview scripts -->
+    <script type="text/javascript" src="splitview/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="splitview/jquery.mobile.splitview.js"></script>
+    <script type="text/javascript" src="splitview/jquery.mobile-splitview-version.js" ></script>
+    <script type="text/javascript" src="splitview/iscroll-wrapper.js"></script>
+    <script type="text/javascript" src="splitview/iscroll.js"></script>
+    <!-- JQuery Mobile Splitview scripts -->
 
     <!-- JQuery Mobile Multiview scripts -->
     <!--
     <script type="text/javascript" src="multiview/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="multiview/jquery.mobile-1.1.0.multiview.js"></script>
-    <script type="text/javascript" src="jqm.page.params.js"></script>
     <script type="text/javascript" src="multiview/multiview.js"></script>
     -->
     <!-- /JQuery Mobile Multiview scripts -->
 
-    <script type="text/javascript" src="jqm-docs/jqm-docs.js"></script>
-
     <!-- JSRender script -->
     <script type="text/javascript" src="jsrender-1.0pre.js" ></script>
     <!-- /JSRender script -->
-
 
     <!-- Application configuration -->
     <script type="text/javascript">
@@ -54,7 +59,6 @@
         // var jahiaServer = "10.8.37.154:8080";
         // var jahiaServer = "10.0.1.27:8080";
         var jahiaServer = "10.0.1.60:8080";
-        // var jahiaServer = "cordova:8080";
         var jahiaUserName = "root", jahiaUserPassword = "root1234";
         var ignoreNodeTypes = [ "jnt:acl", "jnt:tasks", "docnt:pollsContainer", "docnt:links", "jnt:contentList" ];
         var leafNodeTypes = [ "docnt:note", "jnt:file", "jnt:blogPost", "jnt:post", "jnt:wikiPage" ];
@@ -65,32 +69,28 @@
     <script type="text/javascript" src="jahia-wise-1.0.js" ></script>
     <!-- /Main application script -->
 
+
 </head>
 <body>
 
-<div data-role="page" id="home">
+<div data-role="panel" data-id="menu" data-hash="false">
+
+<div data-role="page" id="home" data-hash="false">
     <div data-role="header">
         <!-- This div with data-role is the header, shown in the black -->
         <h1><img src="images/jahia-logo-wise.png"/></h1>
     </div>
     <div data-role="content">
-        <div class="content-primary">
+        <!-- This div is the body of the page -->
 
-            <!-- This div is the body of the page -->
+        <h3>Your spaces</h3>
+        <ul id="docspaceList" data-role="listview" data-inset="true" data-filter="false"></ul>
 
-            <h3>Your spaces</h3>
-            <ul id="docspaceList" data-role="listview" data-inset="true" data-filter="false"></ul>
 
-        </div>
+        <div id="deviceView" data-role="collapsible">
+            <h3>Device properties</h3>
 
-        <div class="content-secondary">
-
-            <div id="deviceView" data-role="collapsible">
-                <h3>Device properties</h3>
-
-                <p id="deviceProperties">Loading device properties...</p>
-            </div>
-
+            <p id="deviceProperties">Loading device properties...</p>
         </div>
 
     </div>
@@ -102,14 +102,16 @@
 </div>
 
 <div data-role="page" id="viewNode_nt_base">
-    <div data-role="header">
-        <a data-panel="menu" href="#">Up</a>
-        <h1>Node</h1>
-    </div>
     <div class="nodeContent"></div>
     <script id="baseTemplate" class="nodeTemplate" type="text/x-jsrender">
+        <div data-role="header">
+            <!-- This div with data-role is the header, shown in the black -->
+            <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
+
+            <h1>{{:text}}</h1>
+        </div>
         <div data-role="content">
-            <div class="content-primary">
+            <div>
                 {{if hasChildren}}
                 <ul data-role='listview' data-inset='true'>
                     {{for childNodes}}
@@ -121,7 +123,7 @@
                     </li>
                     {{else}}
                     <li>
-                        <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                        <a href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
                     </li>
                     {{/if}}
                     {{/if}}
@@ -130,9 +132,6 @@
                 {{else}}
                 <p>Node empty</p>
                 {{/if}}
-                </div>
-
-                <div class="content-secondary">
 
                 <div id="propertiesView" data-role="collapsible">
                     <h3>Properties</h3>
@@ -156,16 +155,16 @@
     </script>
 </div>
 
-<div data-role="page" id="viewNode_jnt_folder" data-url="viewNode_jnt_folder">
-    <div data-role="header">
-        <a data-panel="menu" href="#">Up</a>
-        <h1>{{:text}}</h1>
-    </div>
-    <div data-role="content">
-        <div class="nodeContent"></div>
+<div data-role="page" id="viewNode_jnt_folder">
+    <div class="nodeContent"></div>
     <script id="folderTemplate" class="nodeTemplate" type="text/x-jsrender">
+        <div data-role="header">
+            <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
+            <!-- This div with data-role is the header, shown in the black -->
+            <h1>{{:text}}</h1>
+        </div>
+        <div data-role="content">
 
-        <div class="content-primary">
             {{if hasChildren}}
             <ul data-role='listview' data-inset='true'>
                 {{for childNodes}}
@@ -177,7 +176,7 @@
                 </li>
                 {{else}}
                 <li>
-                    <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                    <a href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
                 </li>
                 {{/if}}
                 {{/if}}
@@ -186,8 +185,6 @@
             {{else}}
             <p>Folder empty</p>
             {{/if}}
-        </div>
-        <div class="content-secondary">
             <div id="folderActions" data-role="collapsible">
                 <h3>Folder actions</h3>
                 <fieldset data-role="controlgroup">
@@ -203,7 +200,7 @@
                     </fieldset>
                 </form>
             </div>
-            </div>
+        </div>
     </script>
     <script type="text/javascript">
         function jnt_folder_pageInit(data) {
@@ -231,19 +228,18 @@
 
 
     </script>
-        </div>
 </div>
 
 <div data-role="page" id="viewNode_docnt_notesContainer">
-    <div data-role="header">
-        <a data-panel="menu" href="#">Up</a>
-        <!-- This div with data-role is the header, shown in the black -->
-        <h1>Notes</h1>
-    </div>
     <div class="nodeContent"></div>
     <script id="notesContainerTemplate" class="nodeTemplate" type="text/x-jsrender">
+        <div data-role="header">
+            <a href="{{:~getParentPageName(#data)}}?nodePath={{encodeURIComponent:parentPath}}">Up</a>
+            <!-- This div with data-role is the header, shown in the black -->
+            <h1>{{:text}}</h1>
+        </div>
         <div data-role="content">
-            <div class="content-primary">
+
             {{if hasChildren}}
             <ul data-role='listview' data-inset='true'>
                 {{for childNodes}}
@@ -255,7 +251,7 @@
                 </li>
                 {{else}}
                 <li>
-                    <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                    <a href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
                 </li>
                 {{/if}}
                 {{/if}}
@@ -264,8 +260,6 @@
             {{else}}
             <p>Folder empty</p>
             {{/if}}
-                </div>
-            <div class="content-secondary">
             <div id="notesContainerAction" data-role="collapsible">
                 <h3>Note actions</h3>
 
@@ -278,7 +272,6 @@
                     </fieldset>
                 </form>
             </div>
-                </div>
         </div>
     </script>
     <script type="text/javascript">
@@ -306,9 +299,35 @@
 
 </div>
 
+</div>
+
+<div data-role="panel" data-id="main">
+    <!-- Start of second page -->
+    <div data-role="page" id="bar">
+
+        <div data-role="header">
+            <h1>Welcome to Jahia Wise</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer" data-position="fixed" data-id="ew-footer" class="ui-splitview-hidden">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active" data-transition="slideup">Wise home</a></li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
     <div data-role="page" id="viewNode_docnt_note">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>Note </h1>
         </div>
@@ -335,7 +354,6 @@
 
     <div data-role="page" id="viewNode_jnt_wikiPage">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>Note </h1>
         </div>
@@ -361,7 +379,6 @@
 
     <div data-role="page" id="viewNode_jnt_blogPost">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>Note </h1>
         </div>
@@ -386,13 +403,12 @@
     </div>
 
     <div data-role="page" id="viewNode_jnt_post">
-        <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
-            <!-- This div with data-role is the header, shown in the black -->
-            <h1>{{:text}}</h1>
-        </div>
         <div class="nodeContent"></div>
         <script id="postTemplate" class="nodeTemplate" type="text/x-jsrender">
+            <div data-role="header">
+                <!-- This div with data-role is the header, shown in the black -->
+                <h1>{{:text}}</h1>
+            </div>
             <div data-role="content">
                 <div>
                     {{:content}}
@@ -412,7 +428,6 @@
 
     <div data-role="page" id="viewNode_jnt_file">
         <div data-role="header">
-            <a data-panel="menu" href="#">Up</a>
             <!-- This div with data-role is the header, shown in the black -->
             <h1>File </h1>
         </div>
@@ -436,6 +451,7 @@
 
     </div>
 
+</div>
 
 </body>
 </html>

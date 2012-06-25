@@ -207,10 +207,10 @@ function renderNode(pageSelector, node) {
 
     // Find the h1 element in our header and inject the name of
     // the category into it.
-    console.log("Changing title...");
     $header.find("h1").html(node.text);
-    console.log("Changing parent link...");
     $header.find("a").attr('href', resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes) + "?nodePath=" + encodeURIComponent(node.parentPath));
+
+    $(pageSelector + " .nodeContent").trigger("create");
 
     // Pages are lazily enhanced. We call page() on the page
     // element to make sure it is always enhanced before we
@@ -219,8 +219,6 @@ function renderNode(pageSelector, node) {
     // can only be enhanced once.
     $page.page();
 
-    console.log("Enhancing page components");
-    $(pageSelector + " .nodeContent").trigger("create");
 
     // Enhance the listview we just injected.
     // $content.find(":jqmData(role=listview)").listview();
@@ -244,8 +242,8 @@ function refreshNodeDetails() {
 }
 
 function showNodeDetails(urlObj, options, refresh) {
-    var nodePath = decodeURIComponent(urlObj.hash.replace(/.*nodePath=/, ""));
-    // var nodePath = decodeURIComponent(options.pageData.nodePath);
+    // var nodePath = decodeURIComponent(urlObj.hash.replace(/.*nodePath=/, ""));
+    var nodePath = decodeURIComponent(options.pageData.nodePath);
     console.log('jahiawise.showNodeDetails urlObj=');
     dumpObjectProperties(urlObj);
     console.log('jahiawise.showNodeDetails options=');
@@ -285,7 +283,7 @@ function showNodeDetails(urlObj, options, refresh) {
             // the page we just modified.
             if (!refresh) {
                 console.log("showNodeDetails: Now changing page dynamically...options.pageContainer=" + options.pageContainer);
-                $.mobile.changePage($page, options);
+                // $.mobile.changePage($page, options);
             }
         } else {
             console.log("No valid node for " + nodePath + " was found !");
@@ -298,7 +296,7 @@ function displayNode(node) {
     // dumpObjectProperties(node);
     var newMarkup = '';
     var childPageName = resolvePageName(node.primaryNodeType, node.mixinTypes, node.supertypes);
-    newMarkup += "<a href='" + childPageName + "?nodePath=" + encodeURIComponent(node.path) + "'>";
+    newMarkup += "<a href='" + childPageName + "?nodePath=" + encodeURIComponent(node.path) + "' data-panel=\"menu\">";
 
     newMarkup += '<h3>' + node.jcr_title + '</h3>';
     newMarkup += '<p>' + node.path + '</p>';
@@ -514,7 +512,7 @@ function initApp() {
                 showNodeDetails(u, data.options, false);
                 // Make sure to tell changePage() we've handled this call so it doesn't
                 // have to do anything.
-                event.preventDefault();
+                // event.preventDefault();
             }
         }
     });
