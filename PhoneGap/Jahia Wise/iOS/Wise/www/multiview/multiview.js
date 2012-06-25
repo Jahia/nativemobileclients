@@ -1433,6 +1433,9 @@
 				$link = $( link ), 
 				onePass;
 
+            console.log('multiview.clickRouter $link=');
+            dumpObjectProperties($link);
+
 			if ( $(e.target).closest('.ui-popup-container').length > 0 ){				
 				onePass = true;
 				}
@@ -1499,7 +1502,10 @@
 		   * @param {object}  data
 		   */
 		panelTrans: function (e, data) {
-			
+
+            console.log('multiview.panelTrans data=');
+            dumpObjectProperties(data);
+
 			var	self = this,
 				o = self.options,
 				wrap = $('div:jqmData(wrapper="true").ui-page-active'),
@@ -1509,10 +1515,17 @@
 				$targetPanel = $link ? wrap.find('div:jqmData(id="'+$targetPanelID+'")') : ( data.options.pageContainer.get(0).tagName == "DIV" ? wrap.find( data.options.pageContainer ) : data.options.pageContainer ),
 				$targetPanelActivePage = $targetPanel.find( '.ui-page-active' ).length > 0 ? $targetPanel.find( '.ui-page-active' ) : $targetPanel.find('div:jqmData(show="first")'),
 				urlHash;
-			
+
+            console.log('multiview.panelTrans $link=' + $link);
+            console.log('multiview.panelTrans targetPanelID=');
+            dumpObjectProperties($targetPanelID);
+            console.log('multiview.panelTrans targetPanel=');
+            dumpObjectProperties($targetPanel);
+
 			// if panel transition
 			if ( $targetPanel.is('body') == false && dial == false ) {
 				//alert("panelTrans");
+                console.log('multiview.panelTrans = panel transition');
 				data.options.fromPage = $targetPanelActivePage;
 				data.options.pageContainer = $targetPanel;
 				
@@ -1526,7 +1539,8 @@
 				o._trans = "panelTrans";
 								
 				} else {
-					// = JQM territory					
+                    console.log('multiview.panelTrans = JQM transition');
+					// = JQM territory
 					// alert("JQM");
 					// still, if we are coming from a wrapper page, with panel transitions made, fromPage may not
 					// always be set to the wrapper page, which will cause JQM to drop active class from the panel
@@ -1562,7 +1576,10 @@
 		   * @param {object}  data
 		   */
 		panelHash: function( e, data ) {
-				
+
+                console.log('multiview.panelhash data=');
+                dumpObjectProperties(data);
+
 				var self = this,
 					o = self.options,					
 					isHash = $.mobile.path.parseUrl(data.toPage),
@@ -1680,7 +1697,14 @@
 		   * @param {link}    link object that was clicked (or "")
 		   */
 		panelTransitionCleaner: function(data, todo, link ) {
-		
+
+            console.log('panelTransitionCleaner data=');
+            dumpObjectProperties(data);
+            console.log(' todo=');
+            dumpObjectProperties(todo);
+            console.log(' link=');
+            dumpObjectProperties(link);
+
 			var self = this,
 				o = self.options,
 				wrap = $('div:jqmData(wrapper="true").ui-page-active'),				
@@ -1878,7 +1902,10 @@
 		      * purpose: 	panel transition handler, rewrite toPage and options on pagebeforechange w/o preventDefaulting!			  
 		      */
 			$(document).on( "pagebeforechange", function( e, data ) {
-				
+
+                console.log("multiview.pagebeforechange data=");
+                dumpObjectProperties(data);
+
 				// store external pages in sitemap
 				if ( data.options.fromHashChange == false && $.mobile.path.parseUrl( data.toPage ).hash == "") {
 					var newExt = $.mobile.path.parseUrl( data.toPage ).pathname;
@@ -1891,6 +1918,7 @@
 				if (data.options.fromHashChange == true && typeof data.toPage == 'string' && ( data.toPage == o._prevBack || o._blockPopupHavoc == true ) ) {
 					o._prevBack = '';
 					o._blockPopupHavoc = false;
+                    console.log('multiview.pagebeforechange return because of Firefox-superfast-trailing-hashchange-double-back-transition-blocker');
 					return;
 					}
 				
@@ -1911,17 +1939,19 @@
 					
 						data.toPage = isId;
 						o._backFix = true;
+                        console.log("multiview.pagebeforechange backFix=true");
 					} 
 				
-				// block trailing hashchange (objects) - including dialogs/custom selects				
-				if (typeof data.toPage !== 'string' ) {					
+				// block trailing hashchange (objects) - including dialogs/custom selects
+				if (typeof data.toPage !== 'string' ) {
 					
 					if ( data.options.role != "custom-select" ) {
-						o._backFix = false;							
+						o._backFix = false;
+                        console.log('multiview.pagebeforechange return because of non-string toPage and non-custom select');
 						return;
 						} 
 					}
-				
+
 				// continue to fwd/back transition
 				if ( data.options.fromHashChange == true ) {
 						// Firefox prevBack

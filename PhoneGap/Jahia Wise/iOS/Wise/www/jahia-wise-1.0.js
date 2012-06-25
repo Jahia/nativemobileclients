@@ -49,7 +49,7 @@ function createNode(parentNodePath, nodeType, extraData, callback) {
         url : 'http://' + jahiaServer + '/cms/wise/default/en' + parentNodePath + '/*',
         type: 'POST',
         data : {
-            jcrNodeType : nodeType,
+            jcrNodeType : nodeType
         },
         success : function(data, textStatus, jqXHR) {
             getCookie(jqXHR);
@@ -108,10 +108,66 @@ function isLeafType(childNodeType) {
     return ($.inArray(childNodeType, leafNodeTypes) !== -1);
 }
 
+var alreadyVisited = [];
+var currentPath = [];
+
 function dumpObjectProperties(curObject) {
-    for (var objectPropertyKey in curObject) {
-        console.log('  +-- ' + objectPropertyKey + ' = ' + curObject[objectPropertyKey]);
+
+    recurseDumpObjectProperties(curObject, 0);
+
+    alreadyVisited = [];
+    currentPath = [];
+}
+
+function getNodePath(htmlNode) {
+
+    var path = [];
+
+    do {
+        path.unshift(htmlNode.nodeName + (htmlNode.id ? ' id="' + htmlNode.id + '"' : '') + (htmlNode.className ? ' class="' + htmlNode.className + '"' : ''));
+    } while ((htmlNode.nodeName.toLowerCase() != 'html') && (htmlNode = htmlNode.parentNode));
+
+    return path.join(" > ");
+
+}
+
+function recurseDumpObjectProperties(curObject, depthPadding) {
+    var depthPaddingString = "";
+    for (i =0; i < depthPadding; i++) {
+        depthPaddingString += " ";
     }
+    if ($.inArray(curObject, alreadyVisited) !== -1) {
+        console.log(depthPaddingString + 'already visited object at ' + currentPath);
+        return;
+    }
+    if (depthPadding > 4) {
+        console.log(depthPaddingString + 'aborting output because of depth');
+        return;
+    }
+    alreadyVisited.push(curObject);
+    currentPath.push(curObject);
+    console.log(depthPaddingString + '{');
+    for (var objectPropertyKey in curObject) {
+        var objectPropertyValue = curObject[objectPropertyKey];
+        if (objectPropertyKey == 'outerHTML' || objectPropertyKey == 'innerHTML') {
+            console.log(depthPaddingString + '   ' + objectPropertyKey + ' : \'HTML stripped\'');
+        } else if (objectPropertyKey == 'outerText' || objectPropertyKey == 'innerText') {
+                console.log(depthPaddingString + '   ' + objectPropertyKey + ' : \'Text stripped\'');
+        } else if (typeof objectPropertyValue == 'object') {
+            if (objectPropertyValue instanceof Node) {
+                console.log(depthPaddingString + '   ' + objectPropertyKey + ' : ' + getNodePath(objectPropertyValue));
+            } else {
+                console.log(depthPaddingString + '   ' + objectPropertyKey + ' : ');
+                recurseDumpObjectProperties(objectPropertyValue, depthPadding + 2);
+            }
+        } else if (typeof objectPropertyValue == 'function') {
+            // don't dump functions, they are not needed most of the time.
+        } else {
+            console.log(depthPaddingString + '   ' + objectPropertyKey + ' : ' + curObject[objectPropertyKey]);
+        }
+    }
+    console.log(depthPaddingString + '}');
+    currentPath.pop();
 }
 
 /**
@@ -137,7 +193,7 @@ function renderNode(pageSelector, node) {
         // Render the template with the movies data and insert
         // the rendered HTML under the "movieList" element
         console.log('Node ' + node.path + ":");
-        dumpObjectProperties(node);
+        // dumpObjectProperties(node);
         try {
             markup = $(pageSelector + " .nodeTemplate").render(node);
         } catch (e) {
@@ -151,7 +207,10 @@ function renderNode(pageSelector, node) {
 
     // Find the h1 element in our header and inject the name of
     // the category into it.
-    // $header.find("h1").html(node.text);
+    $header.find("h1").html(node.text);
+    $header.find("a").attr('href', resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes) + "?nodePath=" + encodeURIComponent(node.parentPath));
+
+    $(pageSelector + " .nodeContent").trigger("create");
 
     // Pages are lazily enhanced. We call page() on the page
     // element to make sure it is always enhanced before we
@@ -159,6 +218,7 @@ function renderNode(pageSelector, node) {
     // Subsequent calls to page() are ignored since a page/widget
     // can only be enhanced once.
     $page.page();
+
 
     // Enhance the listview we just injected.
     // $content.find(":jqmData(role=listview)").listview();
@@ -171,7 +231,6 @@ function renderNode(pageSelector, node) {
         console.log("No page init callback with name " + callbackFunction + " found.")
     }
 
-    $(pageSelector + " .nodeContent").trigger("create");
 
     return $page;
 }
@@ -183,7 +242,16 @@ function refreshNodeDetails() {
 }
 
 function showNodeDetails(urlObj, options, refresh) {
-    var nodePath = decodeURIComponent(urlObj.hash.replace(/.*nodePath=/, ""));
+    // var nodePath = decodeURIComponent(urlObj.hash.replace(/.*nodePath=/, ""));
+    var nodePath = decodeURIComponent(options.pageData.nodePath);
+    console.log('jahiawise.showNodeDetails urlObj=');
+    dumpObjectProperties(urlObj);
+    console.log('jahiawise.showNodeDetails options=');
+    dumpObjectProperties(options);
+    console.log('jahiawise.showNodeDetails refresh=');
+    dumpObjectProperties(refresh);
+    console.log('jahiawise.showNodeDetails nodePath=');
+    dumpObjectProperties(nodePath);
     curUrlObj = urlObj;
     curOptions = options;
     // Get the object that represents the category we
@@ -204,6 +272,7 @@ function showNodeDetails(urlObj, options, refresh) {
                 return;
             }
             var $page = renderNode(pageSelector, node);
+
             // We don't want the data-url of the page we just modified
             // to be the url that shows up in the browser's location field,
             // so set the dataUrl option to the URL for the category
@@ -213,8 +282,8 @@ function showNodeDetails(urlObj, options, refresh) {
             // Now call changePage() and tell it to switch to
             // the page we just modified.
             if (!refresh) {
-                console.log("showNodeDetails: Now changing page dynamically...");
-                $.mobile.changePage($page, options);
+                console.log("showNodeDetails: Now changing page dynamically...options.pageContainer=" + options.pageContainer);
+                // $.mobile.changePage($page, options);
             }
         } else {
             console.log("No valid node for " + nodePath + " was found !");
@@ -224,10 +293,10 @@ function showNodeDetails(urlObj, options, refresh) {
 
 function displayNode(node) {
     console.log('Node ' + node.path + ':');
-    dumpObjectProperties(node);
+    // dumpObjectProperties(node);
     var newMarkup = '';
     var childPageName = resolvePageName(node.primaryNodeType, node.mixinTypes, node.supertypes);
-    newMarkup += "<a href='" + childPageName + "?nodePath=" + encodeURIComponent(node.path) + "'>";
+    newMarkup += "<a href='" + childPageName + "?nodePath=" + encodeURIComponent(node.path) + "' data-panel=\"menu\">";
 
     newMarkup += '<h3>' + node.jcr_title + '</h3>';
     newMarkup += '<p>' + node.path + '</p>';
@@ -426,6 +495,9 @@ function initApp() {
 // Listen for any attempts to call changePage().
     $(document).bind("pagebeforechange", function(event, data) {
 
+        console.log('jahiawise.pagebeforechange data=');
+        dumpObjectProperties(data);
+
         // We only want to handle changePage() calls where the caller is
         // asking us to load a page by URL.
         if (typeof data.toPage === "string") {
@@ -440,7 +512,7 @@ function initApp() {
                 showNodeDetails(u, data.options, false);
                 // Make sure to tell changePage() we've handled this call so it doesn't
                 // have to do anything.
-                event.preventDefault();
+                // event.preventDefault();
             }
         }
     });

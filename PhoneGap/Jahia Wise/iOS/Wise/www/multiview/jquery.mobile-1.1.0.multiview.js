@@ -2834,6 +2834,8 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 	//function for transitioning between two existing pages
 	function transitionPages( toPage, fromPage, transition, reverse ) {
 
+        console.log('jqm.transitionPages toPage=' + toPage + ' fromPage=' + fromPage);
+
 		if( fromPage ) {
 			//trigger before show/hide events
 			fromPage.data( "page" )._trigger( "beforehide", null, { nextPage: toPage } );
@@ -3013,6 +3015,9 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 		// Make sure we have a pageContainer to work with.
 		settings.pageContainer = settings.pageContainer || $.mobile.pageContainer;
 
+        console.log('jqm.loadPage looking for path with dataUrl=' + dataUrl + ' path=' + path + ' fileUrl=' + fileUrl + ' pageContainer=');
+        dumpObjectProperties(settings.pageContainer);
+
 		// Check to see if the page already exists in the DOM.
 		page = settings.pageContainer.children( ":jqmData(url='" + dataUrl + "')" );
 
@@ -3021,6 +3026,7 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 		// injected by a developer, in which case it would be lacking a data-url
 		// attribute and in need of enhancement.
 		if ( page.length === 0 && dataUrl && !path.isPath( dataUrl ) ) {
+            console.log('jqm.loadPage page not found using data-url, trying to compensate');
 			page = settings.pageContainer.children( "#" + dataUrl )
 				.attr( "data-" + $.mobile.ns + "url", dataUrl )
 				.jqmData( "url", dataUrl );
@@ -3101,6 +3107,7 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 		if ( !( $.mobile.allowCrossDomainPages || path.isSameDomain( documentUrl, absUrl ) ) ) {
 			deferred.reject( absUrl, options );
 		} else {
+            console.log('jqm.loadPage attempting to use AJAX to load page using URL=' + fileUrl);
 			// Load the new page.
 			$.ajax({
 				url: fileUrl,
@@ -3272,6 +3279,9 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 			return;
 		}
 
+        console.log('jqm.changepage start toPage=' + toPage + " options=");
+        dumpObjectProperties(options);
+
 		var settings = $.extend( {}, $.mobile.changePage.defaults, options );
 
 		// Make sure we have a pageContainer to work with.
@@ -3297,6 +3307,9 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 
 		toPage = triggerData.toPage;
 
+        console.log('jqm.changepage after pagebeforechange toPage=' + toPage + " options=");
+        dumpObjectProperties(options);
+
 		// Set the isPageTransitioning flag to prevent any requests from
 		// entering this method while we are in the midst of loading a page
 		// or transitioning.
@@ -3315,6 +3328,7 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 					$.mobile.changePage( newPage, options );
 				})
 				.fail(function( url, options ) {
+                    console.log('jqm.changepage: Page change to ' + url + ' failed !!!!!!');
 					isPageTransitioning = false;
 
 					//clear out the active button state
@@ -3370,6 +3384,8 @@ $.mobile._maybeDegradeTransition = function( transition ) {
 					isForward:	function() {}
 				});
 			}
+
+            console.log('jqm.changepage from and to page are the same, aborting !!!');
 
 			return;
 		}
@@ -5641,7 +5657,7 @@ $.widget( "mobile.button", $.mobile.widget, {
 		// Add hidden input during submit if input type="submit" has a name.
 		if ( type !== "button" && type !== "reset" && name ) {
 				$el.bind( "vclick", function() {
-					// Add hidden input if it doesn’t already exist.
+					// Add hidden input if it doesnï¿½t already exist.
 					if( $buttonPlaceholder === undefined ) {
 						$buttonPlaceholder = $( "<input>", {
 							type: "hidden",
