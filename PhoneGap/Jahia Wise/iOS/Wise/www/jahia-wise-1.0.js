@@ -105,6 +105,8 @@ function resolveIconName(node) {
         return 'jnt_folder';
     } else if (node.primaryNodeType == 'jnt:file') {
         return 'jnt_file';
+    } else if (node.primaryNodeType == 'docnt:note') {
+        return 'docnt_note';
     } else {
         return node.nodename;
     }
