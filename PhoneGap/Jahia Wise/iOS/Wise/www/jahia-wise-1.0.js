@@ -100,6 +100,16 @@ function resolvePageName(nodeType, mixinTypes, superTypes) {
     return pageName;
 }
 
+function resolveIconName(node) {
+    if (node.primaryNodeType == 'jnt:folder') {
+        return 'jnt_folder';
+    } else if (node.primaryNodeType == 'jnt:file') {
+        return 'jnt_file';
+    } else {
+        return node.nodename;
+    }
+}
+
 function isIgnoredType(childNodeType) {
     return ($.inArray(childNodeType, ignoreNodeTypes) !== -1);
 }
@@ -581,6 +591,12 @@ function initApp() {
             }  else {
                 return "";
             }
+        },
+        getPathFromNodeType: function (nodetype) {
+            return nodeTypeToPath(nodetype);
+        },
+        getIconName: function (node) {
+            return resolveIconName(node);
         }
     });
 }

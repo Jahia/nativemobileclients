@@ -176,11 +176,11 @@
                     {{else}}
                     {{if ~isLeafType(jcr_primaryType)}}
                     <li>
-                        <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                        <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}"><!--img src="images/{{:~getIconName(#data)}}.png" class="ui-li-icon"/-->{{:text}}</a>
                     </li>
                     {{else}}
                     <li>
-                        <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                        <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}"><!--img src="images/{{:~getIconName(#data)}}.png" class="ui-li-icon"/-->{{:text}}</a>
                     </li>
                     {{/if}}
                     {{/if}}
