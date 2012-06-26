@@ -313,7 +313,9 @@ function displayNode(node) {
     newMarkup += "<a href='" + childPageName + "?nodePath=" + encodeURIComponent(node.path) + "'>";
 
     newMarkup += '<h3>' + node.jcr_title + '</h3>';
-    newMarkup += '<p>' + node.path + '</p>';
+    // newMarkup += '<p>'+node.jcr_description+'</p>';
+    newMarkup += '<p>Last modification by '+node.j_lastPublishedBy+'</p>';
+    newMarkup += '<p>'+prettyDate(new Date(node.j_lastPublished))+'</p>';
     if (false) {
         newMarkup += '<table>';
         $.each(node, function(key, value) {
