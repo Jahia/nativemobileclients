@@ -221,7 +221,7 @@ function renderNode(pageSelector, node) {
     console.log("Changing title...");
     $header.find("h1").html(node.text);
     console.log("Changing parent link...");
-    $header.find("a").attr('href', resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes) + "?nodePath=" + encodeURIComponent(node.parentPath));
+    $header.find("a[class='up-link']").attr('href', resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes) + "?nodePath=" + encodeURIComponent(node.parentPath));
 
     // Pages are lazily enhanced. We call page() on the page
     // element to make sure it is always enhanced before we
