@@ -47,14 +47,17 @@
     <script type="text/javascript" src="jsrender-1.0pre.js"></script>
     <!-- /JSRender script -->
 
+    <!-- Pretty date JQuery plugin script -->
+    <script type="text/javascript" src="pretty.js"></script>
+    <!-- /Pretty date JQuery plugin script -->
 
     <!-- Application configuration -->
     <script type="text/javascript">
 
         var currentNodePath = null;
-        // var jahiaServer = "10.8.37.154:8080";
+        var jahiaServer = "10.8.37.154:8080";
         // var jahiaServer = "10.0.1.27:8080";
-        var jahiaServer = "10.0.1.60:8080";
+        // var jahiaServer = "10.0.1.60:8080";
         // var jahiaServer = "cordova:8080";
         var jahiaUserName = "root", jahiaUserPassword = "root1234";
         var ignoreNodeTypes = [ "jnt:acl", "jnt:tasks", "docnt:pollsContainer", "docnt:links", "jnt:contentList" ];
@@ -176,11 +179,11 @@
                     {{else}}
                     {{if ~isLeafType(jcr_primaryType)}}
                     <li>
-                        <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                        <a data-panel="main" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}"><img src="images/{{:~getIconName(#data)}}.png" class="ui-li-icon"/>{{:text}}</a>
                     </li>
                     {{else}}
                     <li>
-                        <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}">{{:text}}</a>
+                        <a data-panel="menu" href="{{:~getChildPageName(#data)}}?nodePath={{encodeURIComponent:path}}"><img src="images/{{:~getIconName(#data)}}.png" class="ui-li-icon"/>{{:text}}</a>
                     </li>
                     {{/if}}
                     {{/if}}

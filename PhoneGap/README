@@ -1,0 +1,60 @@
+Jahia Apache Cordova Example Projects Readme
+============================================
+
+Important Disclaimer (please read)
+----------------------------------
+The projects presented here are examples, that were established at a specific point in 
+time along with a specific version of Jahia. These are not to be considered as Jahia 
+products and therefore are not supported nor have any guarantees. If you need help with 
+these examples, you can either ask questions in the Jahia Forums (www.jahia.com) or 
+contract an assistance plan at support@jahia.com
+
+Requirements
+------------
+- Jahia 6.6 or more recent, installed
+- By default the example code is designed to work with Jahia Wise, which is not yet
+  available at the time of writing this, but the code can be adapted to work with any
+  Jahia website (simply modify the AJAX urls).
+- Apache Cordova 1.8.1 or more recent : http://phonegap.com/download
+- For iOS project, you will need to install XCode 4.3.3 on a Mac, https://developer.apple.com/xcode/
+- For Android projects, you will need to install the Android SDK : http://developer.android.com/sdk/index.html
+  and possibly also an Eclipse IDE : http://www.eclipse.org/
+  
+Getting started
+---------------
+1. Download and install mobile platform SDK (iOS requires a Mac, Windows Mobile requires a PC)
+2. Download and install Apache Cordova
+3. Create a native mobile project and install Cordova inside (see Cordova Getting Started Guides)
+   at http://docs.phonegap.com/en/1.8.1/guide_getting-started_index.md.html
+4. Copy example HTML, Javascript, CSS and image files over to project
+5. In your project, open the index.html file and locate the hardcoded Jahia server URL
+   and user name and password and adjust them to point to your Jahia server.
+6. Customize the URLs and nodetypes inside the index.html and jahia-wise-1.0.js files
+   to match the node types and data inside your Jahia server.
+7. In your are using Jahia 6.6 and not a later version, copy the packaged base.full.jsp and 
+   base.nodetype.jsp into your Jahia install at the following location (don't overwrite
+   the files if they are already present !)
+   
+   modules/default/nt_base/json/
+   
+8. Customize, deploy and test !
+
+Debugging
+---------
+
+Debugging can be more difficult than for a regular native application since the code is 
+actually running inside the Javascript interpreter inside a web view. Apache Cordova does
+redirect the Javascript console so you can use statements such as :
+
+    console.log('Debug output')
+    
+You can then use the application in the Android or iOS simulators and you should see the
+statements appear in the console panel of the IDE.
+
+Be careful that lots of logging statements might slow down the execution of the code. 
+
+If you need to really dig deep into the debugging and for example trace the Javascript 
+execution, a tool is available only on the iOS platform (iOS 5 or more recent required) 
+called iWebInspector: http://www.iwebinspector.com/
+
+

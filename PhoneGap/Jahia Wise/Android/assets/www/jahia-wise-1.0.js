@@ -100,6 +100,18 @@ function resolvePageName(nodeType, mixinTypes, superTypes) {
     return pageName;
 }
 
+function resolveIconName(node) {
+    if (node.primaryNodeType == 'jnt:folder') {
+        return 'jnt_folder';
+    } else if (node.primaryNodeType == 'jnt:file') {
+        return 'jnt_file';
+    } else if (node.primaryNodeType == 'docnt:note') {
+        return 'docnt_note';
+    } else {
+        return node.nodename;
+    }
+}
+
 function isIgnoredType(childNodeType) {
     return ($.inArray(childNodeType, ignoreNodeTypes) !== -1);
 }
@@ -301,7 +313,9 @@ function displayNode(node) {
     newMarkup += "<a href='" + childPageName + "?nodePath=" + encodeURIComponent(node.path) + "'>";
 
     newMarkup += '<h3>' + node.jcr_title + '</h3>';
-    newMarkup += '<p>' + node.path + '</p>';
+    // newMarkup += '<p>'+node.jcr_description+'</p>';
+    newMarkup += '<p>Last modification by '+node.j_lastPublishedBy+'</p>';
+    newMarkup += '<p>'+prettyDate(new Date(node.j_lastPublished))+'</p>';
     if (false) {
         newMarkup += '<table>';
         $.each(node, function(key, value) {
@@ -581,6 +595,12 @@ function initApp() {
             }  else {
                 return "";
             }
+        },
+        getPathFromNodeType: function (nodetype) {
+            return nodeTypeToPath(nodetype);
+        },
+        getIconName: function (node) {
+            return resolveIconName(node);
         }
     });
 }
