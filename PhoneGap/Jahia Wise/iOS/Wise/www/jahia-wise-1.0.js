@@ -32,7 +32,7 @@ function getNodeData(nodePath, callback) {
         },
         dataType: 'json',
         error: function(jqXHR, textStatus, errorThrown) {
-            alert('Error retrieving node at '+nodePath+':' + textStatus + " error:" + errorThrown);
+            alert('Error retrieving node at ' + nodePath + ':' + textStatus + " error:" + errorThrown);
         },
         timeout: 5000
     }
@@ -73,8 +73,7 @@ function createNode(parentNodePath, nodeType, extraData, callback) {
 }
 
 function resolvePageName(nodeType, mixinTypes, superTypes) {
-    var pageName = '#viewNode_' + nodeTypeToPath(nodeType),
-        pageSelector = $(pageName);
+    var pageName = '#viewNode_' + nodeTypeToPath(nodeType), pageSelector = $(pageName);
     if (pageSelector.length == 0) {
         console.log('resolvePageName: Page name ' + pageName + " not found, searching in mixinTypes");
         for (mixinType in mixinTypes) {
@@ -145,7 +144,7 @@ function getNodePath(htmlNode) {
 
 function recurseDumpObjectProperties(curObject, depthPadding) {
     var depthPaddingString = "";
-    for (i =0; i < depthPadding; i++) {
+    for (i = 0; i < depthPadding; i++) {
         depthPaddingString += " ";
     }
     if ($.inArray(curObject, alreadyVisited) !== -1) {
@@ -164,7 +163,7 @@ function recurseDumpObjectProperties(curObject, depthPadding) {
         if (objectPropertyKey == 'outerHTML' || objectPropertyKey == 'innerHTML') {
             console.log(depthPaddingString + '   ' + objectPropertyKey + ' : \'HTML stripped\'');
         } else if (objectPropertyKey == 'outerText' || objectPropertyKey == 'innerText') {
-                console.log(depthPaddingString + '   ' + objectPropertyKey + ' : \'Text stripped\'');
+            console.log(depthPaddingString + '   ' + objectPropertyKey + ' : \'Text stripped\'');
         } else if (typeof objectPropertyValue == 'object') {
             if (objectPropertyValue instanceof Node) {
                 console.log(depthPaddingString + '   ' + objectPropertyKey + ' : ' + getNodePath(objectPropertyValue));
@@ -314,8 +313,8 @@ function displayNode(node) {
 
     newMarkup += '<h3>' + node.jcr_title + '</h3>';
     // newMarkup += '<p>'+node.jcr_description+'</p>';
-    newMarkup += '<p>Last modification by '+node.j_lastPublishedBy+'</p>';
-    newMarkup += '<p>'+prettyDate(new Date(node.j_lastPublished))+'</p>';
+    newMarkup += '<p>Last modification by ' + node.j_lastPublishedBy + '</p>';
+    newMarkup += '<p>' + prettyDate(new Date(node.j_lastPublished)) + '</p>';
     if (false) {
         newMarkup += '<table>';
         $.each(node, function(key, value) {
@@ -442,7 +441,10 @@ function showLink(url, fileName) {
 
 
 function fail(evt) {
+    console.log('File system access failed with error code');
     console.log(evt.target.error.code);
+    console.log('and event:');
+    console.log(evt);
 }
 
 function sendImage(src, path) {
@@ -475,8 +477,8 @@ function sendImage(src, path) {
         options.fileKey = "file";
         var fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
         if (fileName.lastIndexOf('.') == -1) {
-        	console.log('Missing extension, adding .jpg extension to file name ' + fileName);
-        	fileName += '.jpg'
+            console.log('Missing extension, adding .jpg extension to file name ' + fileName);
+            fileName += '.jpg'
         }
         options.fileName = fileName;
         options.mimeType = "image/jpeg";
@@ -495,7 +497,7 @@ function sendImage(src, path) {
         options.params = params;
 
         var ft = new FileTransfer();
-        console.log('Now uploading image ' + imageURI + ' to url ' + url + '...' );
+        console.log('Now uploading image ' + imageURI + ' to url ' + url + '...');
         ft.upload(imageURI, url, uploadSuccess, uploadFail, options);
 
     }
@@ -505,9 +507,75 @@ function sendImage(src, path) {
     }
 }
 
+function readConfigFile(successCallback, failureCallback) {
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
+        fileSystem.root.getFile("config.txt", {create: false, exclusive: false}, function (fileEntry) {
+            fileEntry.file(function (file) {
+                var reader = new FileReader();
+                reader.onloadend = function(evt) {
+                    console.log("Read as text");
+                    console.log(evt.target.result);
+                    var configText = evt.target.result;
+                    var configData = configText.split(',');
+                    if (configData.length == 3) {
+                        jahiaServer = configData[0];
+                        jahiaUserName = configData[1];
+                        jahiaUserPassword = configData[2];
+                        console.log('Config read successfully, calling success callback...');
+                        successCallback();
+                    } else {
+                        console.log('Invalid length for configData: ' + configText);
+                        failureCallback();
+                    }
+                };
+                reader.readAsText(file);
+            }, failConfigRead);
+        }, failConfigRead);
+    }, failConfigRead);
+}
+
+function failConfigRead(error) {
+    console.log('Error reading config file config.txt:')
+    console.log(error.code);
+    console.log('Detailed error:');
+    console.log(error);
+}
+
+function writeConfigFile(successCallback) {
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
+        fileSystem.root.getFile("config.txt", {create: true, exclusive: false}, function (fileEntry) {
+            fileEntry.createWriter(function (writer) {
+                writer.onwrite = function(evt) {
+                    console.log("Config write successfull.");
+                    if (successCallback) {
+                        successCallback();
+                    }
+                };
+                writer.write(jahiaServer + ',' + jahiaUserName + ',' + jahiaUserPassword);
+            }, failConfigWrite);
+        }, failConfigWrite);
+    }, failConfigWrite);
+}
+
+function failConfigWrite(error) {
+    console.log('Error writing config file config.txt:')
+    console.log(error.code);
+}
+
 
 // Wait for Cordova to load
 function initApp() {
+
+    console.log('Attempting to read config file...');
+    readConfigFile(function success() {
+        console.log('Config read successfully, logging in...');
+        login();
+    }, function failure() {
+        console.log('Failed reading config, writing default config.')
+        writeConfigFile();
+    });
+
+
 // Listen for any attempts to call changePage().
     $(document).bind("pagebeforechange", function(event, data) {
 
@@ -522,13 +590,17 @@ function initApp() {
             // We are being asked to load a page by URL, but we only
             // want to handle URLs that request the data for a specific
             // node.
-            var u = $.mobile.path.parseUrl(data.toPage), detailsRe = /^#viewNode_/;
+            var u = $.mobile.path.parseUrl(data.toPage), detailsRe = /^#viewNode_/, settingsRe = /^#settings/;
 
             if (u.hash.search(detailsRe) !== -1) {
                 showNodeDetails(u, data.options, false);
                 // Make sure to tell changePage() we've handled this call so it doesn't
                 // have to do anything.
                 event.preventDefault();
+            } else if (u.hash.search(settingsRe) !== -1) {
+                $("input[name='jahiaServerURL']").val(jahiaServer);
+                $("input[name='jahiaUserName']").val(jahiaUserName);
+                $("input[name='jahiaUserPassword']").val(jahiaUserPassword);
             }
         }
     });
@@ -541,7 +613,6 @@ function initApp() {
      });
      */
 
-    login();
 
     var element = document.getElementById('deviceProperties');
 
@@ -572,11 +643,10 @@ function initApp() {
         getParentPageName: function (node) {
             return resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes);
         },
-        getFields: function( object ) {
-            var key, value,
-                fieldsArray = [];
-            for ( key in object ) {
-                if ( object.hasOwnProperty( key )) {
+        getFields: function(object) {
+            var key, value, fieldsArray = [];
+            for (key in object) {
+                if (object.hasOwnProperty(key)) {
                     value = object[ key ];
                     // For each property/field add an object to the array, with key and value
                     fieldsArray.push({
@@ -592,7 +662,7 @@ function initApp() {
             var lastSlashPos = path.lastIndexOf('/');
             if (lastSlashPos > -1) {
                 return path.substring(0, lastSlashPos);
-            }  else {
+            } else {
                 return "";
             }
         },

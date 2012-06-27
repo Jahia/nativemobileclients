@@ -76,6 +76,7 @@
     <div data-role="header">
         <!-- This div with data-role is the header, shown in the black -->
         <h1><img src="images/jahia-logo-wise.png"/></h1>
+        <a href="#settings">Settings</a>
     </div>
     <div data-role="content">
         <div class="content-primary">
@@ -96,6 +97,60 @@
             </div>
 
         </div>
+
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="ew-footer">
+        <h2>&copy; 2012 Jahia Solutions Inc.</h2>
+    </div>
+    <!-- /footer -->
+
+</div>
+
+<div data-role="page" id="settings">
+    <div data-role="header">
+        <!-- This div with data-role is the header, shown in the black -->
+        <h1>Settings</h1>
+        <a href="#home">Home</a>
+    </div>
+    <div data-role="content">
+        <div class="content-primary">
+            <form id="settingsForm">
+                <fieldset data-role="controlgroup">
+                    <legend>App settings:</legend>
+                    Jahia Server URL:
+                    <input type="text" name="jahiaServerURL" value="Jahia Server URL"/>
+                    <br/>
+                    User name:
+                    <input type="text" name="jahiaUserName" value="Jahia User Name"/>
+                    <br/>
+                    User password:
+                    <input type="text" name="jahiaUserPassword" value="Jahia User Password"/>
+                    <br/>
+                    <input type="button" class="save-settings" value="Save"/>
+                </fieldset>
+            </form>
+
+        </div>
+
+        <div class="content-secondary">
+
+        </div>
+
+        <script type="text/javascript">
+
+                $('.save-settings').click(function () {
+                    jahiaServer = $("input[type='text'][name='jahiaServerURL']").val();
+                    jahiaUserName = $("input[type='text'][name='jahiaUserName']").val();
+                    jahiaUserPassword = $("input[type='text'][name='jahiaUserPassword']").val();
+                    console.log('Now writing new configuration... ');
+                    writeConfigFile(function () {
+                        alert('Configuration saved.');
+                        $.mobile.changePage('#home');
+                        login();
+                    });
+                });
+
+        </script>
 
     </div>
     <div data-role="footer" data-position="fixed" data-id="ew-footer">
