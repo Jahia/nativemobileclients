@@ -73,8 +73,7 @@ function createNode(parentNodePath, nodeType, extraData, callback) {
 }
 
 function resolvePageName(nodeType, mixinTypes, superTypes) {
-    var pageName = '#viewNode_' + nodeTypeToPath(nodeType),
-        pageSelector = $(pageName);
+    var pageName = '#viewNode_' + nodeTypeToPath(nodeType), pageSelector = $(pageName);
     if (pageSelector.length == 0) {
         console.log('resolvePageName: Page name ' + pageName + " not found, searching in mixinTypes");
         for (mixinType in mixinTypes) {
@@ -222,7 +221,7 @@ function renderNode(pageSelector, node) {
     console.log("Changing title...");
     $header.find("h1").html(node.text);
     console.log("Changing parent link...");
-    $header.find("a").attr('href', resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes) + "?nodePath=" + encodeURIComponent(node.parentPath));
+    $header.find("a[class='up-link']").attr('href', resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes) + "?nodePath=" + encodeURIComponent(node.parentPath));
 
     // Pages are lazily enhanced. We call page() on the page
     // element to make sure it is always enhanced before we
@@ -442,7 +441,10 @@ function showLink(url, fileName) {
 
 
 function fail(evt) {
+    console.log('File system access failed with error code');
     console.log(evt.target.error.code);
+    console.log('and event:');
+    console.log(evt);
 }
 
 function sendImage(src, path) {
@@ -505,9 +507,117 @@ function sendImage(src, path) {
     }
 }
 
+var JsonFormatter = {
+        stringify: function (cipherParams) {
+            // create json object with ciphertext
+            var jsonObj = {
+                ct: cipherParams.ciphertext.toString(CryptoJS.enc.Base64)
+            };
+
+            // optionally add iv and salt
+            if (cipherParams.iv) {
+                jsonObj.iv = cipherParams.iv.toString();
+            }
+            if (cipherParams.salt) {
+                jsonObj.s = cipherParams.salt.toString();
+            }
+
+            // stringify json object
+            return JSON.stringify(jsonObj);
+        },
+
+        parse: function (jsonStr) {
+            // parse json string
+            var jsonObj = JSON.parse(jsonStr);
+
+            // extract ciphertext from json object, and create cipher params object
+            var cipherParams = CryptoJS.lib.CipherParams.create({
+                ciphertext: CryptoJS.enc.Base64.parse(jsonObj.ct)
+            });
+
+            // optionally extract iv and salt
+            if (jsonObj.iv) {
+                cipherParams.iv = CryptoJS.enc.Hex.parse(jsonObj.iv)
+            }
+            if (jsonObj.s) {
+                cipherParams.salt = CryptoJS.enc.Hex.parse(jsonObj.s)
+            }
+
+            return cipherParams;
+        }
+    };
+
+function readConfigFile(successCallback, failureCallback) {
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
+        fileSystem.root.getFile("config.txt", {create: false, exclusive: false}, function (fileEntry) {
+            fileEntry.file(function (file) {
+                var reader = new FileReader();
+                reader.onloadend = function(evt) {
+                    console.log("Read as text");
+                    console.log(evt.target.result);
+                    var configText = evt.target.result;
+                    var configData = configText.split(';');
+                    if (configData.length == 3) {
+                        jahiaServer = configData[0];
+                        jahiaUserName = configData[1];
+                        var decryptedWordArray = CryptoJS.AES.decrypt(configData[2], device.name + device.uuid, { format: JsonFormatter });
+                        jahiaUserPassword = decryptedWordArray.toString(CryptoJS.enc.Utf8);
+                        console.log('Config read successfully, calling success callback...');
+                        successCallback();
+                    } else {
+                        console.log('Invalid length for configData: ' + configText);
+                        failureCallback();
+                    }
+                };
+                reader.readAsText(file);
+            }, failConfigRead);
+        }, failConfigRead);
+    }, failConfigRead);
+}
+
+function failConfigRead(error) {
+    console.log('Error reading config file config.txt:')
+    console.log(error.code);
+    console.log('Detailed error:');
+    console.log(error);
+}
+
+function writeConfigFile(successCallback) {
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
+        fileSystem.root.getFile("config.txt", {create: true, exclusive: false}, function (fileEntry) {
+            fileEntry.createWriter(function (writer) {
+                writer.onwrite = function(evt) {
+                    console.log("Config write successfull.");
+                    if (successCallback) {
+                        successCallback();
+                    }
+                };
+                var encryptedPass = CryptoJS.AES.encrypt(jahiaUserPassword, device.name + device.uuid, { format: JsonFormatter });
+                writer.write(jahiaServer + ';' + jahiaUserName + ';' + encryptedPass);
+            }, failConfigWrite);
+        }, failConfigWrite);
+    }, failConfigWrite);
+}
+
+function failConfigWrite(error) {
+    console.log('Error writing config file config.txt:')
+    console.log(error.code);
+}
+
 
 // Wait for Cordova to load
 function initApp() {
+
+    console.log('Attempting to read config file...');
+    readConfigFile(function success() {
+        console.log('Config read successfully, logging in...');
+        login();
+    }, function failure() {
+        console.log('Failed reading config, writing default config.')
+        writeConfigFile();
+    });
+
+
 // Listen for any attempts to call changePage().
     $(document).bind("pagebeforechange", function(event, data) {
 
@@ -522,13 +632,17 @@ function initApp() {
             // We are being asked to load a page by URL, but we only
             // want to handle URLs that request the data for a specific
             // node.
-            var u = $.mobile.path.parseUrl(data.toPage), detailsRe = /^#viewNode_/;
+            var u = $.mobile.path.parseUrl(data.toPage), detailsRe = /^#viewNode_/, settingsRe = /^#settings/;
 
             if (u.hash.search(detailsRe) !== -1) {
                 showNodeDetails(u, data.options, false);
                 // Make sure to tell changePage() we've handled this call so it doesn't
                 // have to do anything.
                 event.preventDefault();
+            } else if (u.hash.search(settingsRe) !== -1) {
+                $("input[name='jahiaServerURL']").val(jahiaServer);
+                $("input[name='jahiaUserName']").val(jahiaUserName);
+                $("input[name='jahiaUserPassword']").val(jahiaUserPassword);
             }
         }
     });
@@ -541,7 +655,6 @@ function initApp() {
      });
      */
 
-    login();
 
     var element = document.getElementById('deviceProperties');
 
@@ -573,8 +686,7 @@ function initApp() {
             return resolvePageName(node.parentPrimaryNodeType, node.parentMixinTypes, node.parentSupertypes);
         },
         getFields: function( object ) {
-            var key, value,
-                fieldsArray = [];
+            var key, value, fieldsArray = [];
             for ( key in object ) {
                 if ( object.hasOwnProperty( key )) {
                     value = object[ key ];
